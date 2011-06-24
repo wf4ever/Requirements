@@ -1,0 +1,20 @@
+{
+  "tutorial1.txt|jinja" : {
+    "inputs" : ["tutorial1.py|py", "tutorial1.py|dexy"]
+  },
+  "tutorial2.html|jinja" : {
+    "inputs" : ["tutorial2.py|py", "tutorial2.py|pyg", "tutorial2.py|pycon|pyg"]
+  },
+  "tutorial3.html|jinja" : {
+    "inputs" : ["tutorial3.py|py", "tutorial3.py|pyg", "tutorial3.py|fn|pycon|pyg", "tutorial3.r|fn|r|pyg"]
+  },
+  "tutorial3.r|fn|r|pyg" : {
+    "inputs" : ["tutorial3.py|fn|pycon|pyg"]
+  },
+  "*.css|dexy"        : {},
+  "*.py|py"           : {},
+  "*.py|dexy"         : {},
+  "*.py|pyg"          : {},
+  "*.py|fn|pycon|pyg" : {},
+  "*.r|fn|r|pyg"      : {}
+}

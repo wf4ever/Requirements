@@ -1,0 +1,14 @@
+First Dexy tutorial:
+
+1 + 1 = {{ 1 + 2 }}
+
+Here is some Python code:
+
+{{ d['tutorial1.py|dexy'] }}
+
+Here is the output from running this script:
+
+{{ d['tutorial1.py|py'] }}
+
+Ends.
+

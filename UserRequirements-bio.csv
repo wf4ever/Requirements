@@ -1,0 +1,40 @@
+"Wf4Ever user requirements",,,,,,
+,,,,,,
+,,,,,,
+"Id","As a...","I want...","So that...","Benefit","Impact","Comment"
+,,,,"(for me)","(to all)",
+,,,,,,
+,,,,,,
+"UB1","re-user","search => find (parts of) existing workflows that do something similar to what is required for my experiment","get ideas for my own work",4,4,"Consider benefit to researcher for now, keeping wider impact in view, in expectation that will flow through later.  Try to capture both aspects in “So that...” column."
+,,,"compare with my work ('related work')",2,4,
+,,,"reuse in my own analysis",5,4,
+,,,"understand a method",3,3,
+,,,"reuse the results",5,4,
+"UB2","re-user","reference the experiment that provides the input to the workflow (including paper reference, if any) ","acknowledge data providers",2,5,
+"UB3","re-user","record my initial experimental hypothesis ","link the experimental design to its purpose (onset)
+",2,4,
+,,,"allow others to find my work based on its purpose",2,4,
+"UB4","re-user","assemble conceptual workflow","discuss my plans with supervisors/peers",3,,"“conceptual workflow” is a concrete workflow that makes reference to unimplemented or unspecified elements;  e.g. Taverna w/f with reference to dummy elements (e.g. can fake with beanshell)"
+,,,"start searching for components",,,
+"UB5","re-user","adapt an existing workflow to my needs","avoid having to learn (or remember?) everything about creating workflows (note: newbie scenario)",4,4,
+"UB6","re-user","search for workflows by keywords about purpose, context, and outcome of experiment","find workflows relevant to my experiment",5,5,
+"UB7","re-user","run an existing workflow with different data ","understand the workflow
+",5,4,
+,"re-user",,"get more biological results efficiently",,,
+"UB8","re-user","compare results of workflow run with other results ","understand the results in biological terms, compare with competition",3,4,
+"UB9","re-user","create new workflows with my own scripts ","''get on with it' without trying to understand other people's work",5,4,
+"UB10","re-user","run workflow scripts provided by colleagues ","perform experiments for which the methods are familiar to my direct colleagues",5,3,
+,"re-user",,"shorten the start-up phase and lower the risk of unexpected bottlenecks",,,
+"UB11","re-user","record notes relating to experiment (design and run-time log)","document my considerations during design and execution, linked to design, run, and input/output data.",2,5,
+"UB12","re-user","record revised experimental hypothesis ","link experimental design and execution to the purpose of the experiment",4,5,
+"UB13","re-user","search for 'follow-up' workflows ","create a new workflow or revise my own to test the improved hypothesis or new questions derived from the previous results",4,3,
+"UB14","re-user","record reasons for workflow revision ","Link new workflow to previous workflow",2,4,"Expand benefit?"
+"UB15","re-user","link test results and interpretation to initial hypothesis ","retrieve past information about and interrelations between hypotheses ",4,5,
+"UB16","re-user","to see the rationale for existing workflows ","I can better understand an existing workflow, and find help to interpret results of my own workflows",,,
+"UB17","re-user","annotate data with information from global databases","I can relate results to work from other experiments",,,"(needs clarification/example)"
+"UB18","re-user","record biological interpretation of results, linked to experiment and data used ","Personal: organize my information for me, my colleagues and later publication",,,
+,,,"Science: allow other researchers ineterested in investigating similar biological phenomena to find and re-use my work.",,,
+,,,,,,
+,,"Ingo Wassink – thesis on human factors in workflow creation (cf “Conceptual workflows” above).",,,,
+,,,,,,
+,"Making things easier to evaluate – is this adequately captured?",,,,,

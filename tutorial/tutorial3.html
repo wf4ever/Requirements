@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="trac.css-dexy.css" />
+  </head>
+  <body>
+
+    <p>Here is the python script when run:</p>
+    {{ d['tutorial3.py|fn|pycon|pyg'] }}
+
+    <p>The simulation was run for {{ d['sim-params']['number_of_steps'] }} steps and with {{ d['sim-params']['number_of_players'] }} players.</p>
+
+    <p>Here is the R script when it is run:</p>
+    {{ d['tutorial3.r|fn|r|pyg'] }}
+
+    <p>The maximum number of points in the final period of the simulation was {{ d['sim-results']['max_points_in_last_period'] }}.</p>
+
+    <p>Here is the histogram:</p>
+    <img src="hist.png" alt="histogram" />
+
+    <p>Here is the bar chart:</p>
+    <img src="strategy-counts.png" alt="count of strategies over time" />
+
+  </body>
+</html>
+

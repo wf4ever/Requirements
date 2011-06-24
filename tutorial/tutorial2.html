@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="trac.css-dexy.css" />
+  </head>
+  <body>
+
+    <p>Here is a Python script:</p>
+{{ d['tutorial2.py|pyg'] }}
+
+    <p>Here is the output:</p>
+<pre>
+{{ d['tutorial2.py|py'] }}
+</pre>
+
+    <p>Running the code:</p>
+    {{ d['tutorial2.py|pycon|pyg'] }}
+
+    <p>Ends.</p>
+  </body>
+</html>
