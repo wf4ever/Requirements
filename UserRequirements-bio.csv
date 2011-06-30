@@ -1,40 +1,56 @@
-"Wf4Ever user requirements",,,,,,
-,,,,,,
-,,,,,,
-"Id","As a...","I want...","So that...","Benefit","Impact","Comment"
-,,,,"(for me)","(to all)",
-,,,,,,
-,,,,,,
-"UB1","re-user","search => find (parts of) existing workflows that do something similar to what is required for my experiment","get ideas for my own work",4,4,"Consider benefit to researcher for now, keeping wider impact in view, in expectation that will flow through later.  Try to capture both aspects in “So that...” column."
-,,,"compare with my work ('related work')",2,4,
-,,,"reuse in my own analysis",5,4,
-,,,"understand a method",3,3,
-,,,"reuse the results",5,4,
-"UB2","re-user","reference the experiment that provides the input to the workflow (including paper reference, if any) ","acknowledge data providers",2,5,
-"UB3","re-user","record my initial experimental hypothesis ","link the experimental design to its purpose (onset)
-",2,4,
-,,,"allow others to find my work based on its purpose",2,4,
-"UB4","re-user","assemble conceptual workflow","discuss my plans with supervisors/peers",3,,"“conceptual workflow” is a concrete workflow that makes reference to unimplemented or unspecified elements;  e.g. Taverna w/f with reference to dummy elements (e.g. can fake with beanshell)"
-,,,"start searching for components",,,
-"UB5","re-user","adapt an existing workflow to my needs","avoid having to learn (or remember?) everything about creating workflows (note: newbie scenario)",4,4,
-"UB6","re-user","search for workflows by keywords about purpose, context, and outcome of experiment","find workflows relevant to my experiment",5,5,
-"UB7","re-user","run an existing workflow with different data ","understand the workflow
-",5,4,
-,"re-user",,"get more biological results efficiently",,,
-"UB8","re-user","compare results of workflow run with other results ","understand the results in biological terms, compare with competition",3,4,
-"UB9","re-user","create new workflows with my own scripts ","''get on with it' without trying to understand other people's work",5,4,
-"UB10","re-user","run workflow scripts provided by colleagues ","perform experiments for which the methods are familiar to my direct colleagues",5,3,
-,"re-user",,"shorten the start-up phase and lower the risk of unexpected bottlenecks",,,
-"UB11","re-user","record notes relating to experiment (design and run-time log)","document my considerations during design and execution, linked to design, run, and input/output data.",2,5,
-"UB12","re-user","record revised experimental hypothesis ","link experimental design and execution to the purpose of the experiment",4,5,
-"UB13","re-user","search for 'follow-up' workflows ","create a new workflow or revise my own to test the improved hypothesis or new questions derived from the previous results",4,3,
-"UB14","re-user","record reasons for workflow revision ","Link new workflow to previous workflow",2,4,"Expand benefit?"
-"UB15","re-user","link test results and interpretation to initial hypothesis ","retrieve past information about and interrelations between hypotheses ",4,5,
-"UB16","re-user","to see the rationale for existing workflows ","I can better understand an existing workflow, and find help to interpret results of my own workflows",,,
-"UB17","re-user","annotate data with information from global databases","I can relate results to work from other experiments",,,"(needs clarification/example)"
-"UB18","re-user","record biological interpretation of results, linked to experiment and data used ","Personal: organize my information for me, my colleagues and later publication",,,
-,,,"Science: allow other researchers ineterested in investigating similar biological phenomena to find and re-use my work.",,,
-,,,,,,
-,,"Ingo Wassink – thesis on human factors in workflow creation (cf “Conceptual workflows” above).",,,,
-,,,,,,
-,"Making things easier to evaluate – is this adequately captured?",,,,,
+"Wf4Ever user requirements",,,,,,,
+,,,,,,,
+".ref",1,"http://www.wf4ever-project.org/wiki/display/privatefriends/User+Scenarios+-+User+Perspective+%282%29",,,,,
+,,,,,,,
+"Id","As a...","I want...","So that...","Benefit","Impact","Source","Comment"
+,,,,"(for me)","(to all)",,
+,,,,,,,
+".start","Dennis","Scenario 1: a researcher is looking for workflows that will help him interpret data from a gene expression experiment",,,,,
+"UB1","re-user","to search => find (parts of) existing workflows that do something similar to what is required for my experiment","I can get ideas for my own work",4,4,"MR [1]","Consider benefit to researcher for now, keeping wider impact in view, in expectation that will flow through later.  Try to capture both aspects in “So that...” column."
+,,,"I can compare with my work ('related work')",2,4,"MR [1]",
+,,,"I can reuse in my own analysis",5,4,"MR [1]",
+,,,"I can understand a method",3,3,"MR [1]",
+,,,"I can reuse the results",5,4,"MR [1]",
+"UB2","re-user","to reference the experiment that provides the input to the workflow (including paper reference, if any) ","I can acknowledge data providers",2,5,"MR [1]",
+"UB3","re-user","to record my initial experimental hypothesis ","I can link the experimental design to its purpose (onset)",2,4,"MR [1]",
+,,,"others can find my work based on its purpose",2,4,"MR [1]",
+"UB4","re-user","to assemble conceptual workflow","I can discuss my plans with supervisors/peers",3,,"MR [1]","“conceptual workflow” is a concrete workflow that makes reference to unimplemented or unspecified elements;  e.g. Taverna w/f with reference to dummy elements (e.g. can fake with beanshell)"
+,,,"I can start searching for components",,,"MR [1]",
+"UB5","re-user","to adapt an existing workflow to my needs","I can avoid having to learn (or remember?) everything about creating workflows (note: newbie scenario)",4,4,"MR [1]",
+"UB6","re-user","to search for workflows by keywords about purpose, context, and outcome of experiment","I can find workflows relevant to my experiment",5,5,"MR [1]",
+"UB7","re-user","to run an existing workflow with different data ","I can understand the workflow",5,4,"MR [1]",
+,"re-user",,"I can get more biological results efficiently",,,"MR [1]",
+"UB8","re-user","to compare results of workflow run with other results ","I can understand the results in biological terms, compare with competition",3,4,"MR [1]",
+"UB9","re-user","to create new workflows with my own scripts ","I can ''get on with it' without trying to understand other people's work",5,4,"MR [1]",
+"UB10","re-user","to run workflow scripts provided by colleagues ","I can perform experiments for which the methods are familiar to my direct colleagues",5,3,"MR [1]",
+,"re-user",,"I can shorten the start-up phase and lower the risk of unexpected bottlenecks",,,"MR [1]",
+"UB11","re-user","to record notes relating to experiment (design and run-time log)","I can document my considerations during design and execution, linked to design, run, and input/output data.",2,5,"MR [1]",
+"UB12","re-user","to record revised experimental hypothesis ","I can link experimental design and execution to the purpose of the experiment",4,5,"MR [1]",
+"UB13","re-user","to search for 'follow-up' workflows ","I can create a new workflow or revise my own to test the improved hypothesis or new questions derived from the previous results",4,3,"MR [1]",
+"UB14","re-user","to record reasons for workflow revision ","Link new workflow to previous workflow",2,4,"MR [1]","Expand benefit?"
+"UB15","re-user","to link test results and interpretation to initial hypothesis ","retrieve past information about and interrelations between hypotheses ",4,5,"MR [1]",
+"UB16","re-user","to see the rationale for existing workflows ","I can better understand an existing workflow, and find help to interpret results of my own workflows",,,"MR",
+"UB17","re-user","to annotate data with information from global databases","I can relate results to work from other experiments",,,"MR","(needs clarification/example)"
+"UB18","re-user","to record biological interpretation of results, linked to experiment and data used ","I can  organize my information for me, my colleagues and later publication",,,"MR",
+,,,"other researchers interested in investigating similar biological phenomena can find and re-use my work.",,,"MR",
+".end",,,,,,,
+,,,,,,,
+,"Ingo Wassink – thesis on human factors in workflow creation (cf “Conceptual workflows” above).",,,,,,
+,,,,,,,
+,"Making things easier to evaluate – is this adequately captured?",,,,,,
+,,,,,,,
+".start","Kristina","Scenario 2: a researcher needs to implement a workflow that will help her interpret data from a metabolomics experiment",,,,,
+"UB19","re-user","to record the origin of experimental data used for analysis","??",,,"KH [1]","In this scenario researcher Kristina will take the result of a genome wide association study experiment (GWAS) and a metabolomics experiment (SNPs related to metabolites) and map it to biological concepts using text mining technology. The GWAS and metabolomics experiments were done by others than Kristina. She makes a note of the origin ..."
+"UB20","re-user","to record information that must be kept confidential",,,,"KH [1]","… (including the still confidential research proposal for the study)"
+"UB21","re-user","to adapt existing workflows for a new study","I can benefit from the knowledge and previous work of colleagues",,,"KH [1]","Kristina is new to workflows, so she wishes to start with an existing workflow. When she started on the project she was introduced to people that perform related work. She knows that one of her colleagues is making a workflow for the mapping of SNPs to genes, and then onto pathways. She also knows that another colleague has created an abstract workflow for parts of the text mining technology that she wants to use."
+"UB22","re-user","to understand existing workflows","I can benefit from the knowledge and previous work of colleagues",,,"KH [1]","She wishes to understand these workflows and asks her colleagues to explain their functionality to her."
+"UB23","re-user","to build a new workflow from more than one existing workflow","I can benefit from the knowledge and previous work of colleagues",,,"KH [1]","She decides that she would like to build a workflow that would integrate the text mining technology with the one already implemented for the SNP-gene-pathway pipeline."
+"UB24","re-user","to record an abstract (not-yet-implemented) workflow","I can explain my needs to colleagues who will implement processes I shall need",,,"KH [1]","However, the abstract workflow for the text mining technology will probably take a long time to implement since the underlying web services that are needed do not actually exist yet. She is dependent on another colleague to implement these for her. At this point she decides to make an abstract workflow of her own, that she will use as a reference when explaining her research and analysis steps."
+"UB25","re-user","to run a workflow with an alternative processing tool ...OR... to partially execute a workflow, with unavailable sections replaced by manual processes ?????","I can make progress in my research while waiting for processing tools or other workflows to be implemented ",,,"KH [1]","This tool is however in need of an update, which she will perform. In the mean time, the ordering customer, which is the scientist that provided the original data, is getting impatient and wants results. She therefore decides to run the analysis with the version of the tool that is available. She uses the output from the already available SNP-gene-pathway workflow to map SNPs to genes, ending up with a list of genes for a metabolite. This lists she feeds into the tool."
+"UB26","re-user","to record information that is discovered from other external sources","I can keep track of reasons for decisions made in the conduct of my studies ",,,"KH [1]","Ultimately, the workflow (or at this point the tool that is actually available) suggests for example that one gene in the set of genes associated with a specific metabolite actually is associated with the metabolite via the Gluconeogenesis biological process. It is one of the two main mechanisms humans and many other animals use to keep blood glucose levels from dropping too low (hypoglycemia), information he finds on the Internet. She makes a note of that and goes back to the tool to see if Gluconeogenesis is a process that is known to be associated with MetS."
+"UB27","re-user","to repeatedly re-run a workflow with different input parameters and/or data","I can look for potential links between my results and other known biological mechanisms",,,"KH [1]","She will perform the same type of analysis for the different genes associated with the metabolite, and also for the list of genes as a whole. These analyses will lead to a number of candidate biological processes hypothesized to explain the gene-metabolite associations."
+"UB28","re-user","to record an interpretation of results obtained, linked to the experimental record and input data used",,,,"KH [1]","This is now her interpretation of her experiment that she wishes to link to her experiment and the processed data."
+"UB29","re-user","to record notes for future work",,,,"KH [1]","Kristina notes that in a next cycle she will want to perform another workflow that compares her results using text mining with the results from the already available SNP-gene-pathway workflow."
+"UB30","re-user","link workflow results to previous results, procedures and hypotheses","I can subsequently retrieve information about the relationship between hypotheses and results obtained",,,"KH [1]","In this case she will link the result from this workflow to the previous experiment and in particular to the initial hypothesis. At some point, she wishes to be able to retrieve this past information and the interrelationships among his hypotheses."
+"UB31","re-user","Extract information from a working RO for publication","I can easily use my working notes as a basis for creating the distilled information needed for publication.",,,"KH [1]","Assuming her finding and new hypotheses are valuable and new, she will publish her results. The publication has cleaned information, sufficient for evaluating her hypothesis and rerunning the one workflow and the one dataset that lead to this result."
+".end",,,,,,,
