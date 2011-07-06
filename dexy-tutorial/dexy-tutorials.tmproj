@@ -3,34 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>/usr/workspace/wf4ever-requirements/tutorial/.dexy</string>
+	<string>tutorial3.html</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>tutorial3.r</string>
 			<key>lastUsed</key>
-			<date>2011-06-24T13:45:56Z</date>
+			<date>2011-06-24T15:31:14Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>tutorial3.py</string>
 			<key>lastUsed</key>
-			<date>2011-06-24T13:42:00Z</date>
+			<date>2011-06-24T15:32:05Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>tutorial3.html</string>
 			<key>lastUsed</key>
-			<date>2011-06-24T14:35:22Z</date>
+			<date>2011-07-05T14:16:47Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>.dexy</string>
 			<key>lastUsed</key>
-			<date>2011-06-24T14:35:24Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2011-06-24T15:41:26Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -61,56 +61,14 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>/usr/workspace/wf4ever-requirements/tutorial/.dexy</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>9</integer>
-				<key>line</key>
-				<integer>13</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>/usr/workspace/wf4ever-requirements/tutorial/tutorial1.py</key>
+		<key>.dexy</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>3</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>/usr/workspace/wf4ever-requirements/tutorial/tutorial1.txt</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>14</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>/usr/workspace/wf4ever-requirements/tutorial/tutorial2.html</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>50</integer>
-				<key>line</key>
-				<integer>2</integer>
+				<integer>19</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
@@ -121,61 +79,47 @@
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>41</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>2</integer>
+				<integer>7</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>50</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>2</integer>
+				<integer>19</integer>
 			</dict>
 		</dict>
-		<key>/usr/workspace/wf4ever-requirements/tutorial/tutorial2.py</key>
+		<key>tutorial3.html</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>21</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>2</integer>
+				<integer>25</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/usr/workspace/wf4ever-requirements/tutorial/tutorial3.html</key>
+		<key>tutorial3.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>12</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>12</integer>
+				<integer>40</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/usr/workspace/wf4ever-requirements/tutorial/tutorial3.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>11</integer>
-				<key>line</key>
-				<integer>34</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>/usr/workspace/wf4ever-requirements/tutorial/tutorial3.r</key>
+		<key>tutorial3.r</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -192,14 +136,10 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>/usr/workspace/wf4ever-requirements/tutorial/tutorial1.py</string>
-		<string>/usr/workspace/wf4ever-requirements/tutorial/tutorial2.py</string>
-		<string>/usr/workspace/wf4ever-requirements/tutorial/tutorial1.txt</string>
-		<string>/usr/workspace/wf4ever-requirements/tutorial/tutorial2.html</string>
-		<string>/usr/workspace/wf4ever-requirements/tutorial/.dexy</string>
-		<string>/usr/workspace/wf4ever-requirements/tutorial/tutorial3.html</string>
-		<string>/usr/workspace/wf4ever-requirements/tutorial/tutorial3.py</string>
-		<string>/usr/workspace/wf4ever-requirements/tutorial/tutorial3.r</string>
+		<string>tutorial3.r</string>
+		<string>tutorial3.py</string>
+		<string>.dexy</string>
+		<string>tutorial3.html</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
