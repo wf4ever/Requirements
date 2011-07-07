@@ -1,1 +1,8 @@
 Wf4Ever user requirements and requirements analysis documents
+
+Subdirectories:
+
++-data/             contains data files from which the requirements documents are generated
++-docs/             dexy project containing document templates and generated documents
++-python/           contains python code used to manipulate and extract the source data for dexy
++-dexy-tutorial/    contains example dexy files from running the tutorials

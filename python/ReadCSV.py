@@ -52,6 +52,7 @@ import os
 import csv
 import json
 import re
+from operator import itemgetter, attrgetter
 
 def decodeSourceReferences(rowdata):
     #print "rowdata: "+rowdata
@@ -84,48 +85,62 @@ def testDecodeSourceReferences():
     assert r3["DEF"] == None
     return
 
-def addRowData(rowid, rowdata, resultdata):
+def addRowData(rowdata, resultdata):
     if rowdata[0] != "":
-        resultdata[rowid] = (
-            { 'role':    rowdata[1]
-            , 'req':     rowdata[2]
-            , 'reason':  [rowdata[3]]
-            , 'benefit': rowdata[4]
-            , 'impact':  rowdata[5]
-            , 'source':  decodeSourceReferences(rowdata[6])
-            , 'comment': rowdata[7]
-            })
+        resultdata.append( (rowdata[0],
+                { 'id':      rowid
+                , 'role':    rowdata[1]
+                , 'req':     rowdata[2]
+                , 'reason':  [rowdata[3]]
+                , 'benefit': rowdata[4]
+                , 'impact':  rowdata[5]
+                , 'source':  decodeSourceReferences(rowdata[6])
+                , 'comment': rowdata[7]
+                }
+            ))
     else:
-        resultdata[rowid]['reason'].append(rowdata[3])
+        resultdata.append(resultdata[-1]['reason'].append(rowdata[3])
     return resultdata
 
 def testAddRowData():
     r1 = addRowData("R1",
         ["R1", "As", "I want", "So that", "3", "4", "ABC [1]", "Comment"],
         {})
-    assert r1["R1"]["role"] == "As"
-    assert r1["R1"]["req"]  == "I want"
-    assert r1["R1"]["reason"][0] == "So that"
-    assert r1["R1"]["benefit"] == "3"
-    assert r1["R1"]["impact"] == "4"
-    assert r1["R1"]["source"]["ABC"] == "1"
-    assert r1["R1"]["comment"] == "Comment"
-    r2 = addRowData("R1",
+    assert r1[0][0] == "R1"
+    assert r1[0][1]["id"] == "R1"
+    assert r1[0][1]["role"] == "As"
+    assert r1[0][1]["req"]  == "I want"
+    assert r1[0][1]["reason"][0] == "So that"
+    assert r1[0][1]["benefit"] == "3"
+    assert r1[0][1]["impact"] == "4"
+    assert r1[0][1]["source"]["ABC"] == "1"
+    assert r1[0][1]["comment"] == "Comment"
+    r2 = addRowData(
         ["", "", "", "Another reason", "", "", "", ""],
         r1)
-    assert r2["R1"]["role"] == "As"
-    assert r2["R1"]["req"]  == "I want"
-    assert r2["R1"]["reason"][0] == "So that"
-    assert r2["R1"]["reason"][1] == "Another reason"
-    assert r2["R1"]["benefit"] == "3"
-    assert r2["R1"]["impact"] == "4"
-    assert r2["R1"]["source"]["ABC"] == "1"
-    assert r2["R1"]["comment"] == "Comment"
+    assert r2[0][0] == "R1"
+    assert r2[0][1]["id"] == "R1"
+    assert r2[0][1]["role"] == "As"
+    assert r2[0][1]["req"]  == "I want"
+    assert r2[0][1]["reason"][0] == "So that"
+    assert r2[0][1]["reason"][1] == "Another reason"
+    assert r2[0][1]["benefit"] == "3"
+    assert r2[0][1]["impact"] == "4"
+    assert r2[0][1]["source"]["ABC"] == "1"
+    assert r2[0][1]["comment"] == "Comment"
     return
+
+def First(seq):
+    return seq[0]
+
+def IdCmp(key1, key2):
+    key1 = req1[0]
+    key2 = req2[0]
+    
 
 def readCSV(csvfilename, jsonfilename):
     # Read CSV data into internal data structure
-    data  = { 'refs': {}, 'reqs': {} }
+    data  = { 'refs': {}, 'reqs': [] }
     rowid = None
     copydata = False
     csvfilestream = open(csvfilename, "r")
@@ -137,10 +152,10 @@ def readCSV(csvfilename, jsonfilename):
         elif row[0] == ".end":
             copydata = False
         elif copydata:
-            if row[0] != "":
-                rowid = row[0]
-            addRowData(rowid, row, data['reqs'])
+            addRowData(row, data['reqs'])
     csvfilestream.close()
+    # Sort requirements by Id, assuming form ABCnnn
+    data.reqs = sorted(row.reqs(IdCmp))
     # Now write resulting data
     jsonfilestream = open(jsonfilename, "w")
     json.dump(data, jsonfilestream, indent=4)
