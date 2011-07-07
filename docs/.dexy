@@ -1,0 +1,12 @@
+{
+  "*.html|jinja" : {
+    "inputs" : ["*.json|dexy"]
+  },
+  "*.json|dexy"        : {},
+  "*.css|dexy"        : {},
+  "*.py|py"           : {},
+  "*.py|dexy"         : {},
+  "*.py|pyg"          : {},
+  "*.py|fn|pycon|pyg" : {},
+  "*.r|fn|r|pyg"      : {}
+}
