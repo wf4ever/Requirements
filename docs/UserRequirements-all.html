@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Wf4Ever Consolidated User Requirements</title>
+    <link rel="stylesheet" href="trac.css" />
+  </head>
+  <body>
+    <h2>Introduction</h2>
+    <p>This document contains consolidated Wf4Ever user requirements from all sources.</p>
+
+    <h2>Astrophysics user requirements</h2>
+    <p>
+      This section contains requirements articulated by astrophysics researchers. 
+      The information is sourced from project deliverables D4.1 and D6.1.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>As a...</th>
+          <th>I want...</th>
+          <th>So that...</th>
+          <th>Benefit</th>
+          <th>Impact</th>
+          <th>Source</th>
+          <th>Comment</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>(for self)</th>
+          <th>(for science)</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      {% for id,req in d['UserRequirements-astro']['reqs'] %}
+        <tbody>
+          <tr>
+            <td>{{ id }}</td>
+            <td>{{ req['role'] }}</td>
+            <td>{{ req['require'] }}</td>
+            <td>So that... {{ req['reason'][0] }}</td>
+            <td>Benefit {{ req['benefit'] }}</td>
+            <td>Impact {{ req['impact'] }}</td>
+            <td>
+            {% for refid in req['source'] %}
+              Source {{ refid+' ['+req['source'][refid]+'] 
+              ' }}</td>
+            {% endfor %}
+            </td>
+            <td>Comment {{ req['comment'] }}</td>
+          </tr>
+          {% for anotherreason in req['reason'][1:] %}
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>{{ anotherreason }}</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      {% endfor %}
+
+    </table>
+
+    
+    <h2>Bioinformatics user requirements</h2>
+    
+    <h2>General user requirements</h2>
+
+  </body>
+</html>
+
