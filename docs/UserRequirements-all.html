@@ -1,8 +1,72 @@
 <html>
+
+  {% macro UserRequirementsTable(reqslist) %}
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>As a...</th>
+          <th width="25%">I want...</th>
+          <th width="25%">So that...</th>
+          <th>Benefit</th>
+          <th>Impact</th>
+          <th>Source</th>
+          <th width="25%">Comment</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>(for&nbsp;self)</th>
+          <th>(for&nbsp;science)</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      {% for id,req in reqslist['reqs'] %}
+        <tbody>
+          <tr>
+            <td>{{ id }}</td>
+            <td>{{ req['role'][0] }}</td>
+            <td>{{ req['require'] }}</td>
+            <td>{{ req['reason'][0] }}</td>
+            <td class="number">{{ req['benefit'][0] }}</td>
+            <td class="number">{{ req['impact'][0] }}</td>
+            <td>
+              {% for refid in req['source'] -%}
+                {{ refid }}
+                {%- if req['source'][refid] != None -%}
+                  {{ '&nbsp;['+req['source'][refid]+'] ' }}
+                {%- endif -%}
+              {%- endfor %}
+            </td>
+            <td>{{ req['comment'][0] }}</td>
+          </tr>
+          {% for i in range(1,req['len']) %}
+            <tr>
+              <td></td>
+              <td>{{ req['role'][i] }}</td>
+              <td></td>
+              <td>{{ req['reason'][i] }}</td>
+              <td class="number">{{ req['benefit'][i] }}</td>
+              <td class="number">{{ req['impact'][i] }}</td>
+              <td></td>
+              <td>{{ req['comment'][i] }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      {% endfor %}
+    </table>
+  {% endmacro %}
+
   <head>
     <title>Wf4Ever Consolidated User Requirements</title>
     <link rel="stylesheet" href="trac.css" />
+    <link rel="stylesheet" href="reqs.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
   </head>
+
   <body>
     <h2>Introduction</h2>
     <p>This document contains consolidated Wf4Ever user requirements from all sources.</p>
@@ -12,68 +76,25 @@
       This section contains requirements articulated by astrophysics researchers. 
       The information is sourced from project deliverables D4.1 and D6.1.
     </p>
-    <table>
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>As a...</th>
-          <th>I want...</th>
-          <th>So that...</th>
-          <th>Benefit</th>
-          <th>Impact</th>
-          <th>Source</th>
-          <th>Comment</th>
-        </tr>
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th>(for self)</th>
-          <th>(for science)</th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-
-      {% for id,req in d['UserRequirements-astro']['reqs'] %}
-        <tbody>
-          <tr>
-            <td>{{ id }}</td>
-            <td>{{ req['role'] }}</td>
-            <td>{{ req['require'] }}</td>
-            <td>So that... {{ req['reason'][0] }}</td>
-            <td>Benefit {{ req['benefit'] }}</td>
-            <td>Impact {{ req['impact'] }}</td>
-            <td>
-            {% for refid in req['source'] %}
-              Source {{ refid+' ['+req['source'][refid]+'] 
-              ' }}</td>
-            {% endfor %}
-            </td>
-            <td>Comment {{ req['comment'] }}</td>
-          </tr>
-          {% for anotherreason in req['reason'][1:] %}
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>{{ anotherreason }}</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      {% endfor %}
-
-    </table>
-
+    
+    {{ UserRequirementsTable(d['UserRequirements-astro']) }}
     
     <h2>Bioinformatics user requirements</h2>
+    <p>
+      This section contains requirements articulated by bioinformatics researchers. 
+      The information is sourced from project deliverables D4.1 and from 
+      <a href="http://www.wf4ever-project.org/wiki/display/privatefriends/User+Scenarios+-+User+Perspective+%282%29">researcher-described scenarios</a>.
+    </p>
     
+    {{ UserRequirementsTable(d['UserRequirements-bio']) }}
+
     <h2>General user requirements</h2>
+    <p>
+      This section contains requirements of unrecorded origin,
+      sourced from project deliverables D2.1 and D3.1. 
+    </p>
+    
+    {{ UserRequirementsTable(d['UserRequirements-gen']) }}
 
   </body>
 </html>

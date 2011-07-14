@@ -1,0 +1,77 @@
+<html>
+
+  {% macro TechnicalFacetsTable(facetlist) %}
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Functions</th>
+          <th>Components</th>
+          <th>Facets</th>
+          <th width="40%">Description</th>
+          <th>Sources</th>
+          <th width="25%">Comment</th>
+        </tr>
+      </thead>
+      {% for id,facet in facetlist['reqs'] %}
+        <tbody>
+          <tr>
+            <td>{{ id }}</td>
+            <td>{{ facet['function'] }}</td>
+            <td>{{ facet['component'] }}</td>
+            <td>{{ facet['facet'] }}</td>
+            <td>{{ facet['description'][0] }}</td>
+            <td>
+              {% for refid in facet['source'] -%}
+                {{ refid }}
+                {%- if facet['source'][refid] != None -%}
+                  {{ '&nbsp;['+facet['source'][refid]+'] ' }}
+                {%- endif -%}
+              {%- endfor %}
+            </td>
+            <td>{{ facet['comment'][0] }}</td>
+          </tr>
+          {% for i in range(1,facet['len']) %}
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>{{ facet['description'][i] }}</td>
+              <td></td>
+              <td>{{ facet['comment'][i] }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      {% endfor %}
+    </table>
+  {% endmacro %}
+
+  <head>
+    <title>Wf4Ever Consolidated Technical Facets</title>
+    <link rel="stylesheet" href="trac.css" />
+    <link rel="stylesheet" href="reqs.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  </head>
+
+  <body>
+    <h2>Introduction</h2>
+    <p>This document contains consolidated Wf4Ever technical facets from all sources.</p>
+    <p>
+      These are mainly derived from the month 6 project deliverables documents, and need
+      some consolidation work.  The intent is that facet information applied to technical 
+      requirements can be used to isolate specific technical requirements applicable to 
+      each of the project work areas.
+    </p>
+    <p>
+      @@TODO: Need to say more about the nature of technical facets (or dimensions)? 
+    </p>
+
+    <h2>Technical facets</h2>
+    <p>
+    </p>
+    {{ TechnicalFacetsTable(d['TechnicalFacets']) }}
+
+  </body>
+</html>
+
