@@ -1,0 +1,1651 @@
+<html>
+
+  
+
+  <head>
+    <title>Wf4Ever Consolidated Technical Facets</title>
+    <link rel="stylesheet" href="trac.css" />
+    <link rel="stylesheet" href="reqs.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  </head>
+
+  <body>
+    <h2>Introduction</h2>
+    <p>This document contains consolidated Wf4Ever technical facets from all sources.</p>
+    <p>
+      These are mainly derived from the month 6 project deliverables documents, and need
+      some consolidation work.  The intent is that facet information applied to technical 
+      requirements can be used to isolate specific technical requirements applicable to 
+      each of the project work areas.
+    </p>
+    <p>
+      @@TODO: Need to say more about the nature of technical facets (or dimensions)? 
+    </p>
+
+    <h2>Technical facets</h2>
+    <p>
+    </p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Functions</th>
+          <th>Components</th>
+          <th>Facets</th>
+          <th width="40%">Description</th>
+          <th>Sources</th>
+          <th width="25%">Comment</th>
+        </tr>
+      </thead>
+      
+        <tbody>
+          <tr>
+            <td>TF1</td>
+            <td>Evolution</td>
+            <td>RO</td>
+            <td>Repeatable</td>
+            <td>The evolution and collaboration model should provide the mechanisms to identify and characterize different versions of a Research Object and the resources it encapsulates. The goal is to enable scientists to access the same version of the services and data sources involved in the experiments described by a Research Object. This will in turn allow the repetition of the experiments, e.g., to verify or validate the results.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF2</td>
+            <td>Evolution</td>
+            <td>RO</td>
+            <td>Alive</td>
+            <td>Research Objects are subject to many different changes, especially because the resources they aggregate can be of a very dynamic nature, e.g., databases. As such, the evolution and collaboration model should enable the modelling of the transformations the Research Object goes through its lifetime. In particular, the model should be flexible enough to cope with all the possible changes a Research Object can undergo. </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF3</td>
+            <td>Evolution</td>
+            <td>RO</td>
+            <td>Referenceable</td>
+            <td>The ability of representing different versions of a Research Object with the evolution and collaboration model, as noted above, will also play an important role supporting references to Research Objects. In particular, the evolution and collaboration model should provide the means for the identification of such versions, which would enable their referencing as the Research Object evolves.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF4</td>
+            <td>Evolution</td>
+            <td>RO</td>
+            <td>History</td>
+            <td>The evolution and collaboration model should allow keeping a complete track of the changes that the Research Object undergoes. The information to be modelled includes not only a representation about the changes themselves, but also about how those changes were applied (e.g., chronological order, dependencies between them); and possibly why they were conducted (e.g., argumentation). Moreover, this information should be kept at different of abstractions, from the Research Object level to the level of the individual resources it encapsulates. Besides, the information should be detailed enough in order to support advanced operations with the Research Object, such as rolling back, fix and diagnose errors, comparison of Research Objects, etc.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF5</td>
+            <td>Collaboration</td>
+            <td>RO</td>
+            <td>Reliable</td>
+            <td>An important source of information about the Research Object supporting the collaboration of scientists is the justification of why and how particular decisions were made. Based on such justifications, scientists can better interpret a Research Object, its objective and speed up the collaborative work during the construction and adaptation of a Research Object. Hence, the should enable the representation and tracking of such justifications as the Research Object evolves. </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF6</td>
+            <td>Collaboration</td>
+            <td>RO</td>
+            <td>Referenceable</td>
+            <td>Referenceable Research Object requirement. In order to encourage the collaboration of scientists in the construction of Research Objects, it is important to ensure that it is possible to reference those Research Objects. The evolution and collaboration model should provide the means for the identification of Research Objects and of the resources it encapsulates, which will enable referencing and citing not only the Research Object as a whole but also its individual parts. </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF7</td>
+            <td>Evolution, Collaboration</td>
+            <td>User?</td>
+            <td>Versioning</td>
+            <td>It should be possible to keep different versions of Research Objects. In general, two types of Research Object have been identified so far, a live or working Research Object and a published or archived Research Object. The former is expected to change frequently, while the latter is expected to be immutable. Hence, versioning will have to deal mostly with live Research Objects. Versions should have to consider changes at different levels, from the Research Object itself, such as its metadata, to the resources it encapsulates. Moreover, it should be possible to do automatic versioning of metadata (contributors, access privileges, modification date, etc.) to trace the provenance of these metadata. As a result, scientists will be able to access concrete versions of Research Objects and/or their associated resources, e.g., workflows, and to keep track of the evolution of those objects resulting from community efforts.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF8</td>
+            <td>Evolution, Collaboration</td>
+            <td>User?</td>
+            <td>Roll-back</td>
+            <td>Research Objects can change many times during their lifetime. Hence, scientists working with a Research Object may want to go back to a previous state of the Research Object, for instance, to retrace steps or to discard new changes introduced. For this requirement is not enough just to recover a previous state of the Research Object, but also being able to reproduce the steps (backwards) to move from one state to a previous one.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF9</td>
+            <td>Evolution, Collaboration</td>
+            <td>User?</td>
+            <td>Diagnostic and repair</td>
+            <td>During the lifetime of the Research Object, it could happen that some errors were introduced while making changes. So, in a similar situation as in the previous requirement, it may necessary to go back to a previous state of the Research Object. However, in addition to that, it should be feasible to make a diagnosis and potentially to fix the errors introduced. To this end, a complete log of the changes performed and how they were performed will be required.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF10</td>
+            <td>Evolution, Collaboration</td>
+            <td>User?</td>
+            <td>Comparison</td>
+            <td>One of motivations of modelling the evolution of Research Objects is to compare different versions of the Research Object, and in general to compare different states of the same Research Object or with similar Research Objects. This can be useful, for example, in aiding scientists to understand how a Research Object has changed from a previous state, to analyze the transformations, or to find individual contributions to the Research Object. </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF11</td>
+            <td>Collaboration</td>
+            <td>User?</td>
+            <td>Collaborative construction</td>
+            <td>Collaborative construction requirement. Scientists should be able to work collaboratively in the construction of Research Objects. The involved members of the team may include scientists across disciplines with different expertise, and they may play different roles in such a collaborative process. For example, we could identify investigators (doing most of the scientific analysis), supervisors/advisors (the ones giving mostly scientific guidelines and revisions), domain expert advisors and others. Moreover, the collaboration among scientist may involve curation activities, following some predefined editorial process. That is, a process defining the operations and actions the scientists should follow to propose and to approve/reject changes, depending on their role and the state of the Research Object. Such information regarding the roles and process should be part of the collaboration model.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF12</td>
+            <td>Collaboration</td>
+            <td>User?</td>
+            <td>Social approach</td>
+            <td>Current workflow systems have limited collaborative support for sharing and reusing workflows and related resources. In fact they focus only on making workflows available for sharing. A more social approach is required to really improve the collaboration of scientists. A prerequisite for this will be the modelling of the relationships and interactions between scientist and the scientific resources they collaborate with, as well as the community generated information, such as ratings, reviews and usage logs.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF13</td>
+            <td>Collaboration</td>
+            <td>User?</td>
+            <td>Quality and trustworthiness</td>
+            <td>Scientists are only willing to reuse and extend good quality, trustworthy and coherent scientific work. Hence, the collaboration model should allow keeping trace of relevant information about those aspects of Research Objects, such as authors, contributors, applications, process used for its creation, reviews, etc.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF14</td>
+            <td>Collaboration</td>
+            <td>User?</td>
+            <td>Credit and plagiarism detection</td>
+            <td>In order to encourage the collaboration of scientists, special attention has to be paid to credit assignment and recognition of individual contributions. This includes, on the one hand a model for the characterization and identification of those resources, which would enable their citation and attribution in an easy and straightforward manner. And on the other hand, the detection of plagiarism. For the latter, an evolution and collaboration model would provide also some mechanisms to detect it, for example by using the changes in the Research Object. </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF15</td>
+            <td>Evolution, Collaboration</td>
+            <td>Activity?</td>
+            <td>Compliance</td>
+            <td>Research Object model compliance requirement. The evolution and collaboration model should be built on top of the Research Object model that is being specified in Wf4Ever. In fact, the evolution and collaboration model should extend this model with additional elements to represent aspects such as changes, versions, collaborative processes, etc. Hence, evolution and collaboration model should be compatible with the Research Object model, both syntactically and semantically. </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF16</td>
+            <td>Evolution, Collaboration</td>
+            <td>Activity?</td>
+            <td>Accessibility</td>
+            <td>Accessibility requirement. The evolution and collaboration model should be accessible and processable for both humans and machines. The former can be achieved by the usage of natural language concept names, while the latter can be achieved by the usage of Web-compatible representation languages (see low-level requirements). </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF17</td>
+            <td>Evolution, Collaboration</td>
+            <td>Activity?</td>
+            <td>Usability</td>
+            <td>Usability requirement. The evolution and collaboration model should reflect the needs of the majority of scientists, e.g., as reported by Wf4Ever case studies, but at the same time it should allow proprietary extensions and refinements in particular application scenarios (e.g., different scientific domains). Usability can be maximized taking into account multiple metadata types. For instance, based on the NISO (National Information Standards Organization) recommendation, we could have structural metadata to represent, e.g., the physical and logical structure of a Research Object, descriptive metadata to represent information about the content of the Research Object, e.g., for discovery and identification purposes, administrative metadata to represent information that will help managing the Research Object, e.g., when and how it was created, technical information, etc.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF18</td>
+            <td>Evolution, Collaboration</td>
+            <td>Activity?</td>
+            <td>Interoperability</td>
+            <td>Interoperability requirement. The evolution and collaboration model should be available in a form that facilitates metadata exchange among applications. The syntactical aspects of interoperability can be covered by the usage of standard representation languages (see low-level requirements). Semantic interoperability can be ensured by means of a formal and explicit representation of the meaning of the metadata entities (see next requirement).</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF19</td>
+            <td>Evolution, Collaboration</td>
+            <td>Activity?</td>
+            <td>Knowledge formalization</td>
+            <td>Knowledge formalization requirement. As noted above, the evolution and collaboration aspects of Research Objects should be formally and explicitly represented. In order to do so, the evolution and collaboration model will be formalized as an ontology. This ontology should reuse knowledge from the Research Object model, and it should be designed modularly to enable the integration of both models; and to ease its extension it in the future as needed. Among others, this ontology should allow the representation of different Research Object versions, of changes at different abstraction levels, including information of how they are applied, of the users and their roles, as well as the collaborative processes followed during the creation of Research Objects.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF20</td>
+            <td>Evolution, Collaboration</td>
+            <td>Activity?</td>
+            <td>Methodological</td>
+            <td>Methodological requirement. The development of the evolution and collaboration model ontology should follow state-of-the-art methodologies for ontology engineering, such as the NeOn methodology, which provide guidelines to ensure that the ontology fulfils the domain requirements, and to reuse existing knowledge as much as possible, thus speeding up the production of the ontology and making it compliant with existing models. Such existing knowledge can be in the form of previous ontologies, or in some non-ontological form, such as thesauri, classification schemes, etc.</td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF21</td>
+            <td>Recommender</td>
+            <td>RO</td>
+            <td>Discoverable</td>
+            <td>The recommender system must provide the necessary mechanisms in order to discover proactively the Research Objects that might be of interest to the user. This activity should be performed considering the following properties:</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF22</td>
+            <td>Recommender</td>
+            <td>RO</td>
+            <td>Safety</td>
+            <td>The recommender system should avoid recommendation flooding at all costs. </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF23</td>
+            <td>Recommender</td>
+            <td>RO</td>
+            <td>Completeness</td>
+            <td>The recommender system should provide the wider as possible set of relevant Research Object. This property is particularly important since the recommender system will in some cases be used to provide an overview of the state of the art to new scientist.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF24</td>
+            <td>Recommender</td>
+            <td>RO</td>
+            <td>Cross-boundary adaptive</td>
+            <td>Recommender systems are inherently vertical and configured to provide recommendations in a single and specific domain. The cross-boundary dimension of Research Objects makes mandatory the provisioning of recommendation on the very same Research Objects following different recommendation heuristics for each scientific community or communities. That implies that the recommender system must be aware of the scientific community that the user belongs to; and secondly it must act in accordance.</td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF25</td>
+            <td>Recommender</td>
+            <td>RO</td>
+            <td>Repurposable</td>
+            <td>The recommender system must take into consideration the resources that compose a Research Object and not only Research Objects as a whole. Therefore, when making recommendations to a given user the system might suggest new Research Objects; or just resources that might a useful addition/alternative to the ones already aggregated by the Research Objects that the user is currently using or creating</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF26</td>
+            <td>Recommender</td>
+            <td>User?</td>
+            <td>Reputation</td>
+            <td>Reputation requirement (e.g. db with data with wrong confused units). The trust assigned the Research Object recommendations generated by the recommender system must take into account reputation. The measure of reputation must be multidimensional; the Research Object must not only rated as a whole but also its constituent resources (e.g. datasets, workflows, provider, etc.) must be also considered.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF27</td>
+            <td>Recommender</td>
+            <td>User?</td>
+            <td>Content-based</td>
+            <td>Content-based requirement. The recommender system should provide content-based recommendations based on the way that search and retrieving of scientific content is already performed by researchers, allowing search in fields such as authors, abstract, keywords, publication dates, etc.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF28</td>
+            <td>Recommender</td>
+            <td>User?</td>
+            <td>User feedback</td>
+            <td>User feedback requirement. The recommender system must consider user feedback in order to improve its future recommendations.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF29</td>
+            <td>Recommender</td>
+            <td>User?</td>
+            <td>Policy-based</td>
+            <td>Policy-based recommendation requirement. The criterion for selecting the relevance and suitability of an item (either Research Object or resource) is shared among a group of individuals (researchers of the same scientific field, researchers that belong to a concrete lab, etc.); but is not necessarily valid outside this community. There is a need of means for tailoring specific recommendations in terms of certain policies at least for each use case, and in general for each research community that in the future wishes to make use of the recommender system. </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF30</td>
+            <td>Recommender</td>
+            <td>Activity?</td>
+            <td>RO model aware</td>
+            <td>The recommender system must use techniques that exploit the formal models about Research Object that will be developed in the context of Wf4Ever.</td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF31</td>
+            <td>Recommender</td>
+            <td>Activity?</td>
+            <td>Cold start</td>
+            <td>Most of the state of the art recommendation techniques rely in historical information. Therefore, the addition of new elements that are neither reflected nor referenced in this background knowledge causes problems. We distinguish between two possible situations:</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF32</td>
+            <td>Recommender</td>
+            <td>Activity?</td>
+            <td>New user</td>
+            <td>The recommender system must provide mechanisms to lessen effects of the new user problem. When a new user arrives at the system, there is no sufficient rating information to sketch user’s preferences; and there might be also a lack of information about the user itself. Both situations must be tacked by the recommender system.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF33</td>
+            <td>Recommender</td>
+            <td>Activity?</td>
+            <td>New RO handling</td>
+            <td>Every time a new Research Object is created the recommender system must recommend this new item and make to any of the users of the system that might be interested on it. Unlike the case of the new user problem, the possibility of not having enough information about the Research Object is less probable, since we assume that the information about the Research Object is accessible following the Linked Data principles. Nevertheless, we have a problem regarding the estimation of the Research Object reputation.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF34</td>
+            <td>Recommender</td>
+            <td>Activity?</td>
+            <td>Sparse ratings problem handling</td>
+            <td>The sparsity problem typically occurs in systems with large number of items in which there are plenty of items rated only by few users, and many users which rated only few. The set of items rated but just few users would unlikely be recommended, no matter how high its reputation might be. The recommender system should minimize as much as possible this specific situation.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF35</td>
+            <td>Recommender</td>
+            <td>Activity?</td>
+            <td>RO evolution aware</td>
+            <td>The recommender system must take into consideration as efficiently as possible how the evolution of a Research Object affects to its past and future recommendations. In some cases a change might be considered irrelevant and must not be propagated to the recommendations made on the basis of its previous state; whereas some small changes might result in significant changes in the recommendations about the object. In any case, the recommender system must avoid as much as possible the recalculation of recommendations; it should reuse previously made calculations where possible.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF36</td>
+            <td>Recommender</td>
+            <td>Low-level?</td>
+            <td>Linked data principles compliant</td>
+            <td>Linked data principles compliant requirement. Recommendations provided by the recommender system must be accessible using linked data principles (cf. http://en.wikipedia.org/wiki/Linked_Data#Principles).  It is important to understand that recommendations are considered as first class citizens and as such should be treated. In consequence they have their own URI and meta-data associated to them.</td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF37</td>
+            <td>Sharing</td>
+            <td>User?</td>
+            <td>Visualization</td>
+            <td>Visualization requirement. The visualization tool for Collaboration Spheres has to present in a graphical fashion how Research Objects are connected by sharing different resources. </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF38</td>
+            <td>Sharing</td>
+            <td>User?</td>
+            <td>Access and security</td>
+            <td>Access and Security requirement. Research Objects should have different access and security properties depending on user’s role, allowing policies such as making Research Objects (or only part of it) to be freely accessible to all users; permitting a finer-grained definition of access permissions to just a target group of users; and also allowing the definition of partial and temporal access permissions. </td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF39</td>
+            <td>Sharing</td>
+            <td>Activity?</td>
+            <td>Graph-based visualization</td>
+            <td>The visualization tool for Collaboration Spheres should provide graph-based visualization. Graph-based visualization offers benefits since expanding nodes and letting the user navigate and explore the content presents information in a single visualization instead of distributed it over multiple screens. In addition, since resources and users might be connected by an arbitrary number of relationships, a proper visualization of these relationships is required reducing the complexity of the graph. Thus, there are some issues to take into account: </td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF40</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>In order to make it easy for users to see how resources and users are interrelated, the different relation types should be also visualized differently. Then, different kind of relationships should be represented as different kind of labelled edges helping users to comprehend multiple relationships at a time. For example, model-defined relations might be represented as directed or undirected labelled edges depending on whether or not it is a symmetric property. </td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF41</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>In order to make it easy for users to see how resources and users are interrelated, the visualization tool should offer some simplification mechanisms. Some examples are: </td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF42</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Metadata that is only referred by a Research Object is not interested when analyzing relationships with others Research Objects, although that information can be displayed if requested by users.</td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF43</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Since the number of crossings edges might exponentially grow with the number of Research Objects, resources, and teams, the number of edges should be reduced as far as possible arranging the graph in a chain. This approach will arrange Research Objects that share the same resources in a chain.</td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF44</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Different visualization for different items. Understanding the relationships between Research Objects, resources and group of scientists is important in order to understand how research is carried out. However, a powerful and effective visualization form needs to show multiple relationships of different types fitting in different purposes and preventing scientists from information overload. We can differentiate the following relation types that can exist in the visualization:</td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF45</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Model-defined relations: relations that have been explicitly defined in the model (e.g. aggregations.</td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF46</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Content-based relations: automatically derived relations based on the resources, teams, and people across different Research Objects. </td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF47</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Metadata relations (such as author, keywords…)</td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF48</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Allow flexible and customizable visualization and user interaction. As a good engineering principle, the tool should separate the visualization engine and the behaviour assigned to user actions through configuration file. Following this principle will let customize the application to different users and contexts at run-time and defining and implementing new behaviours that can be included in the configuration file at design-time. </td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF49</td>
+            <td>Sharing</td>
+            <td>Activity?</td>
+            <td>Navigation-on-demand</td>
+            <td>Since the size of the available information is unmanageable to be loaded into memory, the visualization tool should allow exploratory navigation based on user actions and running different queries to retrieve the information to be shown.</td>
+            <td>
+              D3.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF50</td>
+            <td>Sharing</td>
+            <td>Low-level?</td>
+            <td>Visualization for collaborative spheres</td>
+            <td>A web-based application following current web standards (e.g. HTML 5)</td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF51</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>It will visualize data, which follows the Linked Data principle of having XML/RDF descriptions and querying SPARQL end-points. </td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF52</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>It will use the Wf4Ever infrastructure for retrieving information about Research Objects. </td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF53</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>It will use the Wf4Ever infrastructure for enforcing the access properties for Research Objects. </td>
+            <td>
+              D3.1
+            </td>
+            <td>??</td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF54</td>
+            <td></td>
+            <td>RO</td>
+            <td>Repeatability</td>
+            <td>Include sufficient information for others to rerun the investigation at a later date. As a Reuser I want to run an existing workflow with new data.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF55</td>
+            <td></td>
+            <td>RO</td>
+            <td>Reproducability</td>
+            <td>Include sufficient information for an independent investigator to reproduce the results, e.g. obtain the same results. As a Reviewer I want to rerun an investigation to validate the result.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF56</td>
+            <td></td>
+            <td>RO</td>
+            <td>Replayability</td>
+            <td>Provide a a comprehensive record of what has happened, without necessarily including the means to perform the investigation again. As a Reviewer I want to follow the steps taken.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF57</td>
+            <td></td>
+            <td>RO</td>
+            <td>Live/Refreshable/Notifiable</td>
+            <td>Provide dynamic links to content, updating with ease when something changes. As a Re-user I want to see versions of a workflow to use the latest working version.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF58</td>
+            <td></td>
+            <td>RO</td>
+            <td>Component reuse</td>
+            <td>Deconstructing an investigation in order to reuse components or pieces. Reassembly of deconstructed aggregations. As a Re-user I want to build a new workflow based on an existing one.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF59</td>
+            <td></td>
+            <td>RO</td>
+            <td>Reliability</td>
+            <td>Verification and validation of the components, along with measures of trust in the data, results and methods. As a Reviewer I want to follow the steps taken to validate the investigative process and identify any problems.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF60</td>
+            <td></td>
+            <td>RO</td>
+            <td>Justifiability</td>
+            <td>Why and how particular decisions were made. As a Creator I want to describe the relationships between aggregated resources.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF61</td>
+            <td></td>
+            <td>RO</td>
+            <td>Resilience</td>
+            <td>Coping with change/loss/errors. As a Re-user I want to run an existing workflow with new data.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF62</td>
+            <td></td>
+            <td>RO</td>
+            <td>Cross-boundary</td>
+            <td>Objects reused across different research communities. As a Reader I want to find relevant materials so that I can understand the field.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF63</td>
+            <td></td>
+            <td>RO</td>
+            <td>Discoverability</td>
+            <td>The ability to find/discover/retrieve ROs. Mechanisms for exposure/publication of ROs. As a Reader I want to survey the field to check if something has been done before.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF64</td>
+            <td></td>
+            <td>RO</td>
+            <td>Referenceability</td>
+            <td>Means of identifying ROs. As a Publisher I want to provide references to ROs so that they can be cited.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF65</td>
+            <td></td>
+            <td>RO</td>
+            <td>History</td>
+            <td>Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.</td>
+            <td>
+              D2.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF66</td>
+            <td>Integrity and Authenticity</td>
+            <td></td>
+            <td>Believability</td>
+            <td>The extent to which information is regarded as true and credible. In a sense, believability is the expected accuracy.  Synonyms: error rate, credibility, trustworthiness</td>
+            <td>
+              D4.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF67</td>
+            <td>Integrity and Authenticity</td>
+            <td></td>
+            <td>Objectivity</td>
+            <td>The degree to which information is unbiased and impartial.</td>
+            <td>
+              D4.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF68</td>
+            <td>Integrity and Authenticity</td>
+            <td></td>
+            <td>Reputation</td>
+            <td>Is the degree to which the information or its source is in high standing.  Synonyms: credibility</td>
+            <td>
+              D4.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF69</td>
+            <td>Integrity and Authenticity</td>
+            <td></td>
+            <td>Consistency</td>
+            <td>Implies that two or more values do not conflict with each other.  Synonyms: integrity, compatibility.</td>
+            <td>
+              D4.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF70</td>
+            <td>Integrity and Authenticity</td>
+            <td></td>
+            <td>Verifiability</td>
+            <td>The degree and ease with which the information can be checked for correctness.  Synonyms: naturalness, traceability, provability.</td>
+            <td>
+              D4.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF71</td>
+            <td>Integrity and Authenticity</td>
+            <td></td>
+            <td>Accuracy</td>
+            <td>The degree of correctness and precision with which information in an information system represents states of the real world.  Accuracy is often used synonymously with data quality, as opposed to information quality. For us, data quality or accuracy is only one aspect of the overall information quality. Synonyms: data quality, error rate, correctness, reliability, integrity, precision.</td>
+            <td>
+              D4.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF72</td>
+            <td>Integrity and Authenticity</td>
+            <td></td>
+            <td>Completeness</td>
+            <td>The degree to which information is not missing.  Synonyms: coverage, scope, granularity, comprehensiveness, density, extent.</td>
+            <td>
+              D4.1
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF73</td>
+            <td></td>
+            <td></td>
+            <td>Discovery</td>
+            <td>Features that enhance the ability to discover workflows and datasets, which are valuable for finding new ideas, understanding existing workflows, reuse of workflows and datasets, and finding related work. </td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF74</td>
+            <td></td>
+            <td></td>
+            <td>Identification</td>
+            <td>Features that allow a workflow or dataset or other element of a research object to be unambiguously identified, which in turn underpin linking, citation and aspects of re-use. </td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF75</td>
+            <td></td>
+            <td></td>
+            <td>Citation</td>
+            <td>References to the work of other researchers, used to acknowledge contributory work.</td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF76</td>
+            <td></td>
+            <td></td>
+            <td>Provenance</td>
+            <td>Information that records input data and processes upon which presented results are based. More detailed aspects of provenance related requirements are discussed and analyzed later in this document.</td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF77</td>
+            <td></td>
+            <td></td>
+            <td>Linking</td>
+            <td>A form of reference that allows a workflow or dataset or other element of a research object to be directly retrieved (usually from the web).</td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF78</td>
+            <td></td>
+            <td></td>
+            <td>Annotation</td>
+            <td>Features to allow additional explanations that record the rationale or intent of choices made in the conduct of some research, or which are provided to help other researchers to understand, review or re-use the material.</td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF79</td>
+            <td></td>
+            <td></td>
+            <td>Content</td>
+            <td>Kinds of information that a research object or workflow element should be able to represent or process.</td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF80</td>
+            <td></td>
+            <td></td>
+            <td>Typing</td>
+            <td>A controlled machine-processable annotation that allows different elements of a research object to be processed or presented appropriately withn the context of that research object. (See also the discussion of research objects in the Technical context section above.)</td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF81</td>
+            <td></td>
+            <td></td>
+            <td>Composition</td>
+            <td>Features that allow complex workflows (or other objects) to be assembled from component elements.</td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF82</td>
+            <td></td>
+            <td></td>
+            <td>Creation</td>
+            <td>Tools to allow users to create new workflows from scratch, or derived from pre-existing ones.</td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF83</td>
+            <td></td>
+            <td></td>
+            <td>Use</td>
+            <td>Features that allow users to do useful things with workflows.</td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>TF84</td>
+            <td></td>
+            <td></td>
+            <td>Re-use</td>
+            <td>Features that facilitate re-use of workflows and other information.</td>
+            <td>
+              GK
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC1</td>
+            <td></td>
+            <td>RO</td>
+            <td>Hypothesis</td>
+            <td>Include hypothesis in RO</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC2</td>
+            <td></td>
+            <td>RO</td>
+            <td>External</td>
+            <td>Include external resources in RO</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC3</td>
+            <td></td>
+            <td>RO</td>
+            <td>Manage</td>
+            <td>Manage RO resources</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC4</td>
+            <td></td>
+            <td>RO</td>
+            <td>Annotate wf</td>
+            <td>Annotate workflow design</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC5</td>
+            <td></td>
+            <td>RO</td>
+            <td>Annotate data</td>
+            <td>Annotate data</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC6</td>
+            <td></td>
+            <td>RO</td>
+            <td>Annotate results</td>
+            <td>Annotate results</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC7</td>
+            <td></td>
+            <td>RO</td>
+            <td>Rating</td>
+            <td>Rate resources</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC8</td>
+            <td></td>
+            <td>RO</td>
+            <td>Rating</td>
+            <td>Rate ROs</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC9</td>
+            <td></td>
+            <td>RO</td>
+            <td>View</td>
+            <td>View RO</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC10</td>
+            <td></td>
+            <td>RO</td>
+            <td>Share</td>
+            <td>Share RO</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC11</td>
+            <td></td>
+            <td>RO</td>
+            <td>Publish</td>
+            <td>Publish RO</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC12</td>
+            <td></td>
+            <td>RO</td>
+            <td>Share</td>
+            <td>Share results</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC13</td>
+            <td></td>
+            <td></td>
+            <td>Access control</td>
+            <td>Control access</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC14</td>
+            <td></td>
+            <td></td>
+            <td>Browse and search</td>
+            <td>Browse and search for RO</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC15</td>
+            <td></td>
+            <td></td>
+            <td>Browse versions</td>
+            <td>Browse RO versions</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC16</td>
+            <td></td>
+            <td></td>
+            <td>Repeatability</td>
+            <td>Rerun workflow</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC17</td>
+            <td></td>
+            <td></td>
+            <td>Debug</td>
+            <td>Debug workflow</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC18</td>
+            <td></td>
+            <td></td>
+            <td>Rerun</td>
+            <td>Run workflow with different data</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC19</td>
+            <td></td>
+            <td>RO</td>
+            <td>Create and edit</td>
+            <td>Create and edit RO</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC20</td>
+            <td></td>
+            <td></td>
+            <td>Create and edit</td>
+            <td>Create a pre-workflow</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC21</td>
+            <td></td>
+            <td></td>
+            <td>Re-use</td>
+            <td>Reuse an existing workflow</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC22</td>
+            <td></td>
+            <td></td>
+            <td>Credit</td>
+            <td>Credits</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+        <tbody>
+          <tr>
+            <td>UC23</td>
+            <td></td>
+            <td></td>
+            <td>Other</td>
+            <td>Unclear</td>
+            <td>
+              Piotr
+            </td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      
+    </table>
+  
+
+  </body>
+</html>

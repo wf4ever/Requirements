@@ -1,8 +1,12 @@
 {
   "*.html|jinja" : {
-    "inputs" : ["*.json|dexy"]
+    "inputs" : ["*.json|dexy", "*.css|dexy"]
   },
-  "*.json|dexy"        : {},
+  "*.css|dexy" : {
+    "inputs" : ["*.css|dexy"]
+  },
+  "*.css|cp"          : {},
+  "*.json|dexy"       : {},
   "*.css|dexy"        : {},
   "*.py|py"           : {},
   "*.py|dexy"         : {},
