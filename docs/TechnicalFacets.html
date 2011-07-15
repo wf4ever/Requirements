@@ -5,9 +5,9 @@
       <thead>
         <tr>
           <th>Id</th>
+          <th>Facets</th>
           <th>Functions</th>
           <th>Components</th>
-          <th>Facets</th>
           <th width="40%">Description</th>
           <th>Sources</th>
           <th width="25%">Comment</th>
@@ -17,9 +17,9 @@
         <tbody>
           <tr>
             <td>{{ id }}</td>
-            <td>{{ facet['function'] }}</td>
-            <td>{{ facet['component'] }}</td>
             <td>{{ facet['facet'] }}</td>
+            <td>{{ facet['function'][0] }}</td>
+            <td>{{ facet['component'][0] }}</td>
             <td>{{ facet['description'][0] }}</td>
             <td>
               {% for refid in facet['source'] -%}
@@ -35,8 +35,8 @@
             <tr>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
+              <td>{{ facet['function'][i] }}</td>
+              <td>{{ facet['component'][i] }}</td>
               <td>{{ facet['description'][i] }}</td>
               <td></td>
               <td>{{ facet['comment'][i] }}</td>
