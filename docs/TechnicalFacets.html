@@ -5,9 +5,9 @@
       <thead>
         <tr>
           <th>Id</th>
-          <th>Facets</th>
-          <th>Functions</th>
-          <th>Components</th>
+          <th>Facet</th>
+          <th>Function</th>
+          <th>Component</th>
           <th width="50%">Description</th>
           <th>Sources</th>
           <th>Comment</th>
@@ -57,7 +57,7 @@
 
   <body>
     <h1>Wf4Ever Consolidated Technical Facets</h1>
-    <p><em>This is a work in progress document, derived from tabular source data.</em></p>
+    <p><em>This is a work in progress document, derived from semi-structured source data.</em></p>
     <h2>Introduction</h2>
     <p>This document contains consolidated Wf4Ever technical facets from all sources.</p>
     <p>
@@ -72,10 +72,31 @@
     <p>
       @@TODO: Figure how to generate facets as "tag cloud" or similar hyperlinked to descriptions. 
     </p>
+    <p>
+      @@TODO: review assignment of categories to "facets" or "functions" - some choices are somewhat arbitrary or maybe plain wrong.  Facets should relate to technical design considerations.
+    </p>
 
     <h2>Technical facets</h2>
     <p>
+      Each facet is listed with the following information:
+      <dl>
+        <dt>Id</dt>
+        <dd>A label that will be used for cross-references</dd>
+        <dt>Facet</dt>
+        <dd>Name of facet</dd>
+        <dt>Function</dt>
+        <dd>User visible functions or concerns that are addressed by the technical requirements or features associated with this facet.</dd>
+        <dt>Component</dt>
+        <dd>Project components or work areas for which there are technical requirements associated with the facet</dd>
+        <dt>Description</dt>
+        <dd>One or more descriptions of the facet, mostly extracted verbatim from the sourve documents</dd>
+        <dt>Sources</dt>
+        <dd>Indicates source documents or other source from which the facet has been derived</dd>
+        <dt>Comment</dt>
+        <dd>Other notes - mainly editorial</dd>
+      </dl>
     </p>
+
     {{ TechnicalFacetsTable(d['TechnicalFacets']) }}
 
   </body>
