@@ -8,9 +8,9 @@
           <th>Facets</th>
           <th>Functions</th>
           <th>Components</th>
-          <th width="40%">Description</th>
+          <th width="50%">Description</th>
           <th>Sources</th>
-          <th width="25%">Comment</th>
+          <th>Comment</th>
         </tr>
       </thead>
       {% for id,facet in facetlist['reqs'] %}
@@ -27,6 +27,7 @@
                 {%- if facet['source'][refid] != None -%}
                   {{ '&nbsp;['+facet['source'][refid]+'] ' }}
                 {%- endif -%}
+                {{ ' ' }}
               {%- endfor %}
             </td>
             <td>{{ facet['comment'][0] }}</td>
@@ -55,16 +56,21 @@
   </head>
 
   <body>
+    <h1>Wf4Ever Consolidated Technical Facets</h1>
+    <p><em>This is a work in progress document, derived from tabular source data.</em></p>
     <h2>Introduction</h2>
     <p>This document contains consolidated Wf4Ever technical facets from all sources.</p>
     <p>
       These are mainly derived from the month 6 project deliverables documents, and need
-      some consolidation work.  The intent is that facet information applied to technical 
+      some review.  The intent is that facet information applied to technical 
       requirements can be used to isolate specific technical requirements applicable to 
       each of the project work areas.
     </p>
     <p>
       @@TODO: Need to say more about the nature of technical facets (or dimensions)? 
+    </p>
+    <p>
+      @@TODO: Figure how to generate facets as "tag cloud" or similar hyperlinked to descriptions. 
     </p>
 
     <h2>Technical facets</h2>
