@@ -1,0 +1,72 @@
+<html>
+
+  {% macro TechRequirementsTable(reqslist) %}
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>User req</th>
+          <th>Facet</th>
+          <th width="50%">Description</th>
+          <th>Source</th>
+          <th>Comment</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      {% for id,req in reqslist['reqs'] %}
+        <tbody>
+          <tr>
+            <td>{{ id }}</td>
+            <td>{{ req['userreq'][0] }}</td>
+            <td>{{ req['facet'][0] }}</td>
+            <td>{{ req['description'][0] }}</td>
+            <td>
+              {% for refid in req['source'] -%}
+                {{ refid }}
+                {%- if req['source'][refid] != None -%}
+                  {{ '&nbsp;['+req['source'][refid]+'] ' }}
+                {%- endif -%}
+              {%- endfor %}
+            </td>
+            <td>{{ req['comment'][0] }}</td>
+          </tr>
+          {% for i in range(1,req['len']) %}
+            <tr>
+              <td></td>
+              <td>{{ req['userreq'][i] }}</td>
+              <td>{{ req['facet'][i] }}</td>
+              <td>{{ req['description'][i] }}</td>
+              <td></td>
+              <td>{{ req['comment'][i] }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      {% endfor %}
+    </table>
+  {% endmacro %}
+
+  <head>
+    <title>Wf4Ever Consolidated Technical Requirements</title>
+    <link rel="stylesheet" href="trac.css" />
+    <link rel="stylesheet" href="reqs.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  </head>
+
+  <body>
+    <h2>Introduction</h2>
+    <p>This document contains consolidated Wf4Ever technical requirements from all sources.</p>
+
+    <h2>Technical requirements</h2>
+    
+    {{ TechRequirementsTable(d['TechRequirements-all']) }}
+
+  </body>
+</html>
+
