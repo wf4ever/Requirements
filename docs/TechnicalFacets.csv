@@ -1,62 +1,116 @@
-"Technical facets/dimensions for technical requirements",,,,,,
-,,,,,,
+"Technical facets/dimensions for technical requirements","","","","","",""
+"","","","","","",""
 ".keys","facet","function","component","description","source","comment"
 ".types","single","multiple","multiple","multiple","source","multiple"
-,,,,,,
+"","","","","","",""
 "Id","Facet","Function","Component","Description","Source","Comment"
-".start",,,,,,
-"TF101","Repeatable","Use","RO","Include sufficient information for others to rerun the investigation at a later date. As a Reuser I want to run an existing workflow with new data.","D2.1, D3.1",
-,,"Use, Manage, Evaluate","Evolution, Collaboration","The evolution and collaboration model should provide the mechanisms to identify and characterize different versions of a Research Object and the resources it encapsulates. The goal is to enable scientists to access the same version of the services and data sources involved in the experiments described by a Research Object. This will in turn allow the repetition of the experiments, e.g., to verify or validate the results.",,
-"TF102","Reproducible","Use","RO","Include sufficient information for an independent investigator to reproduce the results, e.g. obtain the same results. As a Reviewer I want to rerun an investigation to validate the result.","D2.1",
-"TF103","Reviewable","Evaluate","RO","Provide a a comprehensive record of what has happened, without necessarily including the means to perform the investigation again. As a Reviewer I want to follow the steps taken.","D2.1",
-,,"Evaluate","RO","Verification and validation of the components, along with measures of trust in the data, results and methods. As a Reviewer I want to follow the steps taken to validate the investigative process and identify any problems.","D2.1",
-,,"Collaborate, Evaluate","RO, collaboration","An important source of information about the Research Object supporting the collaboration of scientists is the justification of why and how particular decisions were made. Based on such justifications, scientists can better interpret a Research Object, its objective and speed up the collaborative work during the construction and adaptation of a Research Object. Hence, the should enable the representation and tracking of such justifications as the Research Object evolves. ","D3.1",
-,,"Create","RO","Why and how particular decisions were made. As a Creator I want to describe the relationships between aggregated resources.","D2.1",
+".start","","","","","",""
+"TF101","Repeatable","Use","RO","Include sufficient information for others to rerun the investigation at a later date. As a Reuser I want to run an existing workflow with new data.","D2.1, D3.1",""
+"","","Use, Manage, Evaluate","Evolution, Collaboration","The evolution and collaboration model should provide the mechanisms to identify and characterize different versions of a Research Object and the resources it encapsulates. The goal is to enable scientists to access the same version of the services and data sources involved in the experiments described by a Research Object. This will in turn allow the repetition of the experiments, e.g., to verify or validate the results.","",""
+"TF102","Reproducible","Use","RO","Include sufficient information for an independent investigator to reproduce the results, e.g. obtain the same results. As a Reviewer I want to rerun an investigation to validate the result.","D2.1",""
+"TF103","Reviewable","Evaluate","RO","Provide a a comprehensive record of what has happened, without necessarily including the means to perform the investigation again. As a Reviewer I want to follow the steps taken.","D2.1","Remove as facet? Use “Provenance” instead."
+"","","Evaluate","RO","Verification and validation of the components, along with measures of trust in the data, results and methods. As a Reviewer I want to follow the steps taken to validate the investigative process and identify any problems.","D2.1",""
+"","","Collaborate, Evaluate","RO, Collaboration","An important source of information about the Research Object supporting the collaboration of scientists is the justification of why and how particular decisions were made. Based on such justifications, scientists can better interpret a Research Object, its objective and speed up the collaborative work during the construction and adaptation of a Research Object. Hence, the should enable the representation and tracking of such justifications as the Research Object evolves.","D3.1",""
+"","","Create","RO","Why and how particular decisions were made. As a Creator I want to describe the relationships between aggregated resources.","D2.1",""
 "TF104","Alive","Modify, Use","RO","Provide dynamic links to content, updating with ease when something changes. As a Re-user I want to see versions of a workflow to use the latest working version.","D2.1, D3.1","Live/Refreshable/Notifiable."
-,,"Modify, Use","Evolution, Collaboration","Research Objects are subject to many different changes, especially because the resources they aggregate can be of a very dynamic nature, e.g., databases. As such, the evolution and collaboration model should enable the modelling of the transformations the Research Object goes through its lifetime.",,
-"TF105","Re-use","Create","RO, workflow","Deconstructing an investigation in order to reuse components or pieces. Reassembly of deconstructed aggregations. As a Re-user I want to build a new workflow based on an existing one.","D2.1",
-,,"Use","RO, workflow","Coping with change/loss/errors. As a Re-user I want to run an existing workflow with new data.","D2.1",
-"TF106","Composition","Create","RO","Deconstructing an investigation in order to reuse components or pieces. Reassembly of deconstructed aggregations. As a Re-user I want to build a new workflow based on an existing one.","D2.1",
+"","","Modify, Use","Evolution, Collaboration","Research Objects are subject to many different changes, especially because the resources they aggregate can be of a very dynamic nature, e.g., databases. As such, the evolution and collaboration model should enable the modelling of the transformations the Research Object goes through its lifetime.","",""
+"TF105","Re-use","Create","RO, Workflow","Deconstructing an investigation in order to reuse components or pieces. Reassembly of deconstructed aggregations. As a Re-user I want to build a new workflow based on an existing one.","D2.1","Remove as facet? Cover under “Use”"
+"","","Use","RO, Workflow","Coping with change/loss/errors. As a Re-user I want to run an existing workflow with new data.","D2.1",""
+"TF106","Composition","Create","RO","Deconstructing an investigation in order to reuse components or pieces. Reassembly of deconstructed aggregations. As a Re-user I want to build a new workflow based on an existing one.","D2.1",""
 "TF107","Resilience","Use, Evaluate","RO","Coping with change/loss/errors. As a Re-user I want to run an existing workflow with new data.","D2.1","Re-use??"
-"TF108","Cross-boundary","Discover","RO","Objects reused across different research communities. As a Reader I want to find relevant materials so that I can understand the field.","D2.1",
-"TF109","Discovery","Discover","RO","The ability to find/discover/retrieve ROs. Mechanisms for exposure/publication of ROs. As a Reader I want to survey the field to check if something has been done before.","D2.1",
-,,"Browse, Discover","RO","Browse and search for RO",,"Was UC14 from Piotr"
-,,"Discover","Recommender, RO","The recommender system must provide the necessary mechanisms in order to discover proactively the Research Objects that might be of interest to the user. This activity should be performed considering the following properties:","D3.1",
-,,"Discover, Understand, Use","RO","Features that enhance the ability to discover workflows and datasets, which are valuable for finding new ideas, understanding existing workflows, reuse of workflows and datasets, and finding related work. ","GK",
-"TF110","Identification","Cite, Link, Use, Share","RO","Features that allow a workflow or dataset or other element of a research object to be unambiguously identified, which in turn underpin linking, citation and aspects of re-use. ","GK",
-"TF111","Referenceable","Cite","RO","Means of identifying ROs. As a Publisher I want to provide references to ROs so that they can be cited.","D2.1, D3.1",
-,,"Cite","Evolution, Collaboration","The ability of representing different versions of a Research Object with the evolution and collaboration model, as noted above, will also play an important role supporting references to Research Objects, and the resources they encapsulate. In particular, the evolution and collaboration model should provide the means for the identification of such versions, which would enable their referencing as the Research Object evolves.",,
-"TF112","Versioning","Diagnose, View, Modify, Collaborate, Understand","Evolution, Collaboration","Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.","D2.1, D3.1",
-,,"Manage, Diagnose","Evolution, Provenance, Annotation","The evolution and collaboration model should allow keeping a complete track of the changes that the Research Object undergoes. The information to be modelled includes not only a representation about the changes themselves, but also about how those changes were applied (e.g., chronological order, dependencies between them); and possibly why they were conducted (e.g., argumentation).",,
-"TF113","Recoverable","Diagnose, View, Collaborate, Understand","Evolution, Collaboration","Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.","D2.1, D3.1",
-,,"Diagnose, View, Understand","Evolution, RO","Research Objects can change many times during their lifetime. Hence, scientists working with a Research Object may want to go back to a previous state of the Research Object, for instance, to retrace steps or to discard new changes introduced.",,
-"TF114","Repairable","Diagnose, View,  Understand, Repair","Evolution, Workflow","Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.","D2.1, D3.1",
-,,"Diagnose, View,  Understand, Repair","Evolution. RO, Workflow","During the lifetime of the Research Object, it could happen that some errors were introduced while making changes. So, in a similar situation as in the previous requirement, it may necessary to go back to a previous state of the Research Object. However, in addition to that, it should be feasible to make a diagnosis and potentially to fix the errors introduced. To this end, a complete log of the changes performed and how they were performed will be required.",,
-"TF115","Annotation","Annotate","RO","Store annotation of hypothesis, workflow design, data sets, results and interpretations ","Piotr","From UC1, UC4, UC5, UC6 by Piotr "
-,,"Annotate, Understand","RO","Features to allow additional explanations that record the rationale or intent of choices made in the conduct of some research, or which are provided to help other researchers to understand, review or re-use the material.","GK",
-"TF116","Comparable","Evaluate, Understand","RO, Evolution, Collaboration","One of motivations of modelling the evolution of Research Objects is to compare different versions of the Research Object, and in general to compare different states of the same Research Object or with similar Research Objects. This can be useful, for example, in aiding scientists to understand how a Research Object has changed from a previous state, to analyze the transformations, or to find individual contributions to the Research Object. ","D3.1",
-"TF117","Collaboration","Create","RO","Scientists should be able to work collaboratively in the construction of Research Objects. The involved members of the team may include scientists across disciplines with different expertise, and they may play different roles in such a collaborative process.","D3.1",
-"TF118","Social","Collaborate, Share, Use, Evaluate","Collaboration","Current workflow systems have limited collaborative support for sharing and reusing workflows and related resources. In fact they focus only on making workflows available for sharing. A more social approach is required to really improve the collaboration of scientists. A prerequisite for this will be the modelling of the relationships and interactions between scientist and the scientific resources they collaborate with, as well as the community generated information, such as ratings, reviews and usage logs.","D3.1",
-"TF119","Attribution","Cite","Collaboration, RO","In order to encourage the collaboration of scientists, special attention has to be paid to credit assignment and recognition of individual contributions. This includes, on the one hand a model for the characterization and identification of those resources, which would enable their citation and attribution in an easy and straightforward manner.","D3.1",
-,,"Cite","RO","References to the work of other researchers, used to acknowledge contributory work.","GK",
-"TF120","Presentable","Understand","Evolution, Collaboration","The evolution and collaboration model should be accessible and processable for both humans and machines.","D3.1",
-"TF121","Processable","Use","Evolution, Collaboration","The evolution and collaboration model should be accessible and processable for both humans and machines.","D3.1",
-"TF122","Interoperability","Use, Share, Collaborate","Evolution, Collaboration","The evolution and collaboration model should be available in a form that facilitates metadata exchange among applications.","D3.1",
-"TF123","Visualization","Understand, Collaborate","Sharing, RO","The visualization tool for Collaboration Spheres has to present in a graphical fashion how Research Objects are connected by sharing different resources. ","D3.1",
-"TF124","Security","Sharing","Sharing, RO, Repository","Research Objects should have different access and security properties depending on user’s role, allowing policies such as making Research Objects (or only part of it) to be freely accessible to all users; permitting a finer-grained definition of access permissions to just a target group of users; and also allowing the definition of partial and temporal access permissions. ","D3.1",
-"TF125","Information quality","Use","RO,  Collaboration","Scientists are only willing to reuse and extend good quality, trustworthy and coherent scientific work. Hence, the collaboration model should allow keeping trace of relevant information about those aspects of Research Objects, such as authors, contributors, applications, process used for its creation, reviews, etc.","D3.1",
-,,"Evaluate, Understand","Integrity, Authenticity","Information that records input data and processes upon which presented results are based.","GK",
-"TF126","Believability","Integrity, Authenticity","RO","The extent to which information is regarded as true and credible. In a sense, believability is the expected accuracy.  Synonyms: error rate, credibility, trustworthiness","D4.1",
-"TF127","Objectivity","Integrity","RO","The degree to which information is unbiased and impartial.","D4.1",
-"TF128","Reputation","Authenticity","RO","Is the degree to which the information or its source is in high standing.  Synonyms: credibility","D4.1",
-"TF129","Consistency","Integrity and Authenticity","RO","Implies that two or more values do not conflict with each other.  Synonyms: integrity, compatibility.","D4.1",
-"TF130","Verifiability","Integrity and Authenticity","RO","The degree and ease with which the information can be checked for correctness.  Synonyms: naturalness, traceability, provability.","D4.1",
-"TF131","Accuracy","Integrity and Authenticity","RO","The degree of correctness and precision with which information in an information system represents states of the real world.  Accuracy is often used synonymously with data quality, as opposed to information quality. For us, data quality or accuracy is only one aspect of the overall information quality. Synonyms: data quality, error rate, correctness, reliability, integrity, precision.","D4.1",
-"TF132","Completeness","Integrity and Authenticity","RO","The degree to which information is not missing.  Synonyms: coverage, scope, granularity, comprehensiveness, density, extent.","D4.1",
-"TF133","Content","Create, Use","RO","Kinds of information that a research object or workflow element should be able to represent or process.","GK",
-"TF134","Data types","Create, Use","RO","A controlled machine-processable annotation that allows different elements of a research object to be processed or presented appropriately withn the context of that research object. (See also the discussion of research objects in the Technical context section above.)","GK",
-"TF135","Composition","Create","RO, workflow","Features that allow complex workflows (or other objects) to be assembled from component elements.","GK",
-"TF136","Creation","Create","Workflow","Tools to allow users to create new workflows from scratch, or derived from pre-existing ones.","GK",
-"TF137","Use","Use","RO, workflow","Features that allow users to do useful things with workflows.","GK",
-"TF138","Re-use","Use, Share, Collaborate","RO, workflow","Features that facilitate re-use of workflows and other information.","GK",
-".end",,,,,,
+"TF108","Cross-boundary","Discover","RO","Objects reused across different research communities. As a Reader I want to find relevant materials so that I can understand the field.","D2.1",""
+"TF109","Discovery","Discover","RO","The ability to find/discover/retrieve ROs. Mechanisms for exposure/publication of ROs. As a Reader I want to survey the field to check if something has been done before.","D2.1",""
+"","","Browse, Discover","RO","Browse and search for RO","","Was UC14 from Piotr"
+"","","Discover","Recommender, RO","The recommender system must provide the necessary mechanisms in order to discover proactively the Research Objects that might be of interest to the user. This activity should be performed considering the following properties:","D3.1",""
+"","","Discover, Understand, Use","RO","Features that enhance the ability to discover workflows and datasets, which are valuable for finding new ideas, understanding existing workflows, reuse of workflows and datasets, and finding related work.","GK",""
+"TF110","Identification","Cite, Link, Use, Share","RO","Features that allow a workflow or dataset or other element of a research object to be unambiguously identified, which in turn underpin linking, citation and aspects of re-use.","GK",""
+"TF111","Referenceable","Cite","RO","Means of identifying ROs. As a Publisher I want to provide references to ROs so that they can be cited.","D2.1, D3.1",""
+"","","Cite","Evolution, Collaboration","The ability of representing different versions of a Research Object with the evolution and collaboration model, as noted above, will also play an important role supporting references to Research Objects, and the resources they encapsulate. In particular, the evolution and collaboration model should provide the means for the identification of such versions, which would enable their referencing as the Research Object evolves.","",""
+"TF112","Versioning","Diagnose, View, Modify, Collaborate, Understand","Evolution, Collaboration","Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.","D2.1, D3.1",""
+"","","Manage, Diagnose","Evolution, Provenance, Annotation","The evolution and collaboration model should allow keeping a complete track of the changes that the Research Object undergoes. The information to be modelled includes not only a representation about the changes themselves, but also about how those changes were applied (e.g., chronological order, dependencies between them); and possibly why they were conducted (e.g., argumentation).","",""
+"TF113","Recoverable","Diagnose, View, Collaborate, Understand","Evolution, Collaboration","Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.","D2.1, D3.1",""
+"","","Diagnose, View, Understand","Evolution, RO","Research Objects can change many times during their lifetime. Hence, scientists working with a Research Object may want to go back to a previous state of the Research Object, for instance, to retrace steps or to discard new changes introduced.","",""
+"TF114","Repairable","Diagnose, View, Understand, Repair","Evolution, Workflow","Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.","D2.1, D3.1",""
+"","","Diagnose, View, Understand, Repair","Evolution. RO, Workflow","During the lifetime of the Research Object, it could happen that some errors were introduced while making changes. So, in a similar situation as in the previous requirement, it may necessary to go back to a previous state of the Research Object. However, in addition to that, it should be feasible to make a diagnosis and potentially to fix the errors introduced. To this end, a complete log of the changes performed and how they were performed will be required.","",""
+"TF115","Annotation","Annotate","RO","Store annotation of hypothesis, workflow design, data sets, results and interpretations","Piotr","From UC1, UC4, UC5, UC6 by Piotr"
+"","","Annotate, Understand","RO","Features to allow additional explanations that record the rationale or intent of choices made in the conduct of some research, or which are provided to help other researchers to understand, review or re-use the material.","GK",""
+"TF116","Comparison","Evaluate, Understand","RO, Evolution, Collaboration","One of motivations of modelling the evolution of Research Objects is to compare different versions of the Research Object, and in general to compare different states of the same Research Object or with similar Research Objects. This can be useful, for example, in aiding scientists to understand how a Research Object has changed from a previous state, to analyze the transformations, or to find individual contributions to the Research Object.","D3.1",""
+"TF117","Collaboration","Create","RO, Collaboration","Scientists should be able to work collaboratively in the construction of Research Objects. The involved members of the team may include scientists across disciplines with different expertise, and they may play different roles in such a collaborative process.","D3.1",""
+"TF118","Social","Collaborate, Share, Use, Evaluate","Collaboration","Current workflow systems have limited collaborative support for sharing and reusing workflows and related resources. In fact they focus only on making workflows available for sharing. A more social approach is required to really improve the collaboration of scientists. A prerequisite for this will be the modelling of the relationships and interactions between scientist and the scientific resources they collaborate with, as well as the community generated information, such as ratings, reviews and usage logs.","D3.1",""
+"TF119","Attribution","Cite","Collaboration, RO","In order to encourage the collaboration of scientists, special attention has to be paid to credit assignment and recognition of individual contributions. This includes, on the one hand a model for the characterization and identification of those resources, which would enable their citation and attribution in an easy and straightforward manner.","D3.1",""
+"","","Cite","RO","References to the work of other researchers, used to acknowledge contributory work.","GK",""
+"TF120","Presentable","Understand","Evolution, Collaboration","The evolution and collaboration model should be accessible and processable for both humans and machines.","D3.1",""
+"TF121","Processable","Use","Evolution, Collaboration","The evolution and collaboration model should be accessible and processable for both humans and machines.","D3.1",""
+"TF122","Interoperability","Use, Share, Collaborate","Evolution, Collaboration","The evolution and collaboration model should be available in a form that facilitates metadata exchange among applications.","D3.1",""
+"TF123","Visualization","Understand, Collaborate","Sharing, RO","The visualization tool for Collaboration Spheres has to present in a graphical fashion how Research Objects are connected by sharing different resources.","D3.1",""
+"TF124","Security","Sharing","Sharing, RO, Repository","Research Objects should have different access and security properties depending on user’s role, allowing policies such as making Research Objects (or only part of it) to be freely accessible to all users; permitting a finer-grained definition of access permissions to just a target group of users; and also allowing the definition of partial and temporal access permissions.","D3.1",""
+"TF125","Info quality","Use","RO, Collaboration","Scientists are only willing to reuse and extend good quality, trustworthy and coherent scientific work. Hence, the collaboration model should allow keeping trace of relevant information about those aspects of Research Objects, such as authors, contributors, applications, process used for its creation, reviews, etc.","D3.1",""
+"","","Evaluate, Understand","Integrity, Authenticity","Information that records input data and processes upon which presented results are based.","GK",""
+"TF126","Believability","Integrity, Authenticity","RO","The extent to which information is regarded as true and credible. In a sense, believability is the expected accuracy. Synonyms: error rate, credibility, trustworthiness","D4.1","Remove as facet? Use “Provenance” instead."
+"TF127","Objectivity","Integrity","RO","The degree to which information is unbiased and impartial.","D4.1","Remove as facet? Use “Info quality” instead."
+"TF128","Reputation","Authenticity","RO","Is the degree to which the information or its source is in high standing. Synonyms: credibility","D4.1",""
+"TF129","Consistency","Integrity and Authenticity","RO","Implies that two or more values do not conflict with each other. Synonyms: integrity, compatibility.","D4.1","Remove as facet? Use “Info quality” instead."
+"TF130","Verifiability","Integrity and Authenticity","RO","The degree and ease with which the information can be checked for correctness. Synonyms: naturalness, traceability, provability.","D4.1","Remove as facet? Use “Provenance” instead."
+"TF131","Accuracy","Integrity and Authenticity","RO","The degree of correctness and precision with which information in an information system represents states of the real world. Accuracy is often used synonymously with data quality, as opposed to information quality. For us, data quality or accuracy is only one aspect of the overall information quality. Synonyms: data quality, error rate, correctness, reliability, integrity, precision.","D4.1","Remove as facet? Use “Info quality” instead."
+"TF132","Completeness","Integrity and Authenticity","RO","The degree to which information is not missing. Synonyms: coverage, scope, granularity, comprehensiveness, density, extent.","D4.1","Remove as facet? Use “Info quality” instead."
+"TF133","Content","Create, Use","RO","Kinds of information that a research object or workflow element should be able to represent or process.","GK",""
+"TF134","Data types","Create, Use","RO","A controlled machine-processable annotation that allows different elements of a research object to be processed or presented appropriately withn the context of that research object. (See also the discussion of research objects in the Technical context section above.)","GK",""
+"TF135","Composition","Create","RO, Workflow","Features that allow complex workflows (or other objects) to be assembled from component elements.","GK",""
+"TF136","Creation","Create","Workflow","Tools to allow users to create new workflows from scratch, or derived from pre-existing ones.","GK",""
+"TF137","Use","Use","RO, Workflow","Features that allow users to do useful things with workflows.","GK",""
+"TF138","Re-use","Use, Share, Collaborate","RO, Workflow","Features that facilitate re-use of workflows and other information.","GK","Duplicate facet; merge all under “Use”?"
+".end","","","","","",""
+
+"Summary:","","",""
+"","","",""
+"Facet","","User function","Component"
+"","","",""
+"Creation","","Store","Repository"
+"Modification","","Publish",""
+"Composition","","Update",""
+"Use","","Access",""
+"**Re-use","","Manage",""
+"Discovery","","Control",""
+"Recommendation","","Preserve",""
+"Security","","",""
+"++Access?","","",""
+"++Publishing","","",""
+"","","Create","RO"
+"Identification","","Modify","Workflow"
+"Comparison","","View",""
+"** Attribution","Subsume by “citation”?","Use",""
+"Annotation","","Diagnose",""
+"Referenceable","--> ""Citation"" ?","Repair",""
+"Linking","","Annotate",""
+"","","Cite",""
+"Repeatable","","Link",""
+"Reproducible","","Evaluate",""
+"Repurposeable","","Understand",""
+"","","",""
+"Re-usable","","Discover",""
+"Reliable","","Browse",""
+"**Reviewable","(information sufficient for comprehensive review)","",""
+"**Verifiable","(information sufficient for verification of result)","",""
+"Cross-boundary","(link/re-use across disciplinbes)","",""
+"Resilience","(usable in face of errors)","",""
+"Performance","","",""
+"","","",""
+"Alive","","","Evolution"
+"Versioning","","",""
+"Recoverable","(rollback to earlier state)","",""
+"Repairable","(correct errors from earlier executions)","",""
+"++History?","","",""
+"","","",""
+"Collaboration","(multiple contributors working together)","Share","Collaboration"
+"Social","(take account of social connections)","Rate","Sharing"
+"Reputation","","Visualize","Recommender"
+"Presentation","(human consumption)","Collaborate",""
+"Visualization","","",""
+"Processing","(machine consumption)","",""
+"Interoperability","","",""
+"Content","","",""
+"Data types","","",""
+"","","",""
+"Info quality","","","Authenticity"
+"Provenance","","","Integrity"
+

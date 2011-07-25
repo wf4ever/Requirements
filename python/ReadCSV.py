@@ -345,7 +345,9 @@ def readCSV(csvfilename, jsonfilename):
     colfuncs = default_column_functions
     csvfilestream = open(csvfilename, "r")
     for row in csv.reader(csvfilestream, dialect="excel"):
-        if row[0] == ".refs":
+        if len(row) == 0:
+            pass    # skip blank row: lpod-show.py adds blank line to CSV export
+        elif row[0] == ".refs":
             refs[row[1]] = row[2]
         elif row[0] == ".start":
             copydata = True
