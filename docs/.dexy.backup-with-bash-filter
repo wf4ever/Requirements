@@ -5,6 +5,10 @@
   "*.css|dexy" : {
     "inputs" : ["*.css|dexy"]
   },
+  "*.json|dexy"       : {
+    "inputs" : ["*.sh|bash"]
+  },
+  "*.sh|bash"         : {},
   "*.css|cp"          : {},
   "*.css|dexy"        : {},
   "*.py|py"           : {},

@@ -9,7 +9,7 @@ which lpod-show.py >/dev/null
 if [[ "$?" != "0" ]]; then
     echo "$0: This script needs lpod installed - see http://lpod-project.org/"
     echo "    lpod can be installed using apt-get on on Ubuntu Linux as lpod-python"
-    exit 0
+    exit 1
 fi
 
 for f in UserRequirements-astro UserRequirements-bio UserRequirements-gen TechRequirements-all TechnicalFacets; do
@@ -17,6 +17,8 @@ for f in UserRequirements-astro UserRequirements-bio UserRequirements-gen TechRe
     echo "python ../python/ReadCSV.py $f"
     python ../python/ReadCSV.py $f
 done
+
+exit 0
 
 #lpod-show.py ../data/UserRequirements-astro.ods >UserRequirements-astro.csv
 #python ../python/ReadCSV.py UserRequirements-astro
