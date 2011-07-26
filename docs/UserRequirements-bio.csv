@@ -1,5 +1,8 @@
 "Wf4Ever user requirements","","","","","","",""
 "","","","","","","",""
+".keys","role","require","reason","benefit","impact","source","comment"
+".types","multiple","single","multiple","multiple","multiple","source","multiple"
+"","","","","","","",""
 ".ref","1","http://www.wf4ever-project.org/wiki/display/privatefriends/User+Scenarios+-+User+Perspective+%282%29","","","","",""
 "","","","","","","",""
 "Id","As a...","I want...","So that...","Benefit","Impact","Source","Comment"

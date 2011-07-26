@@ -46,6 +46,8 @@
 #     , ...  
 #     } 
 #   }
+#
+# @@TODO: remove addRowDataOrig and tests
 
 import sys
 import os
@@ -105,7 +107,7 @@ def addRowDataOrig(rowdata, resultdata):
     return resultdata
 
 def testAddRowDataOrig():
-    r1 = addRowData(
+    r1 = addRowDataOrig(
         ["R1", "As", "I want", "So that", "3", "4", "Dx.y [1]", "Comment"],
         [])
     assert r1[0][0] == "R1"
@@ -117,7 +119,7 @@ def testAddRowDataOrig():
     assert r1[0][1]["impact"] == "4"
     assert r1[0][1]["source"]["Dx.y"] == "1"
     assert r1[0][1]["comment"] == "Comment"
-    r2 = addRowData(
+    r2 = addRowDataOrig(
         ["", "", "", "Another reason", "", "", "", ""],
         r1)
     assert r2[0][0] == "R1"
@@ -232,9 +234,12 @@ class col_sources:
 column_function_map = {
     'single':       col_single,
     'multiple':     col_multiple,
-    'commalist':    col_commalist,
+    'list':         col_commalist,
     'source':       col_sources
     }
+
+# Originally defaults for user requirements.  
+# Maybe could remove these now, but note tests below use them.
 
 default_column_keys = (
     'id',
@@ -374,6 +379,7 @@ if __name__ == "__main__":
         print "ReadCSV: Testing..."
         testDecodeSourceReferences()
         testCmpId()
+        testAddRowDataOrig()
         testAddRowData()
         print "ReadCSV: Testing done."
     elif sys.argv[1] != "" and os.path.isfile(sys.argv[1]+".csv"):

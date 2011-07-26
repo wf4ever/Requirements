@@ -1,5 +1,8 @@
 "Wf4Ever user requirements – from D2.1","","","","","","",""
 "","","","","","","",""
+".keys","role","require","reason","benefit","impact","source","comment"
+".types","multiple","single","multiple","multiple","multiple","source","multiple"
+"","","","","","","",""
 "Id","As a...","I want...","So that...","Benefit","Impact","Source","Comment"
 "","","","","(for me)","(to all)","",""
 ".ref","1","D2.1","","","","",""
