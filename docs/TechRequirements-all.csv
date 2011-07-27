@@ -30,7 +30,7 @@
 "TB3.1","UB3","Annotation, Content","ROs can store free-text documents with associated component type metdata indicating the type of information expressed, allowing the experimental design to be linked with the original hypothesis.","D4.1",""
 "TB3.2","UB3","Data types","A defined type for “original hypothesis”","D4.1",""
 "TB4.1","UB4","Citation, Provenance, Linking","Workflow can reference externally defined processing elements and workflows.","D4.1",""
-"TB4.2","UB4","Composition, Re-use
+"TB4.2","UB4","Composition, Re-use,
 Info quality","One or more mechanisms for describing workflows composed of component process elements, incorporated by reference rather than copying, allowing for re-use avoiding divergence between multiple instances.","D4.1",""
 "TB4.3","UB4","Data types","A defined component type for workflow or process element description","D4.1",""
 "TB4.4","UB4","Content","Representation of conceptual workflows, as a basis for discussing plans with supervisors/peers and starting to search for components.","D4.1",""
@@ -61,7 +61,7 @@ Provenance","Record association between different versions of workflows or workf
 "TB13.3","UB13","Discovery, Provenance","Find different versions of a workflow, or workflows used to test different versions of a hypothesis","D4.1",""
 "TB14.1","UB14","Annotation, Typing, Provenance","A defined component type for workflow annotation, linked to a workflow","D4.1",""
 "TB15.1","UB15","Content, Annotation, Linking, Provenance","Mechanism to link execution results and associated interpretation to initial hypothesis, allowing reviewers to follow an evolving understanding of the data and results generated.","D4.1",""
-"TB16.1","UB16","Content, Annotation. Presentation,Use","Record and view rationale for workflow.","GK",""
+"TB16.1","UB16","Content, Annotation, Presentation,Use","Record and view rationale for workflow.","GK",""
 "TB17.1","UB17","Annotation, Linking","Link data to external sources","GK",""
 "TB18.1","UB18, UB28","Annotation, Linking, Provenance, Publishing, Discovery, Reuse","Record interpretation of results, linked to experiment and data used","GK",""
 "TB19.1","UB19","Annotation, Linking, Provenance, Reuse","Record origin of experimental data used for analysis","GK",""
@@ -214,6 +214,8 @@ Completeness. The recommender system should provide the wider as possible set of
 "TR134","UR49","Security, Access","Mechanisms for “selective hiding” of content in an RO.","D2.1","Was: D2.1/TR8.4a"
 "TR135","UR49","Security, Access","Mechanisms for “selective hiding” of content in an RO.","D2.1","Was: D2.1/TR8.5a"
 ".end","","","","",""
+".xref","tr_byfacet","id","facet","",""
+".xref","ur_byfacet","userreq","facet","",""
 
 "","","","","",""
 "","","","","",""

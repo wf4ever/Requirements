@@ -1,7 +1,8 @@
 "Technical facets/dimensions for technical requirements","","","","","",""
 "","","","","","",""
 ".keys","facet","function","component","description","source","comment"
-".types","single","multiple","multiple","multiple","source","multiple"
+".types","single","multilist","multilist","multiple","source","multiple"
+".list","facets","","","","",""
 "","","","","","",""
 "Id","Facet","Function","Component","Description","Source","Comment"
 ".start","","","","","",""
@@ -60,6 +61,7 @@
 "TF137","Use","Use","RO, Workflow","Features that allow users to do useful things with workflows.","GK",""
 "TF138","Re-use","Use, Share, Collaborate","RO, Workflow","Features that facilitate re-use of workflows and other information.","GK","Duplicate facet; merge all under “Use”?"
 ".end","","","","","",""
+".dict","facetdict","facet","","","",""
 
 "Summary:","","",""
 "","","",""

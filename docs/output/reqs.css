@@ -3,6 +3,12 @@ td {
     text-align: left;
 }
 
+th {
+    vertical-align : top;
+    text-align: left;
+}
+
+
 td.number {
     text-align: center;
 }

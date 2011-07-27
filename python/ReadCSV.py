@@ -8,6 +8,31 @@
 #
 # The CSV input file is decorated with directives in column one key rows:
 #
+# .keys name1, name2, ...
+#       specify names for column keys in the resulting dictionary for each row, overriding default values.
+#       col[0] always has key 'id'.
+#
+# .types type1, type2, ...
+#       specify types for column valuyes in the resulting dictionary for each row, overriding default values.
+#       recognized types are 'single' (one value per entry), 'multiple' (multiple values on multiple rows),
+#      'list' (multiple values as comma-separated list, and 'source' (special fopr handling source document
+#       references - see '.ref' below)
+#       col[0] always has type single.
+#
+# .list keyname
+#       overrides key name for list of values in result dictionary
+#
+# .dict keyname, colname
+#       generates an column-keyed dictionary of list index values in JSON output, 
+#       to facilitate cross-referenced content in output document (e.g. list of 
+#       technical facets automatically generated from technical requirements can 
+#       extract facet description from facet data).
+#
+# .xref keyname, targetcol, sourcecol
+#       generates a cross-reference dictionary in the output that is accessed via 'keyname',
+#       and which for each distinct value found in sourcecol generates a list of values
+#       in targetcol associated with that value.
+#
 # .ref <tag> <description>
 #       provides a reference to an external source of information linked or
 #       referenced by the input file.
@@ -47,6 +72,10 @@
 #     } 
 #   }
 #
+# The name 'reqs' may be overridden by a .list line.
+#
+# If a .dict line is present in the input, a dictionary mapping identifiers to list indexes
+# is also generated.
 
 import sys
 import os
@@ -54,6 +83,136 @@ import csv
 import json
 import re
 from operator import itemgetter, attrgetter
+
+# Default keys for result dictionary
+default_list_key = "reqs"
+default_dict_key = "reqsdict"
+
+list_key = default_list_key
+dict_key = default_dict_key
+
+# Column functions and map
+
+class col_single:
+    """
+    Column functions for singleton item values
+    """
+    def __init__(self, key):
+        self._key = key
+        return
+    def set(self, itemdata, val):
+        itemdata[self._key] = val
+        return
+    def add(self, itemdata, val):
+        assert val == "", (
+            "id %s, column %s: cannot add value to singleton value"%
+            (itemdata['id'], self._key)
+            )
+
+class col_multiple:
+    """
+    Column functions for multiple item values appearing over multiple rows
+    New "col_multiple" value entries are aligned across columns.
+    """
+    def __init__(self, key):
+        self._key = key
+        return
+    def set(self, itemdata, val):
+        itemdata[self._key] = [val]
+        return
+    def add(self, itemdata, val):
+        if val != "":
+            # Pad value list to current sub-row count
+            while len(itemdata[self._key]) < itemdata['len']:
+                itemdata[self._key].append("")
+            # Append to value list
+            itemdata[self._key].append(val)
+        return
+
+class col_commalist:
+    """
+    Column functions for multiple item values appearing as a comma-separated
+    list
+    """
+    def __init__(self, key):
+        self._key = key
+        return
+    def set(self, itemdata, val):
+        itemdata[self._key] = [ v.strip() for v in val.split(",") ]
+        return
+    def add(self, itemdata, val):
+        if val != "":
+            itemdata[self._key] += [ v.strip() for v in val.split(",") ]
+        return
+
+class col_multilist:
+    """
+    Column functions for multiple rows of item values each having multiple values 
+    appearing as a comma-separated list
+    """
+    def __init__(self, key):
+        self._key = key
+        return
+    def set(self, itemdata, val):
+        itemdata[self._key] = [[ v.strip() for v in val.split(",") ]]
+        return
+    def add(self, itemdata, val):
+        if val != "":
+            # Pad value list to current sub-row count
+            while len(itemdata[self._key]) < itemdata['len']:
+                itemdata[self._key].append("")
+            # Append to value list
+            itemdata[self._key].append([ v.strip() for v in val.split(",") ])
+        return
+
+class col_sources:
+    """
+    Column functions for multiple source values appearing as a comma-separated
+    list
+    """
+    def __init__(self, key):
+        self._key = key
+        return
+    def set(self, itemdata, val):
+        itemdata[self._key] = decodeSourceReferences(val)
+        return
+    def add(self, itemdata, val):
+        if val != "":
+            itemdata[self._key].update(decodeSourceReferences(val))
+        return
+
+column_function_map = {
+    'single':       col_single,
+    'multiple':     col_multiple,
+    'list':         col_commalist,
+    'multilist':    col_multilist,
+    'source':       col_sources
+    }
+
+
+# Originally defaults for user requirements.  
+# Maybe could remove these now, but note tests below use them.
+
+default_column_keys = (
+    'id',
+    "role",
+    "require",
+    "reason",
+    "benefit",
+    "impact",
+    "source",
+    "comment"
+    )
+
+default_column_functions = (None,
+    col_multiple("role"),
+    col_single("require"),
+    col_multiple("reason"),
+    col_multiple("benefit"),
+    col_multiple("impact"),
+    col_sources("source"),
+    col_multiple("comment")
+    )
 
 def decodeSourceReferences(rowdata):
     #print "rowdata: "+rowdata
@@ -116,105 +275,6 @@ def addRowData(colfns, rowdata, resultdata):
                 moredata = 1
         itemdata['len'] += moredata
     return resultdata
-
-class col_single:
-    """
-    Column functions for singleton item values
-    """
-    def __init__(self, key):
-        self._key = key
-        return
-    def set(self, itemdata, val):
-        itemdata[self._key] = val
-        return
-    def add(self, itemdata, val):
-        assert val == "", (
-            "id %s, column %s: cannot add value to singleton value"%
-            (itemdata['id'], self._key)
-            )
-
-class col_multiple:
-    """
-    Column functions for multiple item values appearing over multiple rows
-    New "col_multiple" value entries are aligned across columns.
-    """
-    def __init__(self, key):
-        self._key = key
-        return
-    def set(self, itemdata, val):
-        itemdata[self._key] = [val]
-        return
-    def add(self, itemdata, val):
-        if val != "":
-            # Pad value list to current sub-row count
-            while len(itemdata[self._key]) < itemdata['len']:
-                itemdata[self._key].append("")
-            # Append to value list
-            itemdata[self._key].append(val)
-        return
-
-class col_commalist:
-    """
-    Column functions for multiple item values appearing as a comma-separated
-    list
-    """
-    def __init__(self, key):
-        self._key = key
-        return
-    def set(self, itemdata, val):
-        itemdata[self._key] = [ v.strip() for v in val.split(",") ]
-        return
-    def add(self, itemdata, val):
-        if val != "":
-            itemdata[self._key] += [ v.strip() for v in val.split(",") ]
-        return
-
-class col_sources:
-    """
-    Column functions for multiple source values appearing as a comma-separated
-    list
-    """
-    def __init__(self, key):
-        self._key = key
-        return
-    def set(self, itemdata, val):
-        itemdata[self._key] = decodeSourceReferences(val)
-        return
-    def add(self, itemdata, val):
-        if val != "":
-            itemdata[self._key].update(decodeSourceReferences(val))
-        return
-
-column_function_map = {
-    'single':       col_single,
-    'multiple':     col_multiple,
-    'list':         col_commalist,
-    'source':       col_sources
-    }
-
-# Originally defaults for user requirements.  
-# Maybe could remove these now, but note tests below use them.
-
-default_column_keys = (
-    'id',
-    "role",
-    "require",
-    "reason",
-    "benefit",
-    "impact",
-    "source",
-    "comment"
-    )
-
-default_column_functions = (None,
-    col_multiple("role"),
-    col_single("require"),
-    col_multiple("reason"),
-    col_multiple("benefit"),
-    col_multiple("impact"),
-    col_sources("source"),
-    col_multiple("comment")
-    )
 
 def testAddRowData():
     r1 = addRowData(default_column_functions,
@@ -297,7 +357,11 @@ def testCmpId():
 
 def readCSV(csvfilename, jsonfilename):
     # Read CSV data into internal data structure
-    data  = { 'refs': {}, 'reqs': [] }
+    global list_key
+    global dict_key
+    list_key = default_list_key
+    dict_key = default_dict_key
+    data  = { 'refs': {} }
     rowid = None
     copydata = False
     colkeys  = default_column_keys
@@ -307,7 +371,7 @@ def readCSV(csvfilename, jsonfilename):
         if len(row) == 0:
             pass    # skip blank row: lpod-show.py adds blank line to CSV export
         elif row[0] == ".refs":
-            refs[row[1]] = row[2]
+            data['refs'][row[1]] = row[2]
         elif row[0] == ".start":
             copydata = True
         elif row[0] == ".end":
@@ -316,12 +380,45 @@ def readCSV(csvfilename, jsonfilename):
             colkeys = ['id'] + row[1:]
         elif row[0] == ".types":
             colfuncs = [ None ] + [ column_function_map[row[i]](colkeys[i]) for i in range(1,len(row)) ]
+        elif row[0] == ".list":
+            list_key = row[1]
+            # .list keyname
+        elif row[0] == ".dict":
+            # .dict keyname, colname
+            dict_key = row[1]
+            listindex = {}
+            for i in range(len(data[list_key])):
+                k = data[list_key][i][1][row[2]]
+                listindex[k] = i
+            data[dict_key] = listindex
+        elif row[0] == ".xref":
+            # .xref keyname, targetcol, sourcecol
+            dict_key   = row[1]
+            target_col = row[2]
+            source_col = row[3]
+            xrefindex = {}
+            for i in range(len(data[list_key])):
+                srcval = data[list_key][i][1][source_col]
+                if isinstance(srcval, basestring): srcval = [srcval]
+                tgtval = data[list_key][i][1][target_col]
+                if isinstance(tgtval, basestring): tgtval = [tgtval]
+                for sk in srcval:
+                    if sk not in xrefindex:
+                        xrefindex[sk] = []
+                    for tk in tgtval:
+                        xrefindex[sk].append(tk)
+            data[dict_key] = xrefindex
         elif copydata:
-            addRowData(colfuncs, row, data['reqs'], )
+            if not data.has_key(list_key):
+                data[list_key] = []
+            addRowData(colfuncs, row, data[list_key] )
+
+
+
+
     csvfilestream.close()
     # Sort requirements by Id, assuming form ABCnnn
-    #data['reqs'] = [ [r[0],r[1]] for r in sorted(data['reqs'], cmpId, itemgetter(0))]
-    data['reqs'] = sorted(data['reqs'], cmpId, itemgetter(0))
+    data[list_key] = sorted(data[list_key], cmpId, itemgetter(0))
     # Now write resulting data
     jsonfilestream = open(jsonfilename, "w")
     json.dump(data, jsonfilestream, indent=4)

@@ -2,6 +2,14 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
   <head>
     <title>Wf4Ever Consolidated Technical Facets</title>
     <link rel="stylesheet" href="trac.css" />
@@ -55,743 +63,1949 @@
     <table>
       <thead>
         <tr>
-          <th>Id</th>
           <th>Facet</th>
+          <th>Id</th>
           <th>Function</th>
           <th>Component</th>
-          <th width="50%">Description</th>
+          <th width="35%">Description</th>
           <th>Sources</th>
+          <th>Tech reqs</th>
+          <th>User reqs</th>
           <th>Comment</th>
         </tr>
       </thead>
       
+        
+        
         <tbody>
-          <tr>
-            <td>TF101</td>
-            <td>Repeatable</td>
-            <td>Use</td>
-            <td>RO</td>
-            <td>Include sufficient information for others to rerun the investigation at a later date. As a Reuser I want to run an existing workflow with new data.</td>
-            <td>
-              D2.1 D3.1 
-            </td>
-            <td></td>
-          </tr>
           
             <tr>
+              <td id='Access'>
+    
+    <a href=TechnicalFacets.html#Access>Access</a>
+  
+  </td>
+              <td>--</td>
               <td></td>
               <td></td>
-              <td>Use, Manage, Evaluate</td>
-              <td>Evolution, Collaboration</td>
-              <td>The evolution and collaboration model should provide the mechanisms to identify and characterize different versions of a Research Object and the resources it encapsulates. The goal is to enable scientists to access the same version of the services and data sources involved in the experiments described by a Research Object. This will in turn allow the repetition of the experiments, e.g., to verify or validate the results.</td>
+              <td>UNDEFINED</td>
               <td></td>
-              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TB20.1>TB20.1</a>, <a href=TechRequirements-all.html#TB20.2>TB20.2</a>, <a href=TechRequirements-all.html#TR125>TR125</a>, <a href=TechRequirements-all.html#TR127>TR127</a>, <a href=TechRequirements-all.html#TR134>TR134</a>, <a href=TechRequirements-all.html#TR135>TR135</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UB20>UB20</a>, <a href=UserRequirements-all.html#UB20>UB20</a>, <a href=UserRequirements-all.html#UR42>UR42</a>, <a href=UserRequirements-all.html#UR46>UR46</a>, <a href=UserRequirements-all.html#UR49>UR49</a>, <a href=UserRequirements-all.html#UR49>UR49</a>
+  
+  </td>
             </tr>
           
         </tbody>
       
+        
+        
         <tbody>
-          <tr>
-            <td>TF102</td>
-            <td>Reproducible</td>
-            <td>Use</td>
-            <td>RO</td>
-            <td>Include sufficient information for an independent investigator to reproduce the results, e.g. obtain the same results. As a Reviewer I want to rerun an investigation to validate the result.</td>
-            <td>
-              D2.1 
-            </td>
-            <td></td>
-          </tr>
           
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF103</td>
-            <td>Reviewable</td>
-            <td>Evaluate</td>
-            <td>RO</td>
-            <td>Provide a a comprehensive record of what has happened, without necessarily including the means to perform the investigation again. As a Reviewer I want to follow the steps taken.</td>
-            <td>
-              D2.1 D3.1 
-            </td>
-            <td>Remove as facet? Use “Provenance” instead.</td>
-          </tr>
-          
+            
+            
+            
             <tr>
-              <td></td>
-              <td></td>
-              <td>Evaluate</td>
-              <td>RO</td>
-              <td>Verification and validation of the components, along with measures of trust in the data, results and methods. As a Reviewer I want to follow the steps taken to validate the investigative process and identify any problems.</td>
-              <td></td>
-              <td></td>
-            </tr>
-          
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Collaborate, Evaluate</td>
-              <td>RO, Collaboration</td>
-              <td>An important source of information about the Research Object supporting the collaboration of scientists is the justification of why and how particular decisions were made. Based on such justifications, scientists can better interpret a Research Object, its objective and speed up the collaborative work during the construction and adaptation of a Research Object. Hence, the should enable the representation and tracking of such justifications as the Research Object evolves.</td>
-              <td></td>
-              <td></td>
-            </tr>
-          
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Create</td>
-              <td>RO</td>
-              <td>Why and how particular decisions were made. As a Creator I want to describe the relationships between aggregated resources.</td>
-              <td></td>
-              <td></td>
-            </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF104</td>
-            <td>Alive</td>
-            <td>Modify, Use</td>
-            <td>RO</td>
-            <td>Provide dynamic links to content, updating with ease when something changes. As a Re-user I want to see versions of a workflow to use the latest working version.</td>
-            <td>
-              D2.1 D3.1 
-            </td>
-            <td>Live/Refreshable/Notifiable.</td>
-          </tr>
-          
-            <tr>
-              <td></td>
-              <td></td>
+              <td id='Alive'>
+    
+    <a href=TechnicalFacets.html#Alive>Alive</a>
+  
+  </td>
+              <td id='TF104'>
+    
+    <a href=TechnicalFacets.html#TF104>TF104</a>
+  
+  </td>
               <td>Modify, Use</td>
-              <td>Evolution, Collaboration</td>
-              <td>Research Objects are subject to many different changes, especially because the resources they aggregate can be of a very dynamic nature, e.g., databases. As such, the evolution and collaboration model should enable the modelling of the transformations the Research Object goes through its lifetime.</td>
+              <td>RO</td>
+              <td>Provide dynamic links to content, updating with ease when something changes. As a Re-user I want to see versions of a workflow to use the latest working version.</td>
+              <td rowspan='2'>
+                
+                  D2.1
+                    , 
+                  
+                  D3.1
+              </td>
+              <td rowspan='2'>
+    
+    <a href=TechRequirements-all.html#TA8.1>TA8.1</a>, <a href=TechRequirements-all.html#TR3>TR3</a>, <a href=TechRequirements-all.html#TR67>TR67</a>
+  
+  </td>
+              <td rowspan='2'>
+    
+    <a href=UserRequirements-all.html#UA8>UA8</a>, <a href=UserRequirements-all.html#UR3>UR3</a>, <a href=UserRequirements-all.html#UR4>UR4</a>, <a href=UserRequirements-all.html#UR14>UR14</a>, <a href=UserRequirements-all.html#UR18>UR18</a>, <a href=UserRequirements-all.html#UR23>UR23</a>, <a href=UserRequirements-all.html#UR24>UR24</a>, <a href=UserRequirements-all.html#UR30>UR30</a>, <a href=UserRequirements-all.html#UR31>UR31</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR41>UR41</a>, <a href=UserRequirements-all.html#UR42>UR42</a>, <a href=UserRequirements-all.html#UR17>UR17</a>, <a href=UserRequirements-all.html#UR18>UR18</a>
+  
+  </td>
+              <td>Live/Refreshable/Notifiable.</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Modify, Use</td>
+                <td>Evolution, Collaboration</td>
+                <td>Research Objects are subject to many different changes, especially because the resources they aggregate can be of a very dynamic nature, e.g., databases. As such, the evolution and collaboration model should enable the modelling of the transformations the Research Object goes through its lifetime.</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Annotation'>
+    
+    <a href=TechnicalFacets.html#Annotation>Annotation</a>
+  
+  </td>
+              <td id='TF115'>
+    
+    <a href=TechnicalFacets.html#TF115>TF115</a>
+  
+  </td>
+              <td>Annotate</td>
+              <td>RO</td>
+              <td>Store annotation of hypothesis, workflow design, data sets, results and interpretations</td>
+              <td rowspan='2'>
+                
+                  GK
+                    , 
+                  
+                  Piotr
+              </td>
+              <td rowspan='2'>
+    
+    <a href=TechRequirements-all.html#TA1.1>TA1.1</a>, <a href=TechRequirements-all.html#TA2.1>TA2.1</a>, <a href=TechRequirements-all.html#TA3.1>TA3.1</a>, <a href=TechRequirements-all.html#TA7.1>TA7.1</a>, <a href=TechRequirements-all.html#TA10.2>TA10.2</a>, <a href=TechRequirements-all.html#TB3.1>TB3.1</a>, <a href=TechRequirements-all.html#TB6.1>TB6.1</a>, <a href=TechRequirements-all.html#TB6.2>TB6.2</a>, <a href=TechRequirements-all.html#TB6.3>TB6.3</a>, <a href=TechRequirements-all.html#TB11.1>TB11.1</a>, <a href=TechRequirements-all.html#TB11.4>TB11.4</a>, <a href=TechRequirements-all.html#TB12.1>TB12.1</a>, <a href=TechRequirements-all.html#TB14.1>TB14.1</a>, <a href=TechRequirements-all.html#TB15.1>TB15.1</a>, <a href=TechRequirements-all.html#TB16.1>TB16.1</a>, <a href=TechRequirements-all.html#TB17.1>TB17.1</a>, <a href=TechRequirements-all.html#TB18.1>TB18.1</a>, <a href=TechRequirements-all.html#TB19.1>TB19.1</a>, <a href=TechRequirements-all.html#TB24.1>TB24.1</a>, <a href=TechRequirements-all.html#TB26.1>TB26.1</a>, <a href=TechRequirements-all.html#TB29.1>TB29.1</a>, <a href=TechRequirements-all.html#TB30.1>TB30.1</a>, <a href=TechRequirements-all.html#TR9>TR9</a>, <a href=TechRequirements-all.html#TR43>TR43</a>, <a href=TechRequirements-all.html#TR46>TR46</a>, <a href=TechRequirements-all.html#TR48>TR48</a>, <a href=TechRequirements-all.html#TR52>TR52</a>, <a href=TechRequirements-all.html#TR53>TR53</a>, <a href=TechRequirements-all.html#TR54>TR54</a>, <a href=TechRequirements-all.html#TR55>TR55</a>, <a href=TechRequirements-all.html#TR58>TR58</a>, <a href=TechRequirements-all.html#TR60>TR60</a>, <a href=TechRequirements-all.html#TR66>TR66</a>, <a href=TechRequirements-all.html#TR71>TR71</a>, <a href=TechRequirements-all.html#TR72>TR72</a>, <a href=TechRequirements-all.html#TR76>TR76</a>, <a href=TechRequirements-all.html#TR82>TR82</a>, <a href=TechRequirements-all.html#TR99>TR99</a>, <a href=TechRequirements-all.html#TR106>TR106</a>, <a href=TechRequirements-all.html#TR107>TR107</a>, <a href=TechRequirements-all.html#TR113>TR113</a>
+  
+  </td>
+              <td rowspan='2'>
+    
+    <a href=UserRequirements-all.html#UA1>UA1</a>, <a href=UserRequirements-all.html#UA2>UA2</a>, <a href=UserRequirements-all.html#UA3>UA3</a>, <a href=UserRequirements-all.html#UA7>UA7</a>, <a href=UserRequirements-all.html#UA10>UA10</a>, <a href=UserRequirements-all.html#UB3>UB3</a>, <a href=UserRequirements-all.html#UB6>UB6</a>, <a href=UserRequirements-all.html#UB6>UB6</a>, <a href=UserRequirements-all.html#UB6>UB6</a>, <a href=UserRequirements-all.html#UB11>UB11</a>, <a href=UserRequirements-all.html#UB11>UB11</a>, <a href=UserRequirements-all.html#UB12>UB12</a>, <a href=UserRequirements-all.html#UB14>UB14</a>, <a href=UserRequirements-all.html#UB15>UB15</a>, <a href=UserRequirements-all.html#UB16>UB16</a>, <a href=UserRequirements-all.html#UB17>UB17</a>, <a href=UserRequirements-all.html#UB18>UB18</a>, <a href=UserRequirements-all.html#UB28>UB28</a>, <a href=UserRequirements-all.html#UB19>UB19</a>, <a href=UserRequirements-all.html#UB24>UB24</a>, <a href=UserRequirements-all.html#UB26>UB26</a>, <a href=UserRequirements-all.html#UB29>UB29</a>, <a href=UserRequirements-all.html#UB30>UB30</a>, <a href=UserRequirements-all.html#UR11>UR11</a>, <a href=UserRequirements-all.html#UR22>UR22</a>, <a href=UserRequirements-all.html#UR6>UR6</a>, <a href=UserRequirements-all.html#UR9>UR9</a>, <a href=UserRequirements-all.html#UR9>UR9</a>, <a href=UserRequirements-all.html#UR11>UR11</a>, <a href=UserRequirements-all.html#UR11>UR11</a>, <a href=UserRequirements-all.html#UR12>UR12</a>, <a href=UserRequirements-all.html#UR12>UR12</a>, <a href=UserRequirements-all.html#UR13>UR13</a>, <a href=UserRequirements-all.html#UR13>UR13</a>, <a href=UserRequirements-all.html#UR16>UR16</a>, <a href=UserRequirements-all.html#UR19>UR19</a>, <a href=UserRequirements-all.html#UR19>UR19</a>, <a href=UserRequirements-all.html#UR22>UR22</a>, <a href=UserRequirements-all.html#UR25>UR25</a>, <a href=UserRequirements-all.html#UR34>UR34</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR37>UR37</a>
+  
+  </td>
+              <td>From UC1, UC4, UC5, UC6 by Piotr</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Annotate, Understand</td>
+                <td>RO</td>
+                <td>Features to allow additional explanations that record the rationale or intent of choices made in the conduct of some research, or which are provided to help other researchers to understand, review or re-use the material.</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Attribution'>
+    
+    <a href=TechnicalFacets.html#Attribution>Attribution</a>
+  
+  </td>
+              <td id='TF119'>
+    
+    <a href=TechnicalFacets.html#TF119>TF119</a>
+  
+  </td>
+              <td>Cite</td>
+              <td>Collaboration, RO</td>
+              <td>In order to encourage the collaboration of scientists, special attention has to be paid to credit assignment and recognition of individual contributions. This includes, on the one hand a model for the characterization and identification of those resources, which would enable their citation and attribution in an easy and straightforward manner.</td>
+              <td rowspan='2'>
+                
+                  D3.1
+                    , 
+                  
+                  GK
+              </td>
+              <td rowspan='2'>
+    
+    <a href=TechRequirements-all.html#TB2.1>TB2.1</a>, <a href=TechRequirements-all.html#TR8>TR8</a>, <a href=TechRequirements-all.html#TR50>TR50</a>
+  
+  </td>
+              <td rowspan='2'>
+    
+    <a href=UserRequirements-all.html#UB2>UB2</a>, <a href=UserRequirements-all.html#UR7>UR7</a>, <a href=UserRequirements-all.html#UR10>UR10</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Cite</td>
+                <td>RO</td>
+                <td>References to the work of other researchers, used to acknowledge contributory work.</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Citation'>
+    
+    <a href=TechnicalFacets.html#Citation>Citation</a>
+  
+  </td>
+              <td>--</td>
               <td></td>
               <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TB4.1>TB4.1</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UB4>UB4</a>
+  
+  </td>
             </tr>
           
         </tbody>
       
+        
+        
         <tbody>
-          <tr>
-            <td>TF105</td>
-            <td>Re-use</td>
-            <td>Create</td>
-            <td>RO, Workflow</td>
-            <td>Deconstructing an investigation in order to reuse components or pieces. Reassembly of deconstructed aggregations. As a Re-user I want to build a new workflow based on an existing one.</td>
-            <td>
-              D2.1 
-            </td>
-            <td>Remove as facet? Cover under “Use”</td>
-          </tr>
+          
+            
+            
+            
+            <tr>
+              <td id='Collaboration'>
+    
+    <a href=TechnicalFacets.html#Collaboration>Collaboration</a>
+  
+  </td>
+              <td id='TF117'>
+    
+    <a href=TechnicalFacets.html#TF117>TF117</a>
+  
+  </td>
+              <td>Create</td>
+              <td>RO, Collaboration</td>
+              <td>Scientists should be able to work collaboratively in the construction of Research Objects. The involved members of the team may include scientists across disciplines with different expertise, and they may play different roles in such a collaborative process.</td>
+              <td rowspan='1'>
+                
+                  D3.1
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TR16>TR16</a>, <a href=TechRequirements-all.html#TR17>TR17</a>, <a href=TechRequirements-all.html#TR20>TR20</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR38>UR38</a>, <a href=UserRequirements-all.html#UR34>UR34</a>, <a href=UserRequirements-all.html#UR43>UR43</a>, <a href=UserRequirements-all.html#UR44>UR44</a>, <a href=UserRequirements-all.html#UR43>UR43</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Comparison'>
+    
+    <a href=TechnicalFacets.html#Comparison>Comparison</a>
+  
+  </td>
+              <td id='TF116'>
+    
+    <a href=TechnicalFacets.html#TF116>TF116</a>
+  
+  </td>
+              <td>Evaluate, Understand</td>
+              <td>RO, Evolution, Collaboration</td>
+              <td>One of motivations of modelling the evolution of Research Objects is to compare different versions of the Research Object, and in general to compare different states of the same Research Object or with similar Research Objects. This can be useful, for example, in aiding scientists to understand how a Research Object has changed from a previous state, to analyze the transformations, or to find individual contributions to the Research Object.</td>
+              <td rowspan='1'>
+                
+                  D3.1
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TB1.1>TB1.1</a>, <a href=TechRequirements-all.html#TB8.3>TB8.3</a>, <a href=TechRequirements-all.html#TB8.4>TB8.4</a>, <a href=TechRequirements-all.html#TB27.1>TB27.1</a>, <a href=TechRequirements-all.html#TR7>TR7</a>, <a href=TechRequirements-all.html#TR92>TR92</a>, <a href=TechRequirements-all.html#TR93>TR93</a>, <a href=TechRequirements-all.html#TR96>TR96</a>, <a href=TechRequirements-all.html#TR98>TR98</a>, <a href=TechRequirements-all.html#TR103>TR103</a>, <a href=TechRequirements-all.html#TR104>TR104</a>, <a href=TechRequirements-all.html#TR105>TR105</a>, <a href=TechRequirements-all.html#TR107>TR107</a>, <a href=TechRequirements-all.html#TR124>TR124</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UB1>UB1</a>, <a href=UserRequirements-all.html#UB8>UB8</a>, <a href=UserRequirements-all.html#UB8>UB8</a>, <a href=UserRequirements-all.html#UB27>UB27</a>, <a href=UserRequirements-all.html#UR5>UR5</a>, <a href=UserRequirements-all.html#UR22>UR22</a>, <a href=UserRequirements-all.html#UR29>UR29</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR30>UR30</a>, <a href=UserRequirements-all.html#UR31>UR31</a>, <a href=UserRequirements-all.html#UR32>UR32</a>, <a href=UserRequirements-all.html#UR33>UR33</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR41>UR41</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Composition'>
+    
+    <a href=TechnicalFacets.html#Composition>Composition</a>
+  
+  </td>
+              <td id='TF135'>
+    
+    <a href=TechnicalFacets.html#TF135>TF135</a>
+  
+  </td>
+              <td>Create</td>
+              <td>RO, Workflow</td>
+              <td>Features that allow complex workflows (or other objects) to be assembled from component elements.</td>
+              <td rowspan='1'>
+                
+                  GK
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TB4.2>TB4.2</a>, <a href=TechRequirements-all.html#TB21.1>TB21.1</a>, <a href=TechRequirements-all.html#TB23.1>TB23.1</a>, <a href=TechRequirements-all.html#TR34>TR34</a>, <a href=TechRequirements-all.html#TR35>TR35</a>, <a href=TechRequirements-all.html#TR36>TR36</a>, <a href=TechRequirements-all.html#TR39>TR39</a>, <a href=TechRequirements-all.html#TR113>TR113</a>, <a href=TechRequirements-all.html#TR114>TR114</a>, <a href=TechRequirements-all.html#TR115>TR115</a>, <a href=TechRequirements-all.html#TR125>TR125</a>, <a href=TechRequirements-all.html#TR127>TR127</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UB4>UB4</a>, <a href=UserRequirements-all.html#UB21>UB21</a>, <a href=UserRequirements-all.html#UB23>UB23</a>, <a href=UserRequirements-all.html#UR3>UR3</a>, <a href=UserRequirements-all.html#UR3>UR3</a>, <a href=UserRequirements-all.html#UR3>UR3</a>, <a href=UserRequirements-all.html#UR5>UR5</a>, <a href=UserRequirements-all.html#UR37>UR37</a>, <a href=UserRequirements-all.html#UR37>UR37</a>, <a href=UserRequirements-all.html#UR37>UR37</a>, <a href=UserRequirements-all.html#UR42>UR42</a>, <a href=UserRequirements-all.html#UR46>UR46</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Consistency'>
+    
+    <a href=TechnicalFacets.html#Consistency>Consistency</a>
+  
+  </td>
+              <td id='TF129'>
+    
+    <a href=TechnicalFacets.html#TF129>TF129</a>
+  
+  </td>
+              <td>Integrity and Authenticity</td>
+              <td>RO</td>
+              <td>Implies that two or more values do not conflict with each other. Synonyms: integrity, compatibility.</td>
+              <td rowspan='1'>
+                
+                  D4.1
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TB2.2>TB2.2</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UB2>UB2</a>
+  
+  </td>
+              <td>Remove as facet? Use “Info quality” instead.</td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Content'>
+    
+    <a href=TechnicalFacets.html#Content>Content</a>
+  
+  </td>
+              <td id='TF133'>
+    
+    <a href=TechnicalFacets.html#TF133>TF133</a>
+  
+  </td>
+              <td>Create, Use</td>
+              <td>RO</td>
+              <td>Kinds of information that a research object or workflow element should be able to represent or process.</td>
+              <td rowspan='1'>
+                
+                  GK
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TB3.1>TB3.1</a>, <a href=TechRequirements-all.html#TB4.4>TB4.4</a>, <a href=TechRequirements-all.html#TB11.1>TB11.1</a>, <a href=TechRequirements-all.html#TB11.4>TB11.4</a>, <a href=TechRequirements-all.html#TB12.3>TB12.3</a>, <a href=TechRequirements-all.html#TB15.1>TB15.1</a>, <a href=TechRequirements-all.html#TB16.1>TB16.1</a>, <a href=TechRequirements-all.html#TB24.1>TB24.1</a>, <a href=TechRequirements-all.html#TB29.1>TB29.1</a>, <a href=TechRequirements-all.html#TB30.1>TB30.1</a>, <a href=TechRequirements-all.html#TB31.1>TB31.1</a>, <a href=TechRequirements-all.html#TR33>TR33</a>, <a href=TechRequirements-all.html#TR36>TR36</a>, <a href=TechRequirements-all.html#TR39>TR39</a>, <a href=TechRequirements-all.html#TR40>TR40</a>, <a href=TechRequirements-all.html#TR41>TR41</a>, <a href=TechRequirements-all.html#TR42>TR42</a>, <a href=TechRequirements-all.html#TR43>TR43</a>, <a href=TechRequirements-all.html#TR46>TR46</a>, <a href=TechRequirements-all.html#TR48>TR48</a>, <a href=TechRequirements-all.html#TR50>TR50</a>, <a href=TechRequirements-all.html#TR51>TR51</a>, <a href=TechRequirements-all.html#TR54>TR54</a>, <a href=TechRequirements-all.html#TR55>TR55</a>, <a href=TechRequirements-all.html#TR57>TR57</a>, <a href=TechRequirements-all.html#TR59>TR59</a>, <a href=TechRequirements-all.html#TR60>TR60</a>, <a href=TechRequirements-all.html#TR72>TR72</a>, <a href=TechRequirements-all.html#TR76>TR76</a>, <a href=TechRequirements-all.html#TR81>TR81</a>, <a href=TechRequirements-all.html#TR84>TR84</a>, <a href=TechRequirements-all.html#TR87>TR87</a>, <a href=TechRequirements-all.html#TR88>TR88</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UB3>UB3</a>, <a href=UserRequirements-all.html#UB4>UB4</a>, <a href=UserRequirements-all.html#UB11>UB11</a>, <a href=UserRequirements-all.html#UB11>UB11</a>, <a href=UserRequirements-all.html#UB12>UB12</a>, <a href=UserRequirements-all.html#UB15>UB15</a>, <a href=UserRequirements-all.html#UB16>UB16</a>, <a href=UserRequirements-all.html#UB24>UB24</a>, <a href=UserRequirements-all.html#UB29>UB29</a>, <a href=UserRequirements-all.html#UB30>UB30</a>, <a href=UserRequirements-all.html#UB31>UB31</a>, <a href=UserRequirements-all.html#UR2>UR2</a>, <a href=UserRequirements-all.html#UR3>UR3</a>, <a href=UserRequirements-all.html#UR5>UR5</a>, <a href=UserRequirements-all.html#UR5>UR5</a>, <a href=UserRequirements-all.html#UR6>UR6</a>, <a href=UserRequirements-all.html#UR7>UR7</a>, <a href=UserRequirements-all.html#UR6>UR6</a>, <a href=UserRequirements-all.html#UR9>UR9</a>, <a href=UserRequirements-all.html#UR9>UR9</a>, <a href=UserRequirements-all.html#UR10>UR10</a>, <a href=UserRequirements-all.html#UR10>UR10</a>, <a href=UserRequirements-all.html#UR12>UR12</a>, <a href=UserRequirements-all.html#UR12>UR12</a>, <a href=UserRequirements-all.html#UR13>UR13</a>, <a href=UserRequirements-all.html#UR13>UR13</a>, <a href=UserRequirements-all.html#UR13>UR13</a>, <a href=UserRequirements-all.html#UR19>UR19</a>, <a href=UserRequirements-all.html#UR22>UR22</a>, <a href=UserRequirements-all.html#UR24>UR24</a>, <a href=UserRequirements-all.html#UR26>UR26</a>, <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR28>UR28</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Creation'>
+    
+    <a href=TechnicalFacets.html#Creation>Creation</a>
+  
+  </td>
+              <td id='TF136'>
+    
+    <a href=TechnicalFacets.html#TF136>TF136</a>
+  
+  </td>
+              <td>Create</td>
+              <td>Workflow</td>
+              <td>Tools to allow users to create new workflows from scratch, or derived from pre-existing ones.</td>
+              <td rowspan='1'>
+                
+                  GK
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TB5.1>TB5.1</a>, <a href=TechRequirements-all.html#TB9.1>TB9.1</a>, <a href=TechRequirements-all.html#TB21.1>TB21.1</a>, <a href=TechRequirements-all.html#TB23.1>TB23.1</a>, <a href=TechRequirements-all.html#TR31>TR31</a>, <a href=TechRequirements-all.html#TR32>TR32</a>, <a href=TechRequirements-all.html#TR33>TR33</a>, <a href=TechRequirements-all.html#TR61>TR61</a>, <a href=TechRequirements-all.html#TR77>TR77</a>, <a href=TechRequirements-all.html#TR86>TR86</a>, <a href=TechRequirements-all.html#TR109>TR109</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UB5>UB5</a>, <a href=UserRequirements-all.html#UB9>UB9</a>, <a href=UserRequirements-all.html#UB21>UB21</a>, <a href=UserRequirements-all.html#UB23>UB23</a>, <a href=UserRequirements-all.html#UR1>UR1</a>, <a href=UserRequirements-all.html#UR1>UR1</a>, <a href=UserRequirements-all.html#UR2>UR2</a>, <a href=UserRequirements-all.html#UR14>UR14</a>, <a href=UserRequirements-all.html#UR23>UR23</a>, <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR36>UR36</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Cross-boundary'>
+    
+    <a href=TechnicalFacets.html#Cross-boundary>Cross-boundary</a>
+  
+  </td>
+              <td id='TF108'>
+    
+    <a href=TechnicalFacets.html#TF108>TF108</a>
+  
+  </td>
+              <td>Discover</td>
+              <td>RO</td>
+              <td>Objects reused across different research communities. As a Reader I want to find relevant materials so that I can understand the field.</td>
+              <td rowspan='1'>
+                
+                  D2.1
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TR19>TR19</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR48>UR48</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Data types'>
+    
+    <a href=TechnicalFacets.html#Data types>Data types</a>
+  
+  </td>
+              <td id='TF134'>
+    
+    <a href=TechnicalFacets.html#TF134>TF134</a>
+  
+  </td>
+              <td>Create, Use</td>
+              <td>RO</td>
+              <td>A controlled machine-processable annotation that allows different elements of a research object to be processed or presented appropriately withn the context of that research object. (See also the discussion of research objects in the Technical context section above.)</td>
+              <td rowspan='1'>
+                
+                  GK
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TA7.1>TA7.1</a>, <a href=TechRequirements-all.html#TB3.2>TB3.2</a>, <a href=TechRequirements-all.html#TB4.3>TB4.3</a>, <a href=TechRequirements-all.html#TB6.3>TB6.3</a>, <a href=TechRequirements-all.html#TB11.2>TB11.2</a>, <a href=TechRequirements-all.html#TB11.3>TB11.3</a>, <a href=TechRequirements-all.html#TB12.1>TB12.1</a>, <a href=TechRequirements-all.html#TB12.2>TB12.2</a>, <a href=TechRequirements-all.html#TB29.1>TB29.1</a>, <a href=TechRequirements-all.html#TR41>TR41</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UA7>UA7</a>, <a href=UserRequirements-all.html#UB3>UB3</a>, <a href=UserRequirements-all.html#UB4>UB4</a>, <a href=UserRequirements-all.html#UB6>UB6</a>, <a href=UserRequirements-all.html#UB11>UB11</a>, <a href=UserRequirements-all.html#UB11>UB11</a>, <a href=UserRequirements-all.html#UB12>UB12</a>, <a href=UserRequirements-all.html#UB12>UB12</a>, <a href=UserRequirements-all.html#UB29>UB29</a>, <a href=UserRequirements-all.html#UR6>UR6</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Discovery'>
+    
+    <a href=TechnicalFacets.html#Discovery>Discovery</a>
+  
+  </td>
+              <td id='TF109'>
+    
+    <a href=TechnicalFacets.html#TF109>TF109</a>
+  
+  </td>
+              <td>Discover</td>
+              <td>RO</td>
+              <td>The ability to find/discover/retrieve ROs. Mechanisms for exposure/publication of ROs. As a Reader I want to survey the field to check if something has been done before.</td>
+              <td rowspan='4'>
+                
+                  D3.1
+                    , 
+                  
+                  D2.1
+                    , 
+                  
+                  GK
+              </td>
+              <td rowspan='4'>
+    
+    <a href=TechRequirements-all.html#TA5.1>TA5.1</a>, <a href=TechRequirements-all.html#TA5.2>TA5.2</a>, <a href=TechRequirements-all.html#TB1.1>TB1.1</a>, <a href=TechRequirements-all.html#TB1.2>TB1.2</a>, <a href=TechRequirements-all.html#TB4.5>TB4.5</a>, <a href=TechRequirements-all.html#TB6.1>TB6.1</a>, <a href=TechRequirements-all.html#TB6.3>TB6.3</a>, <a href=TechRequirements-all.html#TB13.1>TB13.1</a>, <a href=TechRequirements-all.html#TB13.3>TB13.3</a>, <a href=TechRequirements-all.html#TB18.1>TB18.1</a>, <a href=TechRequirements-all.html#TB20.2>TB20.2</a>, <a href=TechRequirements-all.html#TR1>TR1</a>, <a href=TechRequirements-all.html#TR13>TR13</a>, <a href=TechRequirements-all.html#TR70>TR70</a>, <a href=TechRequirements-all.html#TR73>TR73</a>, <a href=TechRequirements-all.html#TR74>TR74</a>, <a href=TechRequirements-all.html#TR75>TR75</a>, <a href=TechRequirements-all.html#TR85>TR85</a>, <a href=TechRequirements-all.html#TR101>TR101</a>, <a href=TechRequirements-all.html#TR102>TR102</a>, <a href=TechRequirements-all.html#TR106>TR106</a>, <a href=TechRequirements-all.html#TR112>TR112</a>, <a href=TechRequirements-all.html#TR114>TR114</a>, <a href=TechRequirements-all.html#TR132>TR132</a>, <a href=TechRequirements-all.html#TR133>TR133</a>
+  
+  </td>
+              <td rowspan='4'>
+    
+    <a href=UserRequirements-all.html#UA5>UA5</a>, <a href=UserRequirements-all.html#UA5>UA5</a>, <a href=UserRequirements-all.html#UB1>UB1</a>, <a href=UserRequirements-all.html#UB1>UB1</a>, <a href=UserRequirements-all.html#UB4>UB4</a>, <a href=UserRequirements-all.html#UB6>UB6</a>, <a href=UserRequirements-all.html#UB6>UB6</a>, <a href=UserRequirements-all.html#UB13>UB13</a>, <a href=UserRequirements-all.html#UB13>UB13</a>, <a href=UserRequirements-all.html#UB18>UB18</a>, <a href=UserRequirements-all.html#UB28>UB28</a>, <a href=UserRequirements-all.html#UB20>UB20</a>, <a href=UserRequirements-all.html#UR2>UR2</a>, <a href=UserRequirements-all.html#UR19>UR19</a>, <a href=UserRequirements-all.html#UR20>UR20</a>, <a href=UserRequirements-all.html#UR21>UR21</a>, <a href=UserRequirements-all.html#UR24>UR24</a>, <a href=UserRequirements-all.html#UR26>UR26</a>, <a href=UserRequirements-all.html#UR27>UR27</a>, <a href=UserRequirements-all.html#UR37>UR37</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR44>UR44</a>, <a href=UserRequirements-all.html#UR46>UR46</a>, <a href=UserRequirements-all.html#UR48>UR48</a>, <a href=UserRequirements-all.html#UR20>UR20</a>, <a href=UserRequirements-all.html#UR19>UR19</a>, <a href=UserRequirements-all.html#UR20>UR20</a>, <a href=UserRequirements-all.html#UR21>UR21</a>, <a href=UserRequirements-all.html#UR22>UR22</a>, <a href=UserRequirements-all.html#UR26>UR26</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR36>UR36</a>, <a href=UserRequirements-all.html#UR37>UR37</a>, <a href=UserRequirements-all.html#UR48>UR48</a>, <a href=UserRequirements-all.html#UR48>UR48</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Browse, Discover</td>
+                <td>RO</td>
+                <td>Browse and search for RO</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td>Was UC14 from Piotr</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Discover</td>
+                <td>Recommender, RO</td>
+                <td>The recommender system must provide the necessary mechanisms in order to discover proactively the Research Objects that might be of interest to the user. This activity should be performed considering the following properties:</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Discover, Understand, Use</td>
+                <td>RO</td>
+                <td>Features that enhance the ability to discover workflows and datasets, which are valuable for finding new ideas, understanding existing workflows, reuse of workflows and datasets, and finding related work.</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
           
             <tr>
+              <td id='Historical'>
+    
+    <a href=TechnicalFacets.html#Historical>Historical</a>
+  
+  </td>
+              <td>--</td>
               <td></td>
               <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TR5>TR5</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UR5>UR5</a>, <a href=UserRequirements-all.html#UR16>UR16</a>, <a href=UserRequirements-all.html#UR22>UR22</a>, <a href=UserRequirements-all.html#UR25>UR25</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='History'>
+    
+    <a href=TechnicalFacets.html#History>History</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TR62>TR62</a>, <a href=TechRequirements-all.html#TR64>TR64</a>, <a href=TechRequirements-all.html#TR68>TR68</a>, <a href=TechRequirements-all.html#TR123>TR123</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UR14>UR14</a>, <a href=UserRequirements-all.html#UR15>UR15</a>, <a href=UserRequirements-all.html#UR17>UR17</a>, <a href=UserRequirements-all.html#UR18>UR18</a>, <a href=UserRequirements-all.html#UR41>UR41</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Identification'>
+    
+    <a href=TechnicalFacets.html#Identification>Identification</a>
+  
+  </td>
+              <td id='TF110'>
+    
+    <a href=TechnicalFacets.html#TF110>TF110</a>
+  
+  </td>
+              <td>Cite, Link, Use, Share</td>
+              <td>RO</td>
+              <td>Features that allow a workflow or dataset or other element of a research object to be unambiguously identified, which in turn underpin linking, citation and aspects of re-use.</td>
+              <td rowspan='1'>
+                
+                  GK
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TB2.2>TB2.2</a>, <a href=TechRequirements-all.html#TR45>TR45</a>, <a href=TechRequirements-all.html#TR47>TR47</a>, <a href=TechRequirements-all.html#TR65>TR65</a>, <a href=TechRequirements-all.html#TR115>TR115</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UB2>UB2</a>, <a href=UserRequirements-all.html#UR8>UR8</a>, <a href=UserRequirements-all.html#UR9>UR9</a>, <a href=UserRequirements-all.html#UR16>UR16</a>, <a href=UserRequirements-all.html#UR37>UR37</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Info quality'>
+    
+    <a href=TechnicalFacets.html#Info quality>Info quality</a>
+  
+  </td>
+              <td id='TF125'>
+    
+    <a href=TechnicalFacets.html#TF125>TF125</a>
+  
+  </td>
+              <td>Use</td>
+              <td>RO, Collaboration</td>
+              <td>Scientists are only willing to reuse and extend good quality, trustworthy and coherent scientific work. Hence, the collaboration model should allow keeping trace of relevant information about those aspects of Research Objects, such as authors, contributors, applications, process used for its creation, reviews, etc.</td>
+              <td rowspan='2'>
+                
+                  D3.1
+                    , 
+                  
+                  GK
+              </td>
+              <td rowspan='2'>
+    
+    <a href=TechRequirements-all.html#TA1.1>TA1.1</a>, <a href=TechRequirements-all.html#TA4.1>TA4.1</a>, <a href=TechRequirements-all.html#TA9.1>TA9.1</a>, <a href=TechRequirements-all.html#TA10.1>TA10.1</a>, <a href=TechRequirements-all.html#TA10.2>TA10.2</a>, <a href=TechRequirements-all.html#TB4.2>TB4.2</a>, <a href=TechRequirements-all.html#TR12>TR12</a>
+  
+  </td>
+              <td rowspan='2'>
+    
+    <a href=UserRequirements-all.html#UA1>UA1</a>, <a href=UserRequirements-all.html#UA4>UA4</a>, <a href=UserRequirements-all.html#UA9>UA9</a>, <a href=UserRequirements-all.html#UA10>UA10</a>, <a href=UserRequirements-all.html#UA10>UA10</a>, <a href=UserRequirements-all.html#UB4>UB4</a>, <a href=UserRequirements-all.html#UR19>UR19</a>, <a href=UserRequirements-all.html#UR27>UR27</a>, <a href=UserRequirements-all.html#UR34>UR34</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Evaluate, Understand</td>
+                <td>Integrity, Authenticity</td>
+                <td>Information that records input data and processes upon which presented results are based.</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Linking'>
+    
+    <a href=TechnicalFacets.html#Linking>Linking</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TA1.1>TA1.1</a>, <a href=TechRequirements-all.html#TA4.1>TA4.1</a>, <a href=TechRequirements-all.html#TA5.1>TA5.1</a>, <a href=TechRequirements-all.html#TA10.1>TA10.1</a>, <a href=TechRequirements-all.html#TB2.1>TB2.1</a>, <a href=TechRequirements-all.html#TB2.2>TB2.2</a>, <a href=TechRequirements-all.html#TB4.1>TB4.1</a>, <a href=TechRequirements-all.html#TB8.1>TB8.1</a>, <a href=TechRequirements-all.html#TB10.1>TB10.1</a>, <a href=TechRequirements-all.html#TB11.1>TB11.1</a>, <a href=TechRequirements-all.html#TB11.4>TB11.4</a>, <a href=TechRequirements-all.html#TB12.3>TB12.3</a>, <a href=TechRequirements-all.html#TB13.2>TB13.2</a>, <a href=TechRequirements-all.html#TB15.1>TB15.1</a>, <a href=TechRequirements-all.html#TB17.1>TB17.1</a>, <a href=TechRequirements-all.html#TB18.1>TB18.1</a>, <a href=TechRequirements-all.html#TB19.1>TB19.1</a>, <a href=TechRequirements-all.html#TB26.1>TB26.1</a>, <a href=TechRequirements-all.html#TB30.1>TB30.1</a>, <a href=TechRequirements-all.html#TR34>TR34</a>, <a href=TechRequirements-all.html#TR37>TR37</a>, <a href=TechRequirements-all.html#TR44>TR44</a>, <a href=TechRequirements-all.html#TR45>TR45</a>, <a href=TechRequirements-all.html#TR49>TR49</a>, <a href=TechRequirements-all.html#TR50>TR50</a>, <a href=TechRequirements-all.html#TR57>TR57</a>, <a href=TechRequirements-all.html#TR72>TR72</a>, <a href=TechRequirements-all.html#TR76>TR76</a>, <a href=TechRequirements-all.html#TR77>TR77</a>, <a href=TechRequirements-all.html#TR98>TR98</a>, <a href=TechRequirements-all.html#TR108>TR108</a>, <a href=TechRequirements-all.html#TR112>TR112</a>, <a href=TechRequirements-all.html#TR118>TR118</a>, <a href=TechRequirements-all.html#TR119>TR119</a>, <a href=TechRequirements-all.html#TR120>TR120</a>, <a href=TechRequirements-all.html#TR122>TR122</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UA1>UA1</a>, <a href=UserRequirements-all.html#UA4>UA4</a>, <a href=UserRequirements-all.html#UA5>UA5</a>, <a href=UserRequirements-all.html#UA10>UA10</a>, <a href=UserRequirements-all.html#UB2>UB2</a>, <a href=UserRequirements-all.html#UB2>UB2</a>, <a href=UserRequirements-all.html#UB4>UB4</a>, <a href=UserRequirements-all.html#UB8>UB8</a>, <a href=UserRequirements-all.html#UB10>UB10</a>, <a href=UserRequirements-all.html#UB11>UB11</a>, <a href=UserRequirements-all.html#UB11>UB11</a>, <a href=UserRequirements-all.html#UB12>UB12</a>, <a href=UserRequirements-all.html#UB13>UB13</a>, <a href=UserRequirements-all.html#UB15>UB15</a>, <a href=UserRequirements-all.html#UB17>UB17</a>, <a href=UserRequirements-all.html#UB18>UB18</a>, <a href=UserRequirements-all.html#UB28>UB28</a>, <a href=UserRequirements-all.html#UB19>UB19</a>, <a href=UserRequirements-all.html#UB26>UB26</a>, <a href=UserRequirements-all.html#UB30>UB30</a>, <a href=UserRequirements-all.html#UR3>UR3</a>, <a href=UserRequirements-all.html#UR4>UR4</a>, <a href=UserRequirements-all.html#UR8>UR8</a>, <a href=UserRequirements-all.html#UR8>UR8</a>, <a href=UserRequirements-all.html#UR9>UR9</a>, <a href=UserRequirements-all.html#UR10>UR10</a>, <a href=UserRequirements-all.html#UR13>UR13</a>, <a href=UserRequirements-all.html#UR19>UR19</a>, <a href=UserRequirements-all.html#UR22>UR22</a>, <a href=UserRequirements-all.html#UR23>UR23</a>, <a href=UserRequirements-all.html#UR33>UR33</a>, <a href=UserRequirements-all.html#UR36>UR36</a>, <a href=UserRequirements-all.html#UR36>UR36</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR41>UR41</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Modification'>
+    
+    <a href=TechnicalFacets.html#Modification>Modification</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TB5.1>TB5.1</a>, <a href=TechRequirements-all.html#TB21.2>TB21.2</a>, <a href=TechRequirements-all.html#TR61>TR61</a>, <a href=TechRequirements-all.html#TR63>TR63</a>, <a href=TechRequirements-all.html#TR109>TR109</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UB5>UB5</a>, <a href=UserRequirements-all.html#UB21>UB21</a>, <a href=UserRequirements-all.html#UR14>UR14</a>, <a href=UserRequirements-all.html#UR15>UR15</a>, <a href=UserRequirements-all.html#UR36>UR36</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Performance'>
+    
+    <a href=TechnicalFacets.html#Performance>Performance</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TA8.1>TA8.1</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UA8>UA8</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Planning'>
+    
+    <a href=TechnicalFacets.html#Planning>Planning</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TB29.1>TB29.1</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UB29>UB29</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Presentation'>
+    
+    <a href=TechnicalFacets.html#Presentation>Presentation</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TB16.1>TB16.1</a>, <a href=TechRequirements-all.html#TB22.1>TB22.1</a>, <a href=TechRequirements-all.html#TB22.2>TB22.2</a>, <a href=TechRequirements-all.html#TB31.1>TB31.1</a>, <a href=TechRequirements-all.html#TR91>TR91</a>, <a href=TechRequirements-all.html#TR95>TR95</a>, <a href=TechRequirements-all.html#TR97>TR97</a>, <a href=TechRequirements-all.html#TR98>TR98</a>, <a href=TechRequirements-all.html#TR106>TR106</a>, <a href=TechRequirements-all.html#TR107>TR107</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UB16>UB16</a>, <a href=UserRequirements-all.html#UB22>UB22</a>, <a href=UserRequirements-all.html#UB22>UB22</a>, <a href=UserRequirements-all.html#UB31>UB31</a>, <a href=UserRequirements-all.html#UR29>UR29</a>, <a href=UserRequirements-all.html#UR32>UR32</a>, <a href=UserRequirements-all.html#UR33>UR33</a>, <a href=UserRequirements-all.html#UR33>UR33</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR35>UR35</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Processing'>
+    
+    <a href=TechnicalFacets.html#Processing>Processing</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TR90>TR90</a>, <a href=TechRequirements-all.html#TR93>TR93</a>, <a href=TechRequirements-all.html#TR116>TR116</a>, <a href=TechRequirements-all.html#TR117>TR117</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR31>UR31</a>, <a href=UserRequirements-all.html#UR38>UR38</a>, <a href=UserRequirements-all.html#UR39>UR39</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Provenance'>
+    
+    <a href=TechnicalFacets.html#Provenance>Provenance</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TA1.1>TA1.1</a>, <a href=TechRequirements-all.html#TA2.1>TA2.1</a>, <a href=TechRequirements-all.html#TA3.1>TA3.1</a>, <a href=TechRequirements-all.html#TA4.1>TA4.1</a>, <a href=TechRequirements-all.html#TA6.1>TA6.1</a>, <a href=TechRequirements-all.html#TA8.1>TA8.1</a>, <a href=TechRequirements-all.html#TA9.1>TA9.1</a>, <a href=TechRequirements-all.html#TA10.1>TA10.1</a>, <a href=TechRequirements-all.html#TA10.2>TA10.2</a>, <a href=TechRequirements-all.html#TB2.1>TB2.1</a>, <a href=TechRequirements-all.html#TB4.1>TB4.1</a>, <a href=TechRequirements-all.html#TB5.2>TB5.2</a>, <a href=TechRequirements-all.html#TB7.2>TB7.2</a>, <a href=TechRequirements-all.html#TB8.1>TB8.1</a>, <a href=TechRequirements-all.html#TB8.4>TB8.4</a>, <a href=TechRequirements-all.html#TB11.1>TB11.1</a>, <a href=TechRequirements-all.html#TB11.4>TB11.4</a>, <a href=TechRequirements-all.html#TB12.1>TB12.1</a>, <a href=TechRequirements-all.html#TB12.3>TB12.3</a>, <a href=TechRequirements-all.html#TB13.2>TB13.2</a>, <a href=TechRequirements-all.html#TB13.3>TB13.3</a>, <a href=TechRequirements-all.html#TB14.1>TB14.1</a>, <a href=TechRequirements-all.html#TB15.1>TB15.1</a>, <a href=TechRequirements-all.html#TB18.1>TB18.1</a>, <a href=TechRequirements-all.html#TB19.1>TB19.1</a>, <a href=TechRequirements-all.html#TB30.1>TB30.1</a>, <a href=TechRequirements-all.html#TR47>TR47</a>, <a href=TechRequirements-all.html#TR48>TR48</a>, <a href=TechRequirements-all.html#TR87>TR87</a>, <a href=TechRequirements-all.html#TR88>TR88</a>, <a href=TechRequirements-all.html#TR97>TR97</a>, <a href=TechRequirements-all.html#TR126>TR126</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UA1>UA1</a>, <a href=UserRequirements-all.html#UA2>UA2</a>, <a href=UserRequirements-all.html#UA3>UA3</a>, <a href=UserRequirements-all.html#UA4>UA4</a>, <a href=UserRequirements-all.html#UA6>UA6</a>, <a href=UserRequirements-all.html#UA8>UA8</a>, <a href=UserRequirements-all.html#UA9>UA9</a>, <a href=UserRequirements-all.html#UA10>UA10</a>, <a href=UserRequirements-all.html#UA10>UA10</a>, <a href=UserRequirements-all.html#UB2>UB2</a>, <a href=UserRequirements-all.html#UB4>UB4</a>, <a href=UserRequirements-all.html#UB5>UB5</a>, <a href=UserRequirements-all.html#UB7>UB7</a>, <a href=UserRequirements-all.html#UB8>UB8</a>, <a href=UserRequirements-all.html#UB8>UB8</a>, <a href=UserRequirements-all.html#UB11>UB11</a>, <a href=UserRequirements-all.html#UB11>UB11</a>, <a href=UserRequirements-all.html#UB12>UB12</a>, <a href=UserRequirements-all.html#UB12>UB12</a>, <a href=UserRequirements-all.html#UB13>UB13</a>, <a href=UserRequirements-all.html#UB13>UB13</a>, <a href=UserRequirements-all.html#UB14>UB14</a>, <a href=UserRequirements-all.html#UB15>UB15</a>, <a href=UserRequirements-all.html#UB18>UB18</a>, <a href=UserRequirements-all.html#UB28>UB28</a>, <a href=UserRequirements-all.html#UB19>UB19</a>, <a href=UserRequirements-all.html#UB30>UB30</a>, <a href=UserRequirements-all.html#UR9>UR9</a>, <a href=UserRequirements-all.html#UR9>UR9</a>, <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR33>UR33</a>, <a href=UserRequirements-all.html#UR42>UR42</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Provenenace'>
+    
+    <a href=TechnicalFacets.html#Provenenace>Provenenace</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TR120>TR120</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UR40>UR40</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Publication'>
+    
+    <a href=TechnicalFacets.html#Publication>Publication</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TR129>TR129</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UR46>UR46</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Publishing'>
+    
+    <a href=TechnicalFacets.html#Publishing>Publishing</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TB18.1>TB18.1</a>, <a href=TechRequirements-all.html#TB31.1>TB31.1</a>, <a href=TechRequirements-all.html#TR53>TR53</a>, <a href=TechRequirements-all.html#TR56>TR56</a>, <a href=TechRequirements-all.html#TR59>TR59</a>, <a href=TechRequirements-all.html#TR132>TR132</a>, <a href=TechRequirements-all.html#TR133>TR133</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UB18>UB18</a>, <a href=UserRequirements-all.html#UB28>UB28</a>, <a href=UserRequirements-all.html#UB31>UB31</a>, <a href=UserRequirements-all.html#UR11>UR11</a>, <a href=UserRequirements-all.html#UR13>UR13</a>, <a href=UserRequirements-all.html#UR13>UR13</a>, <a href=UserRequirements-all.html#UR48>UR48</a>, <a href=UserRequirements-all.html#UR48>UR48</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Re-use'>
+    
+    <a href=TechnicalFacets.html#Re-use>Re-use</a>
+  
+  </td>
+              <td id='TF138'>
+    
+    <a href=TechnicalFacets.html#TF138>TF138</a>
+  
+  </td>
+              <td>Use, Share, Collaborate</td>
+              <td>RO, Workflow</td>
+              <td>Features that facilitate re-use of workflows and other information.</td>
+              <td rowspan='1'>
+                
+                  GK
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TB1.1>TB1.1</a>, <a href=TechRequirements-all.html#TB4.2>TB4.2</a>, <a href=TechRequirements-all.html#TB4.5>TB4.5</a>, <a href=TechRequirements-all.html#TB7.1>TB7.1</a>, <a href=TechRequirements-all.html#TB10.1>TB10.1</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UB1>UB1</a>, <a href=UserRequirements-all.html#UB4>UB4</a>, <a href=UserRequirements-all.html#UB4>UB4</a>, <a href=UserRequirements-all.html#UB7>UB7</a>, <a href=UserRequirements-all.html#UB10>UB10</a>
+  
+  </td>
+              <td>Duplicate facet; merge all under “Use”?</td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Recommendation'>
+    
+    <a href=TechnicalFacets.html#Recommendation>Recommendation</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TR1>TR1</a>, <a href=TechRequirements-all.html#TR2>TR2</a>, <a href=TechRequirements-all.html#TR13>TR13</a>, <a href=TechRequirements-all.html#TR15>TR15</a>, <a href=TechRequirements-all.html#TR17>TR17</a>, <a href=TechRequirements-all.html#TR18>TR18</a>, <a href=TechRequirements-all.html#TR19>TR19</a>, <a href=TechRequirements-all.html#TR74>TR74</a>, <a href=TechRequirements-all.html#TR99>TR99</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UR2>UR2</a>, <a href=UserRequirements-all.html#UR19>UR19</a>, <a href=UserRequirements-all.html#UR20>UR20</a>, <a href=UserRequirements-all.html#UR21>UR21</a>, <a href=UserRequirements-all.html#UR24>UR24</a>, <a href=UserRequirements-all.html#UR26>UR26</a>, <a href=UserRequirements-all.html#UR27>UR27</a>, <a href=UserRequirements-all.html#UR37>UR37</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR44>UR44</a>, <a href=UserRequirements-all.html#UR46>UR46</a>, <a href=UserRequirements-all.html#UR48>UR48</a>, <a href=UserRequirements-all.html#UR2>UR2</a>, <a href=UserRequirements-all.html#UR3>UR3</a>, <a href=UserRequirements-all.html#UR24>UR24</a>, <a href=UserRequirements-all.html#UR27>UR27</a>, <a href=UserRequirements-all.html#UR37>UR37</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR48>UR48</a>, <a href=UserRequirements-all.html#UR20>UR20</a>, <a href=UserRequirements-all.html#UR26>UR26</a>, <a href=UserRequirements-all.html#UR27>UR27</a>, <a href=UserRequirements-all.html#UR34>UR34</a>, <a href=UserRequirements-all.html#UR43>UR43</a>, <a href=UserRequirements-all.html#UR44>UR44</a>, <a href=UserRequirements-all.html#UR34>UR34</a>, <a href=UserRequirements-all.html#UR45>UR45</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR48>UR48</a>, <a href=UserRequirements-all.html#UR21>UR21</a>, <a href=UserRequirements-all.html#UR34>UR34</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Recoverable'>
+    
+    <a href=TechnicalFacets.html#Recoverable>Recoverable</a>
+  
+  </td>
+              <td id='TF113'>
+    
+    <a href=TechnicalFacets.html#TF113>TF113</a>
+  
+  </td>
+              <td>Diagnose, View, Collaborate, Understand</td>
+              <td>Evolution, Collaboration</td>
+              <td>Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.</td>
+              <td rowspan='2'>
+                
+                  D2.1
+                    , 
+                  
+                  D3.1
+              </td>
+              <td rowspan='2'>
+    
+    <a href=TechRequirements-all.html#TR10>TR10</a>, <a href=TechRequirements-all.html#TR69>TR69</a>
+  
+  </td>
+              <td rowspan='2'>
+    
+    <a href=UserRequirements-all.html#UR15>UR15</a>, <a href=UserRequirements-all.html#UR17>UR17</a>, <a href=UserRequirements-all.html#UR18>UR18</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Diagnose, View, Understand</td>
+                <td>Evolution, RO</td>
+                <td>Research Objects can change many times during their lifetime. Hence, scientists working with a Research Object may want to go back to a previous state of the Research Object, for instance, to retrace steps or to discard new changes introduced.</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Referenceable'>
+    
+    <a href=TechnicalFacets.html#Referenceable>Referenceable</a>
+  
+  </td>
+              <td id='TF111'>
+    
+    <a href=TechnicalFacets.html#TF111>TF111</a>
+  
+  </td>
+              <td>Cite</td>
+              <td>RO</td>
+              <td>Means of identifying ROs. As a Publisher I want to provide references to ROs so that they can be cited.</td>
+              <td rowspan='2'>
+                
+                  D2.1
+                    , 
+                  
+                  D3.1
+              </td>
+              <td rowspan='2'>
+    
+    <a href=TechRequirements-all.html#TB2.2>TB2.2</a>, <a href=TechRequirements-all.html#TR4>TR4</a>, <a href=TechRequirements-all.html#TR45>TR45</a>, <a href=TechRequirements-all.html#TR110>TR110</a>, <a href=TechRequirements-all.html#TR130>TR130</a>, <a href=TechRequirements-all.html#TR131>TR131</a>
+  
+  </td>
+              <td rowspan='2'>
+    
+    <a href=UserRequirements-all.html#UB2>UB2</a>, <a href=UserRequirements-all.html#UR3>UR3</a>, <a href=UserRequirements-all.html#UR4>UR4</a>, <a href=UserRequirements-all.html#UR8>UR8</a>, <a href=UserRequirements-all.html#UR9>UR9</a>, <a href=UserRequirements-all.html#UR10>UR10</a>, <a href=UserRequirements-all.html#UR16>UR16</a>, <a href=UserRequirements-all.html#UR17>UR17</a>, <a href=UserRequirements-all.html#UR35>UR35</a>, <a href=UserRequirements-all.html#UR36>UR36</a>, <a href=UserRequirements-all.html#UR41>UR41</a>, <a href=UserRequirements-all.html#UR46>UR46</a>, <a href=UserRequirements-all.html#UR47>UR47</a>, <a href=UserRequirements-all.html#UR8>UR8</a>, <a href=UserRequirements-all.html#UR36>UR36</a>, <a href=UserRequirements-all.html#UR47>UR47</a>, <a href=UserRequirements-all.html#UR47>UR47</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Cite</td>
+                <td>Evolution, Collaboration</td>
+                <td>The ability of representing different versions of a Research Object with the evolution and collaboration model, as noted above, will also play an important role supporting references to Research Objects, and the resources they encapsulate. In particular, the evolution and collaboration model should provide the means for the identification of such versions, which would enable their referencing as the Research Object evolves.</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Referencing'>
+    
+    <a href=TechnicalFacets.html#Referencing>Referencing</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TR57>TR57</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UR13>UR13</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Reliable'>
+    
+    <a href=TechnicalFacets.html#Reliable>Reliable</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TR9>TR9</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UR11>UR11</a>, <a href=UserRequirements-all.html#UR22>UR22</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Repairable'>
+    
+    <a href=TechnicalFacets.html#Repairable>Repairable</a>
+  
+  </td>
+              <td id='TF114'>
+    
+    <a href=TechnicalFacets.html#TF114>TF114</a>
+  
+  </td>
+              <td>Diagnose, View, Understand, Repair</td>
+              <td>Evolution, Workflow</td>
+              <td>Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.</td>
+              <td rowspan='2'>
+                
+                  D2.1
+                    , 
+                  
+                  D3.1
+              </td>
+              <td rowspan='2'>
+    
+    <a href=TechRequirements-all.html#TR11>TR11</a>, <a href=TechRequirements-all.html#TR69>TR69</a>
+  
+  </td>
+              <td rowspan='2'>
+    
+    <a href=UserRequirements-all.html#UR15>UR15</a>, <a href=UserRequirements-all.html#UR17>UR17</a>, <a href=UserRequirements-all.html#UR18>UR18</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Diagnose, View, Understand, Repair</td>
+                <td>Evolution. RO, Workflow</td>
+                <td>During the lifetime of the Research Object, it could happen that some errors were introduced while making changes. So, in a similar situation as in the previous requirement, it may necessary to go back to a previous state of the Research Object. However, in addition to that, it should be feasible to make a diagnosis and potentially to fix the errors introduced. To this end, a complete log of the changes performed and how they were performed will be required.</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Repeatability'>
+    
+    <a href=TechnicalFacets.html#Repeatability>Repeatability</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TB7.2>TB7.2</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UB7>UB7</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Repeatable'>
+    
+    <a href=TechnicalFacets.html#Repeatable>Repeatable</a>
+  
+  </td>
+              <td id='TF101'>
+    
+    <a href=TechnicalFacets.html#TF101>TF101</a>
+  
+  </td>
+              <td>Use</td>
+              <td>RO</td>
+              <td>Include sufficient information for others to rerun the investigation at a later date. As a Reuser I want to run an existing workflow with new data.</td>
+              <td rowspan='2'>
+                
+                  D2.1
+                    , 
+                  
+                  D3.1
+              </td>
+              <td rowspan='2'>
+    
+    <a href=TechRequirements-all.html#TA9.1>TA9.1</a>, <a href=TechRequirements-all.html#TR16>TR16</a>
+  
+  </td>
+              <td rowspan='2'>
+    
+    <a href=UserRequirements-all.html#UA9>UA9</a>, <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR38>UR38</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Use, Manage, Evaluate</td>
+                <td>Evolution, Collaboration</td>
+                <td>The evolution and collaboration model should provide the mechanisms to identify and characterize different versions of a Research Object and the resources it encapsulates. The goal is to enable scientists to access the same version of the services and data sources involved in the experiments described by a Research Object. This will in turn allow the repetition of the experiments, e.g., to verify or validate the results.</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Reproducible'>
+    
+    <a href=TechnicalFacets.html#Reproducible>Reproducible</a>
+  
+  </td>
+              <td id='TF102'>
+    
+    <a href=TechnicalFacets.html#TF102>TF102</a>
+  
+  </td>
+              <td>Use</td>
+              <td>RO</td>
+              <td>Include sufficient information for an independent investigator to reproduce the results, e.g. obtain the same results. As a Reviewer I want to rerun an investigation to validate the result.</td>
+              <td rowspan='1'>
+                
+                  D2.1
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TA9.1>TA9.1</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UA9>UA9</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Repurposeable'>
+    
+    <a href=TechnicalFacets.html#Repurposeable>Repurposeable</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TR2>TR2</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UR2>UR2</a>, <a href=UserRequirements-all.html#UR3>UR3</a>, <a href=UserRequirements-all.html#UR24>UR24</a>, <a href=UserRequirements-all.html#UR27>UR27</a>, <a href=UserRequirements-all.html#UR37>UR37</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR48>UR48</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Reputation'>
+    
+    <a href=TechnicalFacets.html#Reputation>Reputation</a>
+  
+  </td>
+              <td id='TF128'>
+    
+    <a href=TechnicalFacets.html#TF128>TF128</a>
+  
+  </td>
+              <td>Authenticity</td>
+              <td>RO</td>
+              <td>Is the degree to which the information or its source is in high standing. Synonyms: credibility</td>
+              <td rowspan='1'>
+                
+                  D4.1
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TR74>TR74</a>, <a href=TechRequirements-all.html#TR99>TR99</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UR21>UR21</a>, <a href=UserRequirements-all.html#UR34>UR34</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Reuse'>
+    
+    <a href=TechnicalFacets.html#Reuse>Reuse</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TB18.1>TB18.1</a>, <a href=TechRequirements-all.html#TB19.1>TB19.1</a>, <a href=TechRequirements-all.html#TB21.1>TB21.1</a>, <a href=TechRequirements-all.html#TB23.1>TB23.1</a>, <a href=TechRequirements-all.html#TB27.1>TB27.1</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UB18>UB18</a>, <a href=UserRequirements-all.html#UB28>UB28</a>, <a href=UserRequirements-all.html#UB19>UB19</a>, <a href=UserRequirements-all.html#UB21>UB21</a>, <a href=UserRequirements-all.html#UB23>UB23</a>, <a href=UserRequirements-all.html#UB27>UB27</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Security'>
+    
+    <a href=TechnicalFacets.html#Security>Security</a>
+  
+  </td>
+              <td id='TF124'>
+    
+    <a href=TechnicalFacets.html#TF124>TF124</a>
+  
+  </td>
+              <td>Sharing</td>
+              <td>Sharing, RO, Repository</td>
+              <td>Research Objects should have different access and security properties depending on user’s role, allowing policies such as making Research Objects (or only part of it) to be freely accessible to all users; permitting a finer-grained definition of access permissions to just a target group of users; and also allowing the definition of partial and temporal access permissions.</td>
+              <td rowspan='1'>
+                
+                  D3.1
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TB20.1>TB20.1</a>, <a href=TechRequirements-all.html#TB20.2>TB20.2</a>, <a href=TechRequirements-all.html#TR21>TR21</a>, <a href=TechRequirements-all.html#TR38>TR38</a>, <a href=TechRequirements-all.html#TR134>TR134</a>, <a href=TechRequirements-all.html#TR135>TR135</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UB20>UB20</a>, <a href=UserRequirements-all.html#UB20>UB20</a>, <a href=UserRequirements-all.html#UR49>UR49</a>, <a href=UserRequirements-all.html#UR4>UR4</a>, <a href=UserRequirements-all.html#UR49>UR49</a>, <a href=UserRequirements-all.html#UR49>UR49</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            <tr>
+              <td id='Typing'>
+    
+    <a href=TechnicalFacets.html#Typing>Typing</a>
+  
+  </td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TB14.1>TB14.1</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UB14>UB14</a>
+  
+  </td>
+            </tr>
+          
+        </tbody>
+      
+        
+        
+        <tbody>
+          
+            
+            
+            
+            <tr>
+              <td id='Use'>
+    
+    <a href=TechnicalFacets.html#Use>Use</a>
+  
+  </td>
+              <td id='TF137'>
+    
+    <a href=TechnicalFacets.html#TF137>TF137</a>
+  
+  </td>
               <td>Use</td>
               <td>RO, Workflow</td>
-              <td>Coping with change/loss/errors. As a Re-user I want to run an existing workflow with new data.</td>
-              <td></td>
+              <td>Features that allow users to do useful things with workflows.</td>
+              <td rowspan='1'>
+                
+                  GK
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TA2.1>TA2.1</a>, <a href=TechRequirements-all.html#TA3.1>TA3.1</a>, <a href=TechRequirements-all.html#TA4.1>TA4.1</a>, <a href=TechRequirements-all.html#TA5.2>TA5.2</a>, <a href=TechRequirements-all.html#TA6.1>TA6.1</a>, <a href=TechRequirements-all.html#TA8.1>TA8.1</a>, <a href=TechRequirements-all.html#TA9.1>TA9.1</a>, <a href=TechRequirements-all.html#TA10.1>TA10.1</a>, <a href=TechRequirements-all.html#TB5.1>TB5.1</a>, <a href=TechRequirements-all.html#TB7.1>TB7.1</a>, <a href=TechRequirements-all.html#TB8.2>TB8.2</a>, <a href=TechRequirements-all.html#TB10.1>TB10.1</a>, <a href=TechRequirements-all.html#TB16.1>TB16.1</a>, <a href=TechRequirements-all.html#TB22.1>TB22.1</a>, <a href=TechRequirements-all.html#TB22.2>TB22.2</a>, <a href=TechRequirements-all.html#TB27.1>TB27.1</a>, <a href=TechRequirements-all.html#TB31.1>TB31.1</a>, <a href=TechRequirements-all.html#TR59>TR59</a>, <a href=TechRequirements-all.html#TR67>TR67</a>, <a href=TechRequirements-all.html#TR73>TR73</a>, <a href=TechRequirements-all.html#TR75>TR75</a>, <a href=TechRequirements-all.html#TR78>TR78</a>, <a href=TechRequirements-all.html#TR79>TR79</a>, <a href=TechRequirements-all.html#TR80>TR80</a>, <a href=TechRequirements-all.html#TR83>TR83</a>, <a href=TechRequirements-all.html#TR87>TR87</a>, <a href=TechRequirements-all.html#TR88>TR88</a>, <a href=TechRequirements-all.html#TR89>TR89</a>, <a href=TechRequirements-all.html#TR90>TR90</a>, <a href=TechRequirements-all.html#TR91>TR91</a>, <a href=TechRequirements-all.html#TR92>TR92</a>, <a href=TechRequirements-all.html#TR93>TR93</a>, <a href=TechRequirements-all.html#TR94>TR94</a>, <a href=TechRequirements-all.html#TR95>TR95</a>, <a href=TechRequirements-all.html#TR96>TR96</a>, <a href=TechRequirements-all.html#TR97>TR97</a>, <a href=TechRequirements-all.html#TR98>TR98</a>, <a href=TechRequirements-all.html#TR111>TR111</a>, <a href=TechRequirements-all.html#TR116>TR116</a>, <a href=TechRequirements-all.html#TR117>TR117</a>, <a href=TechRequirements-all.html#TR118>TR118</a>, <a href=TechRequirements-all.html#TR125>TR125</a>, <a href=TechRequirements-all.html#TR126>TR126</a>, <a href=TechRequirements-all.html#TR127>TR127</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UA2>UA2</a>, <a href=UserRequirements-all.html#UA3>UA3</a>, <a href=UserRequirements-all.html#UA4>UA4</a>, <a href=UserRequirements-all.html#UA5>UA5</a>, <a href=UserRequirements-all.html#UA6>UA6</a>, <a href=UserRequirements-all.html#UA8>UA8</a>, <a href=UserRequirements-all.html#UA9>UA9</a>, <a href=UserRequirements-all.html#UA10>UA10</a>, <a href=UserRequirements-all.html#UB5>UB5</a>, <a href=UserRequirements-all.html#UB7>UB7</a>, <a href=UserRequirements-all.html#UB8>UB8</a>, <a href=UserRequirements-all.html#UB10>UB10</a>, <a href=UserRequirements-all.html#UB16>UB16</a>, <a href=UserRequirements-all.html#UB22>UB22</a>, <a href=UserRequirements-all.html#UB22>UB22</a>, <a href=UserRequirements-all.html#UB27>UB27</a>, <a href=UserRequirements-all.html#UB31>UB31</a>, <a href=UserRequirements-all.html#UR13>UR13</a>, <a href=UserRequirements-all.html#UR17>UR17</a>, <a href=UserRequirements-all.html#UR18>UR18</a>, <a href=UserRequirements-all.html#UR20>UR20</a>, <a href=UserRequirements-all.html#UR22>UR22</a>, <a href=UserRequirements-all.html#UR23>UR23</a>, <a href=UserRequirements-all.html#UR23>UR23</a>, <a href=UserRequirements-all.html#UR24>UR24</a>, <a href=UserRequirements-all.html#UR25>UR25</a>, <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR28>UR28</a>, <a href=UserRequirements-all.html#UR29>UR29</a>, <a href=UserRequirements-all.html#UR30>UR30</a>, <a href=UserRequirements-all.html#UR31>UR31</a>, <a href=UserRequirements-all.html#UR31>UR31</a>, <a href=UserRequirements-all.html#UR32>UR32</a>, <a href=UserRequirements-all.html#UR32>UR32</a>, <a href=UserRequirements-all.html#UR33>UR33</a>, <a href=UserRequirements-all.html#UR33>UR33</a>, <a href=UserRequirements-all.html#UR36>UR36</a>, <a href=UserRequirements-all.html#UR38>UR38</a>, <a href=UserRequirements-all.html#UR39>UR39</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR42>UR42</a>, <a href=UserRequirements-all.html#UR42>UR42</a>, <a href=UserRequirements-all.html#UR46>UR46</a>
+  
+  </td>
               <td></td>
             </tr>
+            
           
         </tbody>
       
+        
+        
         <tbody>
-          <tr>
-            <td>TF106</td>
-            <td>Composition</td>
-            <td>Create</td>
-            <td>RO</td>
-            <td>Deconstructing an investigation in order to reuse components or pieces. Reassembly of deconstructed aggregations. As a Re-user I want to build a new workflow based on an existing one.</td>
-            <td>
-              D2.1 
-            </td>
-            <td></td>
-          </tr>
           
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF107</td>
-            <td>Resilience</td>
-            <td>Use, Evaluate</td>
-            <td>RO</td>
-            <td>Coping with change/loss/errors. As a Re-user I want to run an existing workflow with new data.</td>
-            <td>
-              D2.1 
-            </td>
-            <td>Re-use??</td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF108</td>
-            <td>Cross-boundary</td>
-            <td>Discover</td>
-            <td>RO</td>
-            <td>Objects reused across different research communities. As a Reader I want to find relevant materials so that I can understand the field.</td>
-            <td>
-              D2.1 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF109</td>
-            <td>Discovery</td>
-            <td>Discover</td>
-            <td>RO</td>
-            <td>The ability to find/discover/retrieve ROs. Mechanisms for exposure/publication of ROs. As a Reader I want to survey the field to check if something has been done before.</td>
-            <td>
-              D3.1 D2.1 GK 
-            </td>
-            <td></td>
-          </tr>
-          
+            
+            
+            
             <tr>
-              <td></td>
-              <td></td>
-              <td>Browse, Discover</td>
+              <td id='Verifiability'>
+    
+    <a href=TechnicalFacets.html#Verifiability>Verifiability</a>
+  
+  </td>
+              <td id='TF130'>
+    
+    <a href=TechnicalFacets.html#TF130>TF130</a>
+  
+  </td>
+              <td>Integrity and Authenticity</td>
               <td>RO</td>
-              <td>Browse and search for RO</td>
-              <td></td>
-              <td>Was UC14 from Piotr</td>
+              <td>The degree and ease with which the information can be checked for correctness. Synonyms: naturalness, traceability, provability.</td>
+              <td rowspan='1'>
+                
+                  D4.1
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TB8.2>TB8.2</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UB8>UB8</a>
+  
+  </td>
+              <td>Remove as facet? Use “Provenance” instead.</td>
             </tr>
-          
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Discover</td>
-              <td>Recommender, RO</td>
-              <td>The recommender system must provide the necessary mechanisms in order to discover proactively the Research Objects that might be of interest to the user. This activity should be performed considering the following properties:</td>
-              <td></td>
-              <td></td>
-            </tr>
-          
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Discover, Understand, Use</td>
-              <td>RO</td>
-              <td>Features that enhance the ability to discover workflows and datasets, which are valuable for finding new ideas, understanding existing workflows, reuse of workflows and datasets, and finding related work.</td>
-              <td></td>
-              <td></td>
-            </tr>
+            
           
         </tbody>
       
+        
+        
         <tbody>
-          <tr>
-            <td>TF110</td>
-            <td>Identification</td>
-            <td>Cite, Link, Use, Share</td>
-            <td>RO</td>
-            <td>Features that allow a workflow or dataset or other element of a research object to be unambiguously identified, which in turn underpin linking, citation and aspects of re-use.</td>
-            <td>
-              GK 
-            </td>
-            <td></td>
-          </tr>
           
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF111</td>
-            <td>Referenceable</td>
-            <td>Cite</td>
-            <td>RO</td>
-            <td>Means of identifying ROs. As a Publisher I want to provide references to ROs so that they can be cited.</td>
-            <td>
-              D2.1 D3.1 
-            </td>
-            <td></td>
-          </tr>
-          
+            
+            
+            
             <tr>
-              <td></td>
-              <td></td>
-              <td>Cite</td>
+              <td id='Versioning'>
+    
+    <a href=TechnicalFacets.html#Versioning>Versioning</a>
+  
+  </td>
+              <td id='TF112'>
+    
+    <a href=TechnicalFacets.html#TF112>TF112</a>
+  
+  </td>
+              <td>Diagnose, View, Modify, Collaborate, Understand</td>
               <td>Evolution, Collaboration</td>
-              <td>The ability of representing different versions of a Research Object with the evolution and collaboration model, as noted above, will also play an important role supporting references to Research Objects, and the resources they encapsulate. In particular, the evolution and collaboration model should provide the means for the identification of such versions, which would enable their referencing as the Research Object evolves.</td>
-              <td></td>
+              <td>Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.</td>
+              <td rowspan='2'>
+                
+                  D2.1
+                    , 
+                  
+                  D3.1
+              </td>
+              <td rowspan='2'>
+    
+    <a href=TechRequirements-all.html#TA4.1>TA4.1</a>, <a href=TechRequirements-all.html#TR6>TR6</a>, <a href=TechRequirements-all.html#TR62>TR62</a>, <a href=TechRequirements-all.html#TR64>TR64</a>, <a href=TechRequirements-all.html#TR68>TR68</a>, <a href=TechRequirements-all.html#TR100>TR100</a>, <a href=TechRequirements-all.html#TR109>TR109</a>, <a href=TechRequirements-all.html#TR111>TR111</a>, <a href=TechRequirements-all.html#TR119>TR119</a>, <a href=TechRequirements-all.html#TR121>TR121</a>, <a href=TechRequirements-all.html#TR122>TR122</a>, <a href=TechRequirements-all.html#TR123>TR123</a>, <a href=TechRequirements-all.html#TR124>TR124</a>, <a href=TechRequirements-all.html#TR128>TR128</a>
+  
+  </td>
+              <td rowspan='2'>
+    
+    <a href=UserRequirements-all.html#UA4>UA4</a>, <a href=UserRequirements-all.html#UR16>UR16</a>, <a href=UserRequirements-all.html#UR41>UR41</a>, <a href=UserRequirements-all.html#UR14>UR14</a>, <a href=UserRequirements-all.html#UR15>UR15</a>, <a href=UserRequirements-all.html#UR17>UR17</a>, <a href=UserRequirements-all.html#UR18>UR18</a>, <a href=UserRequirements-all.html#UR34>UR34</a>, <a href=UserRequirements-all.html#UR36>UR36</a>, <a href=UserRequirements-all.html#UR36>UR36</a>, <a href=UserRequirements-all.html#UR40>UR40</a>, <a href=UserRequirements-all.html#UR41>UR41</a>, <a href=UserRequirements-all.html#UR41>UR41</a>, <a href=UserRequirements-all.html#UR41>UR41</a>, <a href=UserRequirements-all.html#UR41>UR41</a>, <a href=UserRequirements-all.html#UR46>UR46</a>
+  
+  </td>
               <td></td>
             </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Manage, Diagnose</td>
+                <td>Evolution, Provenance, Annotation</td>
+                <td>The evolution and collaboration model should allow keeping a complete track of the changes that the Research Object undergoes. The information to be modelled includes not only a representation about the changes themselves, but also about how those changes were applied (e.g., chronological order, dependencies between them); and possibly why they were conducted (e.g., argumentation).</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td></td>
+              </tr>
+            
           
         </tbody>
       
+        
+        
         <tbody>
-          <tr>
-            <td>TF112</td>
-            <td>Versioning</td>
-            <td>Diagnose, View, Modify, Collaborate, Understand</td>
-            <td>Evolution, Collaboration</td>
-            <td>Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.</td>
-            <td>
-              D2.1 D3.1 
-            </td>
-            <td></td>
-          </tr>
+          
+            
+            
+            
+            <tr>
+              <td id='Visualization'>
+    
+    <a href=TechnicalFacets.html#Visualization>Visualization</a>
+  
+  </td>
+              <td id='TF123'>
+    
+    <a href=TechnicalFacets.html#TF123>TF123</a>
+  
+  </td>
+              <td>Understand, Collaborate</td>
+              <td>Sharing, RO</td>
+              <td>The visualization tool for Collaboration Spheres has to present in a graphical fashion how Research Objects are connected by sharing different resources.</td>
+              <td rowspan='1'>
+                
+                  D3.1
+              </td>
+              <td rowspan='1'>
+    
+    <a href=TechRequirements-all.html#TA5.2>TA5.2</a>, <a href=TechRequirements-all.html#TA6.1>TA6.1</a>, <a href=TechRequirements-all.html#TR14>TR14</a>, <a href=TechRequirements-all.html#TR73>TR73</a>, <a href=TechRequirements-all.html#TR75>TR75</a>
+  
+  </td>
+              <td rowspan='1'>
+    
+    <a href=UserRequirements-all.html#UA5>UA5</a>, <a href=UserRequirements-all.html#UA6>UA6</a>, <a href=UserRequirements-all.html#UR22>UR22</a>, <a href=UserRequirements-all.html#UR33>UR33</a>, <a href=UserRequirements-all.html#UR20>UR20</a>, <a href=UserRequirements-all.html#UR22>UR22</a>
+  
+  </td>
+              <td></td>
+            </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        <tbody>
           
             <tr>
+              <td id='Workflow'>
+    
+    <a href=TechnicalFacets.html#Workflow>Workflow</a>
+  
+  </td>
+              <td>--</td>
               <td></td>
               <td></td>
-              <td>Manage, Diagnose</td>
-              <td>Evolution, Provenance, Annotation</td>
-              <td>The evolution and collaboration model should allow keeping a complete track of the changes that the Research Object undergoes. The information to be modelled includes not only a representation about the changes themselves, but also about how those changes were applied (e.g., chronological order, dependencies between them); and possibly why they were conducted (e.g., argumentation).</td>
+              <td>UNDEFINED</td>
               <td></td>
-              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TB21.1>TB21.1</a>, <a href=TechRequirements-all.html#TB21.2>TB21.2</a>, <a href=TechRequirements-all.html#TB22.1>TB22.1</a>, <a href=TechRequirements-all.html#TB23.1>TB23.1</a>, <a href=TechRequirements-all.html#TB24.1>TB24.1</a>, <a href=TechRequirements-all.html#TB24.1>TB24.1</a>, <a href=TechRequirements-all.html#TB25.1>TB25.1</a>, <a href=TechRequirements-all.html#TB27.1>TB27.1</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UB21>UB21</a>, <a href=UserRequirements-all.html#UB21>UB21</a>, <a href=UserRequirements-all.html#UB22>UB22</a>, <a href=UserRequirements-all.html#UB23>UB23</a>, <a href=UserRequirements-all.html#UB24>UB24</a>, <a href=UserRequirements-all.html#UB24>UB24</a>, <a href=UserRequirements-all.html#UB25>UB25</a>, <a href=UserRequirements-all.html#UB27>UB27</a>
+  
+  </td>
             </tr>
           
         </tbody>
       
+        
+        
         <tbody>
-          <tr>
-            <td>TF113</td>
-            <td>Recoverable</td>
-            <td>Diagnose, View, Collaborate, Understand</td>
-            <td>Evolution, Collaboration</td>
-            <td>Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.</td>
-            <td>
-              D2.1 D3.1 
-            </td>
-            <td></td>
-          </tr>
           
             <tr>
+              <td id='provenance'>
+    
+    <a href=TechnicalFacets.html#provenance>provenance</a>
+  
+  </td>
+              <td>--</td>
               <td></td>
               <td></td>
-              <td>Diagnose, View, Understand</td>
-              <td>Evolution, RO</td>
-              <td>Research Objects can change many times during their lifetime. Hence, scientists working with a Research Object may want to go back to a previous state of the Research Object, for instance, to retrace steps or to discard new changes introduced.</td>
+              <td>UNDEFINED</td>
               <td></td>
-              <td></td>
+              <td>
+    
+    <a href=TechRequirements-all.html#TR12>TR12</a>
+  
+  </td>
+              <td>
+    
+    <a href=UserRequirements-all.html#UR19>UR19</a>, <a href=UserRequirements-all.html#UR27>UR27</a>, <a href=UserRequirements-all.html#UR34>UR34</a>
+  
+  </td>
             </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF114</td>
-            <td>Repairable</td>
-            <td>Diagnose, View, Understand, Repair</td>
-            <td>Evolution, Workflow</td>
-            <td>Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.</td>
-            <td>
-              D2.1 D3.1 
-            </td>
-            <td></td>
-          </tr>
-          
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Diagnose, View, Understand, Repair</td>
-              <td>Evolution. RO, Workflow</td>
-              <td>During the lifetime of the Research Object, it could happen that some errors were introduced while making changes. So, in a similar situation as in the previous requirement, it may necessary to go back to a previous state of the Research Object. However, in addition to that, it should be feasible to make a diagnosis and potentially to fix the errors introduced. To this end, a complete log of the changes performed and how they were performed will be required.</td>
-              <td></td>
-              <td></td>
-            </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF115</td>
-            <td>Annotation</td>
-            <td>Annotate</td>
-            <td>RO</td>
-            <td>Store annotation of hypothesis, workflow design, data sets, results and interpretations</td>
-            <td>
-              GK Piotr 
-            </td>
-            <td>From UC1, UC4, UC5, UC6 by Piotr</td>
-          </tr>
-          
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Annotate, Understand</td>
-              <td>RO</td>
-              <td>Features to allow additional explanations that record the rationale or intent of choices made in the conduct of some research, or which are provided to help other researchers to understand, review or re-use the material.</td>
-              <td></td>
-              <td></td>
-            </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF116</td>
-            <td>Comparison</td>
-            <td>Evaluate, Understand</td>
-            <td>RO, Evolution, Collaboration</td>
-            <td>One of motivations of modelling the evolution of Research Objects is to compare different versions of the Research Object, and in general to compare different states of the same Research Object or with similar Research Objects. This can be useful, for example, in aiding scientists to understand how a Research Object has changed from a previous state, to analyze the transformations, or to find individual contributions to the Research Object.</td>
-            <td>
-              D3.1 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF117</td>
-            <td>Collaboration</td>
-            <td>Create</td>
-            <td>RO, Collaboration</td>
-            <td>Scientists should be able to work collaboratively in the construction of Research Objects. The involved members of the team may include scientists across disciplines with different expertise, and they may play different roles in such a collaborative process.</td>
-            <td>
-              D3.1 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF118</td>
-            <td>Social</td>
-            <td>Collaborate, Share, Use, Evaluate</td>
-            <td>Collaboration</td>
-            <td>Current workflow systems have limited collaborative support for sharing and reusing workflows and related resources. In fact they focus only on making workflows available for sharing. A more social approach is required to really improve the collaboration of scientists. A prerequisite for this will be the modelling of the relationships and interactions between scientist and the scientific resources they collaborate with, as well as the community generated information, such as ratings, reviews and usage logs.</td>
-            <td>
-              D3.1 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF119</td>
-            <td>Attribution</td>
-            <td>Cite</td>
-            <td>Collaboration, RO</td>
-            <td>In order to encourage the collaboration of scientists, special attention has to be paid to credit assignment and recognition of individual contributions. This includes, on the one hand a model for the characterization and identification of those resources, which would enable their citation and attribution in an easy and straightforward manner.</td>
-            <td>
-              D3.1 GK 
-            </td>
-            <td></td>
-          </tr>
-          
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Cite</td>
-              <td>RO</td>
-              <td>References to the work of other researchers, used to acknowledge contributory work.</td>
-              <td></td>
-              <td></td>
-            </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF120</td>
-            <td>Presentable</td>
-            <td>Understand</td>
-            <td>Evolution, Collaboration</td>
-            <td>The evolution and collaboration model should be accessible and processable for both humans and machines.</td>
-            <td>
-              D3.1 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF121</td>
-            <td>Processable</td>
-            <td>Use</td>
-            <td>Evolution, Collaboration</td>
-            <td>The evolution and collaboration model should be accessible and processable for both humans and machines.</td>
-            <td>
-              D3.1 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF122</td>
-            <td>Interoperability</td>
-            <td>Use, Share, Collaborate</td>
-            <td>Evolution, Collaboration</td>
-            <td>The evolution and collaboration model should be available in a form that facilitates metadata exchange among applications.</td>
-            <td>
-              D3.1 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF123</td>
-            <td>Visualization</td>
-            <td>Understand, Collaborate</td>
-            <td>Sharing, RO</td>
-            <td>The visualization tool for Collaboration Spheres has to present in a graphical fashion how Research Objects are connected by sharing different resources.</td>
-            <td>
-              D3.1 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF124</td>
-            <td>Security</td>
-            <td>Sharing</td>
-            <td>Sharing, RO, Repository</td>
-            <td>Research Objects should have different access and security properties depending on user’s role, allowing policies such as making Research Objects (or only part of it) to be freely accessible to all users; permitting a finer-grained definition of access permissions to just a target group of users; and also allowing the definition of partial and temporal access permissions.</td>
-            <td>
-              D3.1 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF125</td>
-            <td>Info quality</td>
-            <td>Use</td>
-            <td>RO, Collaboration</td>
-            <td>Scientists are only willing to reuse and extend good quality, trustworthy and coherent scientific work. Hence, the collaboration model should allow keeping trace of relevant information about those aspects of Research Objects, such as authors, contributors, applications, process used for its creation, reviews, etc.</td>
-            <td>
-              D3.1 GK 
-            </td>
-            <td></td>
-          </tr>
-          
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Evaluate, Understand</td>
-              <td>Integrity, Authenticity</td>
-              <td>Information that records input data and processes upon which presented results are based.</td>
-              <td></td>
-              <td></td>
-            </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF126</td>
-            <td>Believability</td>
-            <td>Integrity, Authenticity</td>
-            <td>RO</td>
-            <td>The extent to which information is regarded as true and credible. In a sense, believability is the expected accuracy. Synonyms: error rate, credibility, trustworthiness</td>
-            <td>
-              D4.1 
-            </td>
-            <td>Remove as facet? Use “Provenance” instead.</td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF127</td>
-            <td>Objectivity</td>
-            <td>Integrity</td>
-            <td>RO</td>
-            <td>The degree to which information is unbiased and impartial.</td>
-            <td>
-              D4.1 
-            </td>
-            <td>Remove as facet? Use “Info quality” instead.</td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF128</td>
-            <td>Reputation</td>
-            <td>Authenticity</td>
-            <td>RO</td>
-            <td>Is the degree to which the information or its source is in high standing. Synonyms: credibility</td>
-            <td>
-              D4.1 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF129</td>
-            <td>Consistency</td>
-            <td>Integrity and Authenticity</td>
-            <td>RO</td>
-            <td>Implies that two or more values do not conflict with each other. Synonyms: integrity, compatibility.</td>
-            <td>
-              D4.1 
-            </td>
-            <td>Remove as facet? Use “Info quality” instead.</td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF130</td>
-            <td>Verifiability</td>
-            <td>Integrity and Authenticity</td>
-            <td>RO</td>
-            <td>The degree and ease with which the information can be checked for correctness. Synonyms: naturalness, traceability, provability.</td>
-            <td>
-              D4.1 
-            </td>
-            <td>Remove as facet? Use “Provenance” instead.</td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF131</td>
-            <td>Accuracy</td>
-            <td>Integrity and Authenticity</td>
-            <td>RO</td>
-            <td>The degree of correctness and precision with which information in an information system represents states of the real world. Accuracy is often used synonymously with data quality, as opposed to information quality. For us, data quality or accuracy is only one aspect of the overall information quality. Synonyms: data quality, error rate, correctness, reliability, integrity, precision.</td>
-            <td>
-              D4.1 
-            </td>
-            <td>Remove as facet? Use “Info quality” instead.</td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF132</td>
-            <td>Completeness</td>
-            <td>Integrity and Authenticity</td>
-            <td>RO</td>
-            <td>The degree to which information is not missing. Synonyms: coverage, scope, granularity, comprehensiveness, density, extent.</td>
-            <td>
-              D4.1 
-            </td>
-            <td>Remove as facet? Use “Info quality” instead.</td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF133</td>
-            <td>Content</td>
-            <td>Create, Use</td>
-            <td>RO</td>
-            <td>Kinds of information that a research object or workflow element should be able to represent or process.</td>
-            <td>
-              GK 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF134</td>
-            <td>Data types</td>
-            <td>Create, Use</td>
-            <td>RO</td>
-            <td>A controlled machine-processable annotation that allows different elements of a research object to be processed or presented appropriately withn the context of that research object. (See also the discussion of research objects in the Technical context section above.)</td>
-            <td>
-              GK 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF135</td>
-            <td>Composition</td>
-            <td>Create</td>
-            <td>RO, Workflow</td>
-            <td>Features that allow complex workflows (or other objects) to be assembled from component elements.</td>
-            <td>
-              GK 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF136</td>
-            <td>Creation</td>
-            <td>Create</td>
-            <td>Workflow</td>
-            <td>Tools to allow users to create new workflows from scratch, or derived from pre-existing ones.</td>
-            <td>
-              GK 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF137</td>
-            <td>Use</td>
-            <td>Use</td>
-            <td>RO, Workflow</td>
-            <td>Features that allow users to do useful things with workflows.</td>
-            <td>
-              GK 
-            </td>
-            <td></td>
-          </tr>
-          
-        </tbody>
-      
-        <tbody>
-          <tr>
-            <td>TF138</td>
-            <td>Re-use</td>
-            <td>Use, Share, Collaborate</td>
-            <td>RO, Workflow</td>
-            <td>Features that facilitate re-use of workflows and other information.</td>
-            <td>
-              GK 
-            </td>
-            <td>Duplicate facet; merge all under “Use”?</td>
-          </tr>
           
         </tbody>
       

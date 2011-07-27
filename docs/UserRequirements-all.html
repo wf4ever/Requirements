@@ -1,5 +1,20 @@
 <html>
 
+  {% macro makeHyperlink(uribase, val) -%}
+    {{- '<a href=' + uribase + val + '>' + val + '</a>' -}}
+  {% endmacro -%}
+
+  {% macro makeHyperlinkList(uribase, vals) %}
+    {% for val in vals -%}
+      {{- ', ' if loop.index0 -}}
+      {{- makeHyperlink(uribase, val) -}}
+    {%- endfor %}
+  {% endmacro %}
+
+  {% macro makeUserRequirementLinks(vals) %}
+    {{ makeHyperlinkList('UserRequirements-all.html#', vals) }}
+  {% endmacro %}
+
   {% macro UserRequirementsTable(reqslist) %}
     <table>
       <thead>
@@ -26,8 +41,8 @@
       </thead>
       {% for id,req in reqslist['reqs'] %}
         <tbody>
-          <tr>
-            <td>{{ id }}</td>
+          <tr id='{{id}}'>
+            <td>{{ makeUserRequirementLinks([id]) }}</td>
             <td>{{ req['role'][0] }}</td>
             <td>{{ req['require'] }}</td>
             <td>{{ req['reason'][0] }}</td>

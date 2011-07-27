@@ -1,48 +1,99 @@
 <html>
 
-  {% macro TechnicalFacetsTable(facetlist) %}
+  {% macro makeHyperlink(uribase, val) -%}
+    {{- '<a href=' + uribase + val + '>' + val + '</a>' -}}
+  {% endmacro -%}
+
+  {% macro makeHyperlinkList(uribase, vals) %}
+    {% for val in vals -%}
+      {{- ', ' if loop.index0 -}}
+      {{- makeHyperlink(uribase, val) -}}
+    {%- endfor %}
+  {% endmacro %}
+
+  {% macro makeUserRequirementLinks(vals) %}
+    {{ makeHyperlinkList('UserRequirements-all.html#', vals) }}
+  {% endmacro %}
+
+  {% macro makeTechRequirementLinks(vals) %}
+    {{ makeHyperlinkList('TechRequirements-all.html#', vals) }}
+  {% endmacro %}
+
+  {% macro makeTechFacetLinks(vals) %}
+    {{ makeHyperlinkList('TechnicalFacets.html#', vals) }}
+  {% endmacro %}
+
+  {% macro TechnicalFacetsTable(reqslist, facetlist) %}
     <table>
       <thead>
         <tr>
-          <th>Id</th>
           <th>Facet</th>
+          <th>Id</th>
           <th>Function</th>
           <th>Component</th>
-          <th width="50%">Description</th>
+          <th width="35%">Description</th>
           <th>Sources</th>
+          <th>Tech reqs</th>
+          <th>User reqs</th>
           <th>Comment</th>
         </tr>
       </thead>
-      {% for id,facet in facetlist['reqs'] %}
+      {% for facetname in reqslist['tr_byfacet'] %}
+        {% set facetindex = facetlist['facetdict'][facetname] %}
+        {% set facet = facetlist['facets'][facetindex] %}
         <tbody>
-          <tr>
-            <td>{{ id }}</td>
-            <td>{{ facet['facet'] }}</td>
-            <td>{{ facet['function'][0] }}</td>
-            <td>{{ facet['component'][0] }}</td>
-            <td>{{ facet['description'][0] }}</td>
-            <td>
-              {% for refid in facet['source'] -%}
-                {{ refid }}
-                {%- if facet['source'][refid] != None -%}
-                  {{ '&nbsp;['+facet['source'][refid]+'] ' }}
-                {%- endif -%}
-                {{ ' ' }}
-              {%- endfor %}
-            </td>
-            <td>{{ facet['comment'][0] }}</td>
-          </tr>
-          {% for i in range(1,facet['len']) %}
+          {% if facet %}
+            {% set facet   = facet[1] %}
+            {% set facetid = facet['id'] %}
+            {% set facetrows = facet['len'] %}
             <tr>
-              <td></td>
-              <td></td>
-              <td>{{ facet['function'][i] }}</td>
-              <td>{{ facet['component'][i] }}</td>
-              <td>{{ facet['description'][i] }}</td>
-              <td></td>
-              <td>{{ facet['comment'][i] }}</td>
+              <td id='{{facetname}}'>{{ makeTechFacetLinks([facetname]) }}</td>
+              <td id='{{facetid}}'>{{ makeTechFacetLinks([facetid]) }}</td>
+              <td>{{ facet['function'][0]|join(', ') }}</td>
+              <td>{{ facet['component'][0]|join(', ') }}</td>
+              <td>{{ facet['description'][0] }}</td>
+              <td rowspan='{{facetrows}}'>
+                {% for refid in facet['source'] -%}
+                  {% if loop.index0 %}
+                    {{ ', ' }}
+                  {% endif %}
+                  {{ refid }}
+                  {%- if facet['source'][refid] != None -%}
+                    {{ '&nbsp;[' + facet['source'][refid] + '] ' }}
+                  {%- endif -%}
+                {%- endfor %}
+              </td>
+              <td rowspan='{{facetrows}}'>{{ makeTechRequirementLinks(reqslist['tr_byfacet'][facetname]) }}</td>
+              <td rowspan='{{facetrows}}'>{{ makeUserRequirementLinks(reqslist['ur_byfacet'][facetname]) }}</td>
+              <td>{{ facet['comment'][0] }}</td>
             </tr>
-          {% endfor %}
+            {% for i in range(1,facetrows) %}
+              <tr>
+                <td></td>
+                <td></td>
+                <td>{{ facet['function'][i]|join(', ') }}</td>
+                <td>{{ facet['component'][i]|join(', ') }}</td>
+                <td>{{ facet['description'][i] }}</td>
+                <!-- rowspan...
+                <td></td>
+                <td></td>
+                <td></td>
+                -->
+                <td>{{ facet['comment'][i] }}</td>
+              </tr>
+            {% endfor %}
+          {% else %}
+            <tr>
+              <td id='{{facetname}}'>{{ makeTechFacetLinks([facetname]) }}</td>
+              <td>--</td>
+              <td></td>
+              <td></td>
+              <td>UNDEFINED</td>
+              <td></td>
+              <td>{{ makeTechRequirementLinks(reqslist['tr_byfacet'][facetname]) }}</td>
+              <td>{{ makeUserRequirementLinks(reqslist['ur_byfacet'][facetname]) }}</td>
+            </tr>
+          {% endif %}
         </tbody>
       {% endfor %}
     </table>
@@ -97,7 +148,7 @@
       </dl>
     </p>
 
-    {{ TechnicalFacetsTable(d['TechnicalFacets']) }}
+    {{ TechnicalFacetsTable(d['TechRequirements-all'], d['TechnicalFacets']) }}
 
 
   <h2>Summary of facets</h2>

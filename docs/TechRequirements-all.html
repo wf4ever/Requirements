@@ -1,5 +1,28 @@
 <html>
 
+  {% macro makeHyperlink(uribase, val) -%}
+    {{- '<a href=' + uribase + val + '>' + val + '</a>' -}}
+  {% endmacro -%}
+
+  {% macro makeHyperlinkList(uribase, vals) %}
+    {% for val in vals -%}
+      {{- ', ' if loop.index0 -}}
+      {{- makeHyperlink(uribase, val) -}}
+    {%- endfor %}
+  {% endmacro %}
+
+  {% macro makeUserRequirementLinks(vals) %}
+    {{ makeHyperlinkList('UserRequirements-all.html#', vals) }}
+  {% endmacro %}
+
+  {% macro makeTechRequirementLinks(vals) %}
+    {{ makeHyperlinkList('TechRequirements-all.html#', vals) }}
+  {% endmacro %}
+
+  {% macro makeTechFacetLinks(vals) %}
+    {{ makeHyperlinkList('TechnicalFacets.html#', vals) }}
+  {% endmacro %}
+
   {% macro TechRequirementsTable(reqslist) %}
     <table>
       <thead>
@@ -22,33 +45,15 @@
       </thead>
       {% for id,req in reqslist['reqs'] %}
         <tbody>
-          <tr>
-            <td>{{ id }}</td>
-            <!-- @@WAS: <td>{{ req['userreq'][0] }}</td> -->
-            <td>
-              {% for ureqid in req['userreq'] -%}
-                {%- if ureqid != req['userreq'][0] -%}
-                  {{ ', ' }}
-                {%- endif -%}
-                {{ ureqid }}
-              {%- endfor %}
-            </td>
-            <!-- @@WAS: <td>{{ req['facet'][0] }}</td> -->
-            <td>
-              {% for facet in req['facet'] -%}
-                {%- if facet != req['facet'][0] -%}
-                  {{ ', ' }}
-                {%- endif -%}
-                {{ facet }}
-              {%- endfor %}
-            </td>
+          <tr id='{{id}}'>
+            <td>{{ makeTechRequirementLinks([id]) }}</td>
+            <td>{{ makeUserRequirementLinks(req['userreq']) }}</td>
+            <td>{{ makeTechFacetLinks(req['facet']) }} </td>
             <td>{{ req['description'][0] }}</td>
             <td>
               {% for refid in req['source'] -%}
                 {{ refid }}
-                {%- if req['source'][refid] != None -%}
-                  {{ '&nbsp;['+req['source'][refid]+'] ' }}
-                {%- endif -%}
+                {{ '&nbsp;['+req['source'][refid]+'] ' if req['source'][refid] != None }}
               {%- endfor %}
             </td>
             <td>{{ req['comment'][0] }}</td>
@@ -56,8 +61,8 @@
           {% for i in range(1,req['len']) %}
             <tr>
               <td></td>
-              <td>{{ req['userreq'][i] }}</td>
-              <td>{{ req['facet'][i] }}</td>
+              <td></td>
+              <td></td>
               <td>{{ req['description'][i] }}</td>
               <td></td>
               <td>{{ req['comment'][i] }}</td>
