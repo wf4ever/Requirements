@@ -1,7 +1,11 @@
 <html>
 
+  {% macro uriEscape(val) -%}
+    {{- val|replace(' ','%20') -}}
+  {% endmacro -%}
+
   {% macro makeHyperlink(uribase, val) -%}
-    {{- '<a href=' + uribase + val + '>' + val + '</a>' -}}
+    {{- '<a href=' + uriEscape(uribase+val) + '>' + val + '</a>' -}}
   {% endmacro -%}
 
   {% macro makeHyperlinkList(uribase, vals) %}
@@ -41,7 +45,7 @@
       </thead>
       {% for id,req in reqslist['reqs'] %}
         <tbody>
-          <tr id='{{id}}'>
+          <tr id='{{uriEscape(id)}}'>
             <td>{{ makeUserRequirementLinks([id]) }}</td>
             <td>{{ req['role'][0] }}</td>
             <td>{{ req['require'] }}</td>

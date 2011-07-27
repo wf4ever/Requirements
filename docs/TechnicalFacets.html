@@ -1,7 +1,11 @@
 <html>
 
+  {% macro uriEscape(val) -%}
+    {{- val|replace(' ','%20') -}}
+  {% endmacro -%}
+
   {% macro makeHyperlink(uribase, val) -%}
-    {{- '<a href=' + uribase + val + '>' + val + '</a>' -}}
+    {{- '<a href=' + uriEscape(uribase+val) + '>' + val + '</a>' -}}
   {% endmacro -%}
 
   {% macro makeHyperlinkList(uribase, vals) %}
@@ -47,8 +51,8 @@
             {% set facetid = facet['id'] %}
             {% set facetrows = facet['len'] %}
             <tr>
-              <td id='{{facetname}}'>{{ makeTechFacetLinks([facetname]) }}</td>
-              <td id='{{facetid}}'>{{ makeTechFacetLinks([facetid]) }}</td>
+              <td id='{{uriEscape(facetname)}}'>{{ makeTechFacetLinks([facetname]) }}</td>
+              <td id='{{uriEscape(facetid)}}'>{{ makeTechFacetLinks([facetid]) }}</td>
               <td>{{ facet['function'][0]|join(', ') }}</td>
               <td>{{ facet['component'][0]|join(', ') }}</td>
               <td>{{ facet['description'][0] }}</td>
