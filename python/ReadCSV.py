@@ -47,7 +47,6 @@
 #     } 
 #   }
 #
-# @@TODO: remove addRowDataOrig and tests
 
 import sys
 import os
@@ -87,51 +86,6 @@ def testDecodeSourceReferences():
     assert r3["DEF"] == None
     r4 = decodeSourceReferences("Dx.y[1]")
     assert r4["Dx.y"] == "1"
-    return
-
-def addRowDataOrig(rowdata, resultdata):
-    if rowdata[0] != "":
-        resultdata.append( (rowdata[0],
-                { 'id':      rowdata[0]
-                , 'role':    rowdata[1]
-                , 'require': rowdata[2]
-                , 'reason':  [rowdata[3]]
-                , 'benefit': rowdata[4]
-                , 'impact':  rowdata[5]
-                , 'source':  decodeSourceReferences(rowdata[6])
-                , 'comment': rowdata[7]
-                }
-            ))
-    else:
-        resultdata[-1][1]['reason'].append(rowdata[3])
-    return resultdata
-
-def testAddRowDataOrig():
-    r1 = addRowDataOrig(
-        ["R1", "As", "I want", "So that", "3", "4", "Dx.y [1]", "Comment"],
-        [])
-    assert r1[0][0] == "R1"
-    assert r1[0][1]["id"] == "R1"
-    assert r1[0][1]["role"] == "As"
-    assert r1[0][1]["require"]  == "I want"
-    assert r1[0][1]["reason"][0] == "So that"
-    assert r1[0][1]["benefit"] == "3"
-    assert r1[0][1]["impact"] == "4"
-    assert r1[0][1]["source"]["Dx.y"] == "1"
-    assert r1[0][1]["comment"] == "Comment"
-    r2 = addRowDataOrig(
-        ["", "", "", "Another reason", "", "", "", ""],
-        r1)
-    assert r2[0][0] == "R1"
-    assert r2[0][1]["id"] == "R1"
-    assert r2[0][1]["role"] == "As"
-    assert r2[0][1]["require"]  == "I want"
-    assert r2[0][1]["reason"][0] == "So that"
-    assert r2[0][1]["reason"][1] == "Another reason"
-    assert r2[0][1]["benefit"] == "3"
-    assert r2[0][1]["impact"] == "4"
-    assert r2[0][1]["source"]["Dx.y"] == "1"
-    assert r2[0][1]["comment"] == "Comment"
     return
 
 def addRowData(colfns, rowdata, resultdata):
@@ -379,7 +333,6 @@ if __name__ == "__main__":
         print "ReadCSV: Testing..."
         testDecodeSourceReferences()
         testCmpId()
-        testAddRowDataOrig()
         testAddRowData()
         print "ReadCSV: Testing done."
     elif sys.argv[1] != "" and os.path.isfile(sys.argv[1]+".csv"):
