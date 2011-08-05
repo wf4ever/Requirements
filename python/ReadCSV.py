@@ -330,6 +330,7 @@ def intOrNone(s):
     return (s or None) and int(s)
 
 def cmpId(key1, key2):
+    #print "cmpid key1:%s, key2:%s"%(key1,key2)
     keyre = re.compile(r"([A-Za-z_]+)(\d+)?")
     match1 = keyre.match(key1)
     match2 = keyre.match(key2)
@@ -368,9 +369,10 @@ def readCSV(csvfilename, jsonfilename):
     colfuncs = default_column_functions
     csvfilestream = open(csvfilename, "r")
     for row in csv.reader(csvfilestream, dialect="excel"):
+        #print repr(row)
         if len(row) == 0:
             pass    # skip blank row: lpod-show.py adds blank line to CSV export
-        elif row[0] == ".refs":
+        elif row[0] == ".ref":
             data['refs'][row[1]] = row[2]
         elif row[0] == ".start":
             copydata = True
@@ -409,13 +411,10 @@ def readCSV(csvfilename, jsonfilename):
                         xrefindex[sk].append(tk)
             data[dict_key] = xrefindex
         elif copydata:
+            #print "Copydata "+row[0]
             if not data.has_key(list_key):
                 data[list_key] = []
             addRowData(colfuncs, row, data[list_key] )
-
-
-
-
     csvfilestream.close()
     # Sort requirements by Id, assuming form ABCnnn
     data[list_key] = sorted(data[list_key], cmpId, itemgetter(0))
