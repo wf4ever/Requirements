@@ -1,0 +1,122 @@
+<html>
+
+  {% macro uriEscape(val) -%}
+    {{- val|replace(' ','%20') -}}
+  {% endmacro -%}
+
+  {% macro makeHyperlink(uribase, val) -%}
+    {{- '<a href=' + uriEscape(uribase+val) + '>' + val + '</a>' -}}
+  {% endmacro -%}
+
+  {% macro makeHyperlinkList(uribase, vals) %}
+    {% for val in vals -%}
+      {{- ', ' if loop.index0 -}}
+      {{- makeHyperlink(uribase, val) -}}
+    {%- endfor %}
+  {% endmacro %}
+
+  {% macro makeUserRequirementLinks(vals) %}
+    {{ makeHyperlinkList('UserRequirements-all.html#', vals) }}
+  {% endmacro %}
+
+  {% macro makeTechRequirementLinks(vals) %}
+    {{ makeHyperlinkList('TechRequirements-all.html#', vals) }}
+  {% endmacro %}
+
+  {% macro makeTechFacetLinks(vals) %}
+    {{ makeHyperlinkList('TechnicalFacets.html#', vals) }}
+  {% endmacro %}
+
+  {% macro TechnicalFacetsTable(reqslist, facetlist) %}
+    <table>
+      <thead>
+        <tr>
+          <th>Facet</th>
+          <th width="30%">Description</th>
+          <th>Tech reqs</th>
+        </tr>
+      </thead>
+      {% for facetname in reqslist['tr_byfacet'] %}
+        {% set facetindex = facetlist['facetdict'][facetname] %}
+        {% set facet = facetlist['facets'][facetindex] %}
+        {% set trlist = reqslist['tr_byfacet'][facetname] %}
+        {% set trdesc = reqslist['trdesc_byfacet'][facetname] %}
+        <tbody>
+          {% if facet %}
+            {% set facet   = facet[1] %}
+            {% set facetrows = facet['len'] %}
+            <tr>
+              <td id='{{uriEscape(facetname)}}'>{{ makeTechFacetLinks([facetname]) }}</td>
+              <td>{{ facet['description'][0] }}</td>
+              <td>{{ trdesc[0] }}</td>
+            </tr>
+            {% for i in range(1,facetrows) %}
+              <tr>
+                <td></td>
+                <td>{{ facet['description'][i] }}</td>
+                <td>{{ trdesc[i] }}</td>
+              </tr>
+            {% endfor %}
+            {% for i in range(facetrows, trdesc|length) %}
+              <tr>
+                <td></td>
+                <td>{{ facet['description'][i] }}</td>
+                <td>{{ trdesc[i] }}</td>
+              </tr>
+            {% endfor %}
+          {% else %}
+            <tr>
+              <td id='{{facetname}}'>{{ makeTechFacetLinks([facetname]) }}</td>
+              <td>UNDEFINED</td>
+              <td>{{ trdesc[0] }}</td>
+            </tr>
+            {% for i in range(1, trdesc|length) %}
+              <tr>
+                <td></td>
+                <td></td>
+                <td>{{ trdesc[i] }}</td>
+              </tr>
+            {% endfor %}
+            </tr>
+          {% endif %}
+        </tbody>
+      {% endfor %}
+    </table>
+  {% endmacro %}
+
+  <head>
+    <title>Wf4Ever Consolidated Technical Facets</title>
+    <link rel="stylesheet" href="trac.css" />
+    <link rel="stylesheet" href="reqs.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  </head>
+
+  <body>
+    <h1>Wf4Ever Consolidated Technical Facets</h1>
+    <p><em>This is a temporary working document, derived from semi-structured source data.</em></p>
+    <h2>Introduction</h2>
+    <p>This document contains consolidated Wf4Ever technical facets from all sources, along witgh the text of technical requirements with which they are associated</p>
+    <p>
+      See also <a href="Technicalfacets.html">the cross-linked technical facet listing</a>.
+    </p>
+
+    <h2>Technical facets</h2>
+    <p>
+      Each facet is listed with the following information:
+      <dl>
+        <dt>Facet</dt>
+        <dd>Name of facet</dd>
+        <dt>Function</dt>
+        <dd>User visible functions or concerns that are addressed by the technical requirements or features associated with this facet.</dd>
+        <dt>Description</dt>
+        <dd>One or more descriptions of the facet, mostly extracted verbatim from the sourve documents</dd>
+        <dt>Technical requirements</dt>
+        <dd>Descriptions of technical requirements with which the facet is associated.</dd>
+      </dl>
+    </p>
+
+    {{ TechnicalFacetsTable(d['TechRequirements-all'], d['TechnicalFacets']) }}
+
+  </body>
+</html>
+

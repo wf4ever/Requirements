@@ -216,6 +216,7 @@ Completeness. The recommender system should provide the wider as possible set of
 ".end","","","","",""
 ".xref","tr_byfacet","id","facet","",""
 ".xref","ur_byfacet","userreq","facet","",""
+".xref","trdesc_byfacet","description","facet","",""
 
 "","","","","",""
 "","","","","",""
