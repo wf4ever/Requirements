@@ -1,0 +1,3024 @@
+<html>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <head>
+    <title>Wf4Ever Consolidated Technical Facets</title>
+    <link rel="stylesheet" href="trac.css" />
+    <link rel="stylesheet" href="reqs.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  </head>
+
+  <body>
+    <h1>Wf4Ever Consolidated Technical Facets</h1>
+    <p><em>This is a temporary working document, derived from semi-structured source data.</em></p>
+    <h2>Introduction</h2>
+    <p>This document contains consolidated Wf4Ever technical facets from all sources, along witgh the text of technical requirements with which they are associated</p>
+    <p>
+      See also <a href="Technicalfacets.html">the cross-linked technical facet listing</a>.
+    </p>
+
+    <h2>Technical facets</h2>
+    <p>
+      Each facet is listed with the following information:
+      <dl>
+        <dt>Facet</dt>
+        <dd>Name of facet</dd>
+        <dt>Function</dt>
+        <dd>User visible functions or concerns that are addressed by the technical requirements or features associated with this facet.</dd>
+        <dt>Description</dt>
+        <dd>One or more descriptions of the facet, mostly extracted verbatim from the sourve documents</dd>
+        <dt>Technical requirements</dt>
+        <dd>Descriptions of technical requirements with which the facet is associated.</dd>
+      </dl>
+    </p>
+
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Facet</th>
+          <th width="30%">Description</th>
+          <th>Tech reqs</th>
+        </tr>
+      </thead>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Access'>
+    
+    <a href=TechnicalFacets.html#Access>Access</a>
+  
+  </td>
+              <td>Mechanisms for access to research data and RO components, including considerations of access control, confidentiality and consistency/atomicity. See also “Security”.</td>
+              <td>Confidential annotations: restricted access</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Search over data and annotations must not reveal confidential information</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for extracting content in a whole and atomic fashion.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms to ensure components of RO are accessible.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for “selective hiding” of content in an RO.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for “selective hiding” of content in an RO.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Alive'>
+    
+    <a href=TechnicalFacets.html#Alive>Alive</a>
+  
+  </td>
+              <td>Provide dynamic links to content, updating with ease when something changes. As a Re-user I want to see versions of a workflow to use the latest working version.</td>
+              <td>Metadata information about the behaviour of the external data sources in terms of response time, availability, etc. Tools that estimate the QoS for users and display such information along with the data sources</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td>Research Objects are subject to many different changes, especially because the resources they aggregate can be of a very dynamic nature, e.g., databases. As such, the evolution and collaboration model should enable the modelling of the transformations the Research Object goes through its lifetime.</td>
+                <td>Research Objects are subject to many different changes, especially because the resources they aggregate can be of a very dynamic nature, e.g., databases. As such, the evolution and collaboration model should enable the modeling of the transformations the Research Object goes through its lifetime. In particular, the model should be flexible enough to cope with all the possible changes a Research Object can undergo.</td>
+              </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for accessing and working with ROs in a “live” state.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Annotation'>
+    
+    <a href=TechnicalFacets.html#Annotation>Annotation</a>
+  
+  </td>
+              <td>Store annotation of hypothesis, workflow design, data sets, results and interpretations</td>
+              <td>Provenance information about the data used as input, which is also properly (semantically) linked with provenance information about ROs and Wfs</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td>Features to allow additional explanations that record the rationale or intent of choices made in the conduct of some research, or which are provided to help other researchers to understand, review or re-use the material.</td>
+                <td>Information about data transformations and transitory data generated during a workflow execution needs to be accessible</td>
+              </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Information about each path taken during the workflow execution and the conditions present at the decision points needs to be accessible</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Tools should allow researchers to add their own assessment of external data sources used (both as free form text, and also using computer-processable vocabularies where appropriate).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Intermediate results and trace information should be captured and recorded during a workflow execution, and made available along with the final results.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>ROs can store free-text documents with associated component type metdata indicating the type of information expressed, allowing the experimental design to be linked with the original hypothesis.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Workflow storage/catalogue facility that allows keywords associated with workflows which can be used as a basis for searching.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Associate keywords with workflow entities</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Facility for searching by type and keyword for objects in an RO repository (to allow workflows to be discovered in a RO repository as well as a workflow repository)</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism for adding free-form textual description of an experiment, with links to external sources (which may be generally known and trusted within a community) that have been used.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Link interpretation of result to experimental run, so computed basis for interpretation is connected.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>A defined component type for revised hypothesis, allowing reviewers to understand alternatives considered in reaching a final hypothesis.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>A defined component type for workflow annotation, linked to a workflow</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism to link execution results and associated interpretation to initial hypothesis, allowing reviewers to follow an evolving understanding of the data and results generated.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record and view rationale for workflow.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Link data to external sources</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record interpretation of results, linked to experiment and data used</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record origin of experimental data used for analysis</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record an abstract (not-yet-implemented) workflow</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record information discovered from external sources</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record notes for future work</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Link results to previous results, procedures and hypotheses</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>An important source of information about the Research Object supporting the collaboration of scientists is the justification of why and how particular decisions were made. Based on such justifications, scientists can better interpret a Research Object, its objective and speed up the collaborative work during the construction and adaptation of a Research Object. Hence, the should enable the representation and tracking of such justifications as the Research Object evolves.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Creator/author annotations.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Harvest/pull metadata about web services.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Uniquely identify web services to give citations</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Workflow tool to provide easy way to annotate parts of workflow.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for publication “clean-up”.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for vocabularies and semantic models.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for rich annotation of items in an RO.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Rich annotation for describing workflows/ROs (e.g.: purpose, history).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Rich annotation for describing workflows/ROs (e.g.: usage, caveats, conditions).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Creator/author annotations for content in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Tagging and other rich annotation capabilities.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for defining and finding relations between ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Description of relationships between resources.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for describing the overview of workflow/method.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for rating and recommending content.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for browsing scientific reasoning of relationships between resources.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for comparing hypothesis of each RO.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for describing the individual components/parts of workflows.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Attribution'>
+    
+    <a href=TechnicalFacets.html#Attribution>Attribution</a>
+  
+  </td>
+              <td>In order to encourage the collaboration of scientists, special attention has to be paid to credit assignment and recognition of individual contributions. This includes, on the one hand a model for the characterization and identification of those resources, which would enable their citation and attribution in an easy and straightforward manner.</td>
+              <td>refer to experiments and datasets that are defined by other researchers or projects, hence incorporate external work by reference. Such references provide acknowledgement of work used and indications of the source of included elements.</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td>References to the work of other researchers, used to acknowledge contributory work.</td>
+                <td>In order to encourage the collaboration of scientists, special attention has to be paid to credit assignment and recognition of individual contributions. This includes, on the one hand a model for the characterization and identification of those resources, which would enable their citation and attribution in an easy and straightforward manner. And on the other hand, the detection of plagiarism. For the latter, an evolution and collaboration model would provide also some mechanisms to detect it, for example by using the changes in the Research Object.</td>
+              </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Resolve publications/ROs for embedded papers.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Citation'>
+    
+    <a href=TechnicalFacets.html#Citation>Citation</a>
+  
+  </td>
+              <td>Human recognizable mechanisms for allowing ROs and parts of ROs to be cited by workflows, other ROs and more generally by other publications. See also “Identification”, “Referenceable”, “Linking”.</td>
+              <td>ROs and their main component resources are identifiable using URIs, allowing for incorporation (re-use) of resources by reference rather than copying, and avoiding divergence between multiple instances of a resource.</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Workflow can reference externally defined processing elements and workflows.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>In order to encourage the collaboration of scientists in the construction of Research Objects, it is important to ensure that it is possible to reference those Research Objects. The evolution and collaboration model should provide the means for the identification of Research Objects and of the resources it encapsulates, which will enable referencing and citing not only the Research Object as a whole but also its individual parts.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Provide immutable URLs which will work throughout evolutions of the system.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for relating workflows/ROs with others.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Ability to gather citations to existing RO.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for identification of published ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for citation.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Collaboration'>
+    
+    <a href=TechnicalFacets.html#Collaboration>Collaboration</a>
+  
+  </td>
+              <td>Scientists should be able to work collaboratively in the construction of Research Objects. The involved members of the team may include scientists across disciplines with different expertise, and they may play different roles in such a collaborative process.</td>
+              <td>The evolution and collaboration model should provide the mechanisms to identify and characterize different versions of a Research Object and the resources it encapsulates. The goal is to enable scientists to access the same version of the services and data sources involved in the experiments described by a Research Object. This will in turn allow the repetition of the experiments, e.g., to verify or validate the results.</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Current workflow systems have limited collaborative support for sharing and reusing workflows and related resources. In fact they focus only on making workflows available for sharing. A more social approach is required to really improve the collaboration of scientists. A prerequisite for this will be the modelling of the relationships and interactions between scientist and the scientific resources they collaborate with, as well as the community generated information, such as ratings, reviews and usage logs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Scientists should be able to work collaboratively in the construction of Research Objects. The involved members of the team may include scientists across disciplines with different expertise, and they may play different roles in such a collaborative process. For example, we could identify investigators (doing most of the scientific analysis), supervisors/advisors (the ones giving mostly scientific guidelines and revisions), domain expert advisors and others. Moreover, the collaboration among scientist may involve curation activities, following some predefined editorial process. That is, a process defining the operations and actions the scientists should follow to propose and to approve/reject changes, depending on their role and the state of the Research Object. Such information regarding the roles and process should be part of the collaboration model.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Comparison'>
+    
+    <a href=TechnicalFacets.html#Comparison>Comparison</a>
+  
+  </td>
+              <td>One of motivations of modelling the evolution of Research Objects is to compare different versions of the Research Object, and in general to compare different states of the same Research Object or with similar Research Objects. This can be useful, for example, in aiding scientists to understand how a Research Object has changed from a previous state, to analyze the transformations, or to find individual contributions to the Research Object.</td>
+              <td>expose metadata information to support searching of workflows, such as descriptions about the functions of workflows or parts of workflows</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Facilities for comparing workflow input and output datasets</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>providing researchers with information that allows them to understand differences between the outputs of workflow runs</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Re-run workflow with different parameters and data</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>One of motivations of modeling the evolution of Research Objects is to compare different versions of the Research Object, and in general to compare different states of the same Research Object or with similar Research Objects . This can be useful, for example, in aiding scientists to understand how a Research Object has changed from a previous state, to analyze the transformations, or to find individual contributions to the Research Object.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Verify data equality/similarity via checksums, timestamps, actual content, etc.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for checking updates to external data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for comparing steps with known methodologies (abstract workflows)</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for following links to verify data equality/similarity/validity.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for comparing workflow/methodology structure, in particular the abstract workflow.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for comparing workflow structures.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for comparing individual data items between ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for comparing hypothesis of each RO.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for comparing different versions of workflows</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Composition'>
+    
+    <a href=TechnicalFacets.html#Composition>Composition</a>
+  
+  </td>
+              <td>Features that allow complex workflows (or other objects) to be assembled from component elements.</td>
+              <td>One or more mechanisms for describing workflows composed of component process elements, incorporated by reference rather than copying, allowing for re-use avoiding divergence between multiple instances.</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Create new workflow from existing components</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Create workflow from components of multiple other workflows</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Linking to existing resources within ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Embedding existing resources as content items in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata about aggregated resources</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Aggregation structures with annotated relationships.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for describing the individual components/parts of workflows.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for finding components/parts of workflows.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Identification mechanisms for individual components/parts of workflows.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for extracting content in a whole and atomic fashion.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms to ensure components of RO are accessible.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Consistency'>
+    
+    <a href=TechnicalFacets.html#Consistency>Consistency</a>
+  
+  </td>
+              <td>Implies that two or more values do not conflict with each other. Synonyms: integrity, compatibility.</td>
+              <td>ROs and their main component resources are identifiable using URIs, allowing for incorporation (re-use) of resources by reference rather than copying, and avoiding divergence between multiple instances of a resource.</td>
+            </tr>
+            
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Content'>
+    
+    <a href=TechnicalFacets.html#Content>Content</a>
+  
+  </td>
+              <td>Kinds of information that a research object or workflow element should be able to represent or process.</td>
+              <td>ROs can store free-text documents with associated component type metdata indicating the type of information expressed, allowing the experimental design to be linked with the original hypothesis.</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Representation of conceptual workflows, as a basis for discussing plans with supervisors/peers and starting to search for components.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism for adding free-form textual description of an experiment, with links to external sources (which may be generally known and trusted within a community) that have been used.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Link interpretation of result to experimental run, so computed basis for interpretation is connected.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Representation of revision relationship between different revisions of an experiment hypothesis.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism to link execution results and associated interpretation to initial hypothesis, allowing reviewers to follow an evolving understanding of the data and results generated.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record and view rationale for workflow.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Workflow can use references to not-yet-implemented, or stub components</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record notes for future work</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Link results to previous results, procedures and hypotheses</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Extract information from working RO for publication</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Embedding data as content items in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata about aggregated resources</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Aggregation structures with annotated relationships.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Vocabularies for representing relationships.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Rich annotated links (e.g.: roles, timestamps) between resources.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism for author identification.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Creator/author annotations.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Harvest/pull metadata about web services.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Uniquely identify web services to give citations</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Resolve publications/ROs for embedded papers.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Embed PDFs/other ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for vocabularies and semantic models.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for rich annotation of items in an RO.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for relating workflows/ROs with others.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture input data to allow repeat runs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Rich annotation for describing workflows/ROs (e.g.: usage, caveats, conditions).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for defining and finding relations between ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Description of relationships between resources.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Rich representation of metadata.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support classification of workflows based on purpose/domain/problem.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture provenance trace of original execution.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture original inputs and required tools.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Creation'>
+    
+    <a href=TechnicalFacets.html#Creation>Creation</a>
+  
+  </td>
+              <td>Tools to allow users to create new workflows from scratch, or derived from pre-existing ones.</td>
+              <td>Mechanisms for copying and modifying existing workflows</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Facility to create workflow elements based on available scripting capabilities. (In this context, I take scripting to mean general purpose process descriptions like shell scripts, Python, Perl programs, etc.)</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Create new workflow from existing components</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Create workflow from components of multiple other workflows</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>System for workflow creation.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Workflows as content items in ROs</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Embedding data as content items in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for adding and updating resources in an RO.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for storing data or linking to data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>System for workflow creation.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for customising existing workflows, keeping links to original.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Cross-boundary'>
+    
+    <a href=TechnicalFacets.html#Cross-boundary>Cross-boundary</a>
+  
+  </td>
+              <td>Objects reused across different research communities. As a Reader I want to find relevant materials so that I can understand the field.</td>
+              <td>Recommender systems are inherently vertical and configured to provide recommendations in a single and specific domain. The cross-boundary dimension of Research Objects makes mandatory the provisioning of recommendation on the very same Research Objects following different recommendation heuristics for each scientific community or communities. That implies that the recommender system must be aware of the scientific community that the user belongs to; and secondly it must act in accordance.</td>
+            </tr>
+            
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Data%20types'>
+    
+    <a href=TechnicalFacets.html#Data%20types>Data types</a>
+  
+  </td>
+              <td>A controlled machine-processable annotation that allows different elements of a research object to be processed or presented appropriately withn the context of that research object. (See also the discussion of research objects in the Technical context section above.)</td>
+              <td>Tools should allow researchers to add their own assessment of external data sources used (both as free form text, and also using computer-processable vocabularies where appropriate).</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>A defined type for “original hypothesis”</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>A defined component type for workflow or process element description</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Facility for searching by type and keyword for objects in an RO repository (to allow workflows to be discovered in a RO repository as well as a workflow repository)</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Defined component type for experiment description and/or annotation</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>A defined component type for interpretation of results</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>A defined component type for revised hypothesis, allowing reviewers to understand alternatives considered in reaching a final hypothesis.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>A defined component type for final hypothesis</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>A defined component type for workflow annotation, linked to a workflow</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record notes for future work</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Rich annotated links (e.g.: roles, timestamps) between resources.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Discovery'>
+    
+    <a href=TechnicalFacets.html#Discovery>Discovery</a>
+  
+  </td>
+              <td>The ability to find/discover/retrieve ROs. Mechanisms for exposure/publication of ROs. As a Reader I want to survey the field to check if something has been done before.</td>
+              <td>Tools need to use the links in the metadata to permit Web navigation through the provenance information</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td>Browse and search for RO</td>
+                <td>Tools need to display provenance information as graphs, allowing navigation through that kind of visualization</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td>The recommender system must provide the necessary mechanisms in order to discover proactively the Research Objects that might be of interest to the user. This activity should be performed considering the following properties:</td>
+                <td>expose metadata information to support searching of workflows, such as descriptions about the functions of workflows or parts of workflows</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td>Features that enhance the ability to discover workflows and datasets, which are valuable for finding new ideas, understanding existing workflows, reuse of workflows and datasets, and finding related work.</td>
+                <td>the workflow environment supports searching over metadata content</td>
+              </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Matching conceptual workflows and components with actual executable processing elements.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Workflow storage/catalogue facility that allows keywords associated with workflows which can be used as a basis for searching.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Facility for searching by type and keyword for objects in an RO repository (to allow workflows to be discovered in a RO repository as well as a workflow repository)</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata and facilities for searching over workflows</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Find different versions of a workflow, or workflows used to test different versions of a hypothesis</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record interpretation of results, linked to experiment and data used</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Search over data and annotations must not reveal confidential information</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>The recommender system must provide the necessary mechanisms in order to discover proactively the Research Objects that might be of interest to the user. This activity should be performed considering the following properties:
+Safety. The recommender system should avoid recommendation flooding at all costs. 
+Completeness. The recommender system should provide the wider as possible set of relevant Research Object. This property is particularly important since the recommender system will in some cases be used to provide an overview of the state of the art to new scientist.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>The recommender system should provide content-based recommendations based on the way that search and retrieving of scientific content is already performed by researchers, allowing search in fields such as authors, abstract, keywords, publication dates, etc.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Searching/browsing of ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Interfaces for the presentation of overviews.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for grouping of ROs by field/tag/content, e.g.: "Most popular in field X"</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Interfaces for browsing and following links between resources.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Interfaces for finding similar workflows based on purpose.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for finding similar ROs (e.g.: with similar/same data/services/workflows).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for finding ROs based on scientific field, keywords/tags, methodology.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for browsing scientific reasoning of relationships between resources.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for discovering and referencing other people’s extensions/uses of chosen workflow.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for finding components/parts of workflows.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Environment for depositing ROs that has a public presence.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for sharing and promoting ROs.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='History'>
+    
+    <a href=TechnicalFacets.html#History>History</a>
+  
+  </td>
+              <td>Record of changes made to a RO, component and/or workflow, with emphasis on description and rationale rather than just the actual changed content. See also “Versioning”.</td>
+              <td>The evolution and collaboration model should allow keeping a complete track of the changes that the Research Object undergoes. The information to be modelled includes not only a representation about the changes themselves, but also about how those changes were applied (e.g., chronological order, dependencies between them); and possibly why they were conducted (e.g., argumentation). Moreover, this information should beAttribution kept at different of abstractions, from the Research Object level to the level of the individual resources it encapsulates. Besides, the information should be detailed enough in order to support advanced operations with the Research Object, such as rolling back, fix and diagnose errors, comparison of Research Objects, etc.</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for capturing history of changes to resources in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for capturing history of changes to content in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for capturing history of changes to content in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture history of workflow evolution</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Identification'>
+    
+    <a href=TechnicalFacets.html#Identification>Identification</a>
+  
+  </td>
+              <td>Features that allow a workflow or dataset or other element of a research object to be unambiguously identified, which in turn underpin linking, citation and aspects of re-use.</td>
+              <td>ROs and their main component resources are identifiable using URIs, allowing for incorporation (re-use) of resources by reference rather than copying, and avoiding divergence between multiple instances of a resource.</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Provide immutable URLs which will work throughout evolutions of the system.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for generating checksums, and recording timestamps and versions of web services.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism for author identification.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Identification mechanisms for individual components/parts of workflows.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Info%20quality'>
+    
+    <a href=TechnicalFacets.html#Info%20quality>Info quality</a>
+  
+  </td>
+              <td>Scientists are only willing to reuse and extend good quality, trustworthy and coherent scientific work. Hence, the collaboration model should allow keeping trace of relevant information about those aspects of Research Objects, such as authors, contributors, applications, process used for its creation, reviews, etc.</td>
+              <td>Provenance information about the data used as input, which is also properly (semantically) linked with provenance information about ROs and Wfs</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td>Information that records input data and processes upon which presented results are based.</td>
+                <td>Metadata needs to permit versioning, with versions semantically linked</td>
+              </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata information needs to contain all the necessary information in order to repeat an experiment and obtain the same results, and tools supporting scientists to use this metadata information to reproduce their experiment</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata should record information about previous executions, and differences from the current execution, and tools using this information to explain any inconsistency or incompleteness of previous execution</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Intermediate results and trace information should be captured and recorded during a workflow execution, and made available along with the final results.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>One or more mechanisms for describing workflows composed of component process elements, incorporated by reference rather than copying, allowing for re-use avoiding divergence between multiple instances.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>An important source of information about the Research Object supporting the collaboration of scientists is the justification of why and how particular decisions were made. Based on such justifications, scientists can better interpret a Research Object, its objective and speed up the collaborative work during the construction and adaptation of a Research Object. Hence, the should enable the representation and tracking of such justifications as the Research Object evolves.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Scientists are only willing to reuse and extend good quality, trustworthy and coherent scientific work. Hence, the collaboration model should allow keeping trace of relevant information about those aspects of Research Objects, such as authors, contributors, applications, process used for its creation, reviews, etc.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Linking'>
+    
+    <a href=TechnicalFacets.html#Linking>Linking</a>
+  
+  </td>
+              <td>Actionable mechanisms for allowing ROs and parts of ROs to be cited by workflows and other ROs. See also “Citation”, “Identification”, “Referenceable”.</td>
+              <td>Provenance information about the data used as input, which is also properly (semantically) linked with provenance information about ROs and Wfs</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata needs to permit versioning, with versions semantically linked</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Tools need to use the links in the metadata to permit Web navigation through the provenance information</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata should record information about previous executions, and differences from the current execution, and tools using this information to explain any inconsistency or incompleteness of previous execution</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>refer to experiments and datasets that are defined by other researchers or projects, hence incorporate external work by reference. Such references provide acknowledgement of work used and indications of the source of included elements.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>ROs and their main component resources are identifiable using URIs, allowing for incorporation (re-use) of resources by reference rather than copying, and avoiding divergence between multiple instances of a resource.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Workflow can reference externally defined processing elements and workflows.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Keep results from multiple workflow executions, along with references to associated inputs, parameters, etc., allowing conditions of execution to be reviewed.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capability to reference and execute a workflow element defined by someone other than the executor</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism for adding free-form textual description of an experiment, with links to external sources (which may be generally known and trusted within a community) that have been used.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Link interpretation of result to experimental run, so computed basis for interpretation is connected.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Representation of revision relationship between different revisions of an experiment hypothesis.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record association between different versions of workflows or workflows used to test different versions of a hypothesis</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism to link execution results and associated interpretation to initial hypothesis, allowing reviewers to follow an evolving understanding of the data and results generated.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Link data to external sources</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record interpretation of results, linked to experiment and data used</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record origin of experimental data used for analysis</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record information discovered from external sources</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Link results to previous results, procedures and hypotheses</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Linking to existing resources within ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>URIs/linking to public and private data</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support persistent URL services.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Provide immutable URLs which will work throughout evolutions of the system.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Resolve publications/ROs for used web services.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Resolve publications/ROs for embedded papers.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for relating workflows/ROs with others.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for defining and finding relations between ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Description of relationships between resources.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for storing data or linking to data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for following links to verify data equality/similarity/validity.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for embedding/linking to existing workflows in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for discovering and referencing other people’s extensions/uses of chosen workflow.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for linking/referencing of resources from one RO to another, including retrieval of data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for linking to newer versions of data from later runs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for linking/referencing of resources, but also following its links back to origin/source</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for forward-links to versions in other repositories/by other users.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Modification'>
+    
+    <a href=TechnicalFacets.html#Modification>Modification</a>
+  
+  </td>
+              <td>Mechanisms to modify a workflow or RO, and to create new ones as modifications of existing ones.</td>
+              <td>Mechanisms for copying and modifying existing workflows</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Modify workflow components</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for adding and updating resources in an RO.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for updating contents of an RO.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for customising existing workflows, keeping links to original.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Performance'>
+    
+    <a href=TechnicalFacets.html#Performance>Performance</a>
+  
+  </td>
+              <td>Information about availability and performance of external data sources and services used by an RO.</td>
+              <td>Metadata information about the behaviour of the external data sources in terms of response time, availability, etc. Tools that estimate the QoS for users and display such information along with the data sources</td>
+            </tr>
+            
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Presentation'>
+    
+    <a href=TechnicalFacets.html#Presentation>Presentation</a>
+  
+  </td>
+              <td>Facilities to allow a researcher to examine the contents of an RO and/or workflow, and the relationships between components.</td>
+              <td>Record and view rationale for workflow.</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>View workflow definitions</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>View workflow annotations</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Extract information from working RO for publication</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Browse annotations on how relationship was made (for instance "dataX producedBy runY of workflowZ using inputA").</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for browsing annotations on steps to validate scientific reasoning.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for browsing annotations on origin/source of data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for following links to verify data equality/similarity/validity.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for browsing scientific reasoning of relationships between resources.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for comparing hypothesis of each RO.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Processing'>
+    
+    <a href=TechnicalFacets.html#Processing>Processing</a>
+  
+  </td>
+              <td>Mechanisms related to the execution of workflows and recording of outputs. Also, detecting changes to source data, and confirming that a workflow is still runnable. See also “Use”.</td>
+              <td>Interfaces for running / “playing” ROs.</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for checking updates to external data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Ability to verify that workflow can still run (e.g.: by checking if underlying web services used are still accessible).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Ability to verify that parts of workflow can still run (e.g.: by checking if underlying web services used are still accessible).</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Provenance'>
+    
+    <a href=TechnicalFacets.html#Provenance>Provenance</a>
+  
+  </td>
+              <td>Record, store, present and analyze information about how data was obtained, from what sources, by whom, etc. See also “Info quality”.</td>
+              <td>Provenance information about the data used as input, which is also properly (semantically) linked with provenance information about ROs and Wfs</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Information about data transformations and transitory data generated during a workflow execution needs to be accessible</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Information about each path taken during the workflow execution and the conditions present at the decision points needs to be accessible</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata needs to permit versioning, with versions semantically linked</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Tools need to include a display of the status of a RO/Wf where the evolution over time (versions) are shown by handling a control</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata information about the behaviour of the external data sources in terms of response time, availability, etc. Tools that estimate the QoS for users and display such information along with the data sources</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata information needs to contain all the necessary information in order to repeat an experiment and obtain the same results, and tools supporting scientists to use this metadata information to reproduce their experiment</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata should record information about previous executions, and differences from the current execution, and tools using this information to explain any inconsistency or incompleteness of previous execution</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Intermediate results and trace information should be captured and recorded during a workflow execution, and made available along with the final results.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>refer to experiments and datasets that are defined by other researchers or projects, hence incorporate external work by reference. Such references provide acknowledgement of work used and indications of the source of included elements.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Workflow can reference externally defined processing elements and workflows.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Represent relationship between the adapted workflow and original workflow, and indicating the origin of components of the new workflow.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capability to retrieve and present input data used to run the workflow, and corresponding data from previous runs, allowing review and confirmation of steps taken to yield results.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Keep results from multiple workflow executions, along with references to associated inputs, parameters, etc., allowing conditions of execution to be reviewed.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>providing researchers with information that allows them to understand differences between the outputs of workflow runs</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism for adding free-form textual description of an experiment, with links to external sources (which may be generally known and trusted within a community) that have been used.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Link interpretation of result to experimental run, so computed basis for interpretation is connected.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>A defined component type for revised hypothesis, allowing reviewers to understand alternatives considered in reaching a final hypothesis.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Representation of revision relationship between different revisions of an experiment hypothesis.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record association between different versions of workflows or workflows used to test different versions of a hypothesis</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Find different versions of a workflow, or workflows used to test different versions of a hypothesis</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>A defined component type for workflow annotation, linked to a workflow</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism to link execution results and associated interpretation to initial hypothesis, allowing reviewers to follow an evolving understanding of the data and results generated.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record interpretation of results, linked to experiment and data used</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record origin of experimental data used for analysis</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Link results to previous results, procedures and hypotheses</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Scientists are only willing to reuse and extend good quality, trustworthy and coherent scientific work. Hence, the collaboration model should allow keeping trace of relevant information about those aspects of Research Objects, such as authors, contributors, applications, process used for its creation, reviews, etc.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for generating checksums, and recording timestamps and versions of web services.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Uniquely identify web services to give citations</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture provenance trace of original execution.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture original inputs and required tools.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for browsing annotations on origin/source of data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for linking/referencing of resources, but also following its links back to origin/source</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture enough information (such as the source and usage) about content, to enable easy reuse.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Publishing'>
+    
+    <a href=TechnicalFacets.html#Publishing>Publishing</a>
+  
+  </td>
+              <td>Mechanisms for selection, organization, dissemination and promotion of research results and argumentation.</td>
+              <td>Record interpretation of results, linked to experiment and data used</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Extract information from working RO for publication</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for publication “clean-up”.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanism for publishing workflow-centric ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture input data to allow repeat runs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for including ROs in publication sources.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Environment for depositing ROs that has a public presence.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for sharing and promoting ROs.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Recommendation'>
+    
+    <a href=TechnicalFacets.html#Recommendation>Recommendation</a>
+  
+  </td>
+              <td>Features relating to automated or assistend discovery of ROs and workflows that may contain elements of use to a current research process.</td>
+              <td>The recommender system must provide the necessary mechanisms in order to discover proactively the Research Objects that might be of interest to the user. This activity should be performed considering the following properties:
+Safety. The recommender system should avoid recommendation flooding at all costs. 
+Completeness. The recommender system should provide the wider as possible set of relevant Research Object. This property is particularly important since the recommender system will in some cases be used to provide an overview of the state of the art to new scientist.</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>The recommender system must take into consideration the resources that compose a Research Object and not only Research Objects as a whole. Therefore, when making recommendations to a given user the system might suggest new Research Objects; or just resources that might a useful addition/alternative to the ones already aggregated by the Research Objects that the user is currently using or creating</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>The recommender system should provide content-based recommendations based on the way that search and retrieving of scientific content is already performed by researchers, allowing search in fields such as authors, abstract, keywords, publication dates, etc.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>The criterion for selecting the relevance and suitability of an item (either Research Object or resource) is shared among a group of individuals (researchers of the same scientific field, researchers that belong to a concrete lab, etc.); but is not necessarily valid outside this community. There is a need of means for tailoring specific recommendations in terms of certain policies at least for each use case, and in general for each research community that in the future wishes to make use of the recommender system.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Current workflow systems have limited collaborative support for sharing and reusing workflows and related resources. In fact they focus only on making workflows available for sharing. A more social approach is required to really improve the collaboration of scientists. A prerequisite for this will be the modelling of the relationships and interactions between scientist and the scientific resources they collaborate with, as well as the community generated information, such as ratings, reviews and usage logs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>The recommender system must consider user feedback in order to improve its future recommendations.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Recommender systems are inherently vertical and configured to provide recommendations in a single and specific domain. The cross-boundary dimension of Research Objects makes mandatory the provisioning of recommendation on the very same Research Objects following different recommendation heuristics for each scientific community or communities. That implies that the recommender system must be aware of the scientific community that the user belongs to; and secondly it must act in accordance.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for grouping of ROs by field/tag/content, e.g.: "Most popular in field X"</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for rating and recommending content.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Recoverable'>
+    
+    <a href=TechnicalFacets.html#Recoverable>Recoverable</a>
+  
+  </td>
+              <td>Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.</td>
+              <td>Research Objects can change many times during their lifetime. Hence, scientists working with a Research Object may want to go back to a previous state of the Research Object, for instance, to retrace steps or to discard new changes introduced. For this requirement is not enough just to recover a previous state of the Research Object, but also being able to reproduce the steps (backwards) to move from one state to a previous one.</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td>Research Objects can change many times during their lifetime. Hence, scientists working with a Research Object may want to go back to a previous state of the Research Object, for instance, to retrace steps or to discard new changes introduced.</td>
+                <td>Mechanisms for dealing with conflicts in changes made to content within ROs and the ROs themselves.</td>
+              </tr>
+            
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Repairable'>
+    
+    <a href=TechnicalFacets.html#Repairable>Repairable</a>
+  
+  </td>
+              <td>Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.</td>
+              <td>During the lifetime of the Research Object, it could happen that some errors were introduced while making changes. So, in a similar situation as in the recoverable requirement, it may necessary to go back to a previous state of the Research Object. However, in addition to that, it should be feasible to make a diagnosis and potentially to fix the errors introduced. To this end, a complete log of the changes performed and how they were performed will be required.</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td>During the lifetime of the Research Object, it could happen that some errors were introduced while making changes. So, in a similar situation as in the previous requirement, it may necessary to go back to a previous state of the Research Object. However, in addition to that, it should be feasible to make a diagnosis and potentially to fix the errors introduced. To this end, a complete log of the changes performed and how they were performed will be required.</td>
+                <td>Mechanisms for dealing with conflicts in changes made to content within ROs and the ROs themselves.</td>
+              </tr>
+            
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Repeatable'>
+    
+    <a href=TechnicalFacets.html#Repeatable>Repeatable</a>
+  
+  </td>
+              <td>Include sufficient information for others to rerun the investigation at a later date. As a Reuser I want to run an existing workflow with new data.</td>
+              <td>Metadata information needs to contain all the necessary information in order to repeat an experiment and obtain the same results, and tools supporting scientists to use this metadata information to reproduce their experiment</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td>The evolution and collaboration model should provide the mechanisms to identify and characterize different versions of a Research Object and the resources it encapsulates. The goal is to enable scientists to access the same version of the services and data sources involved in the experiments described by a Research Object. This will in turn allow the repetition of the experiments, e.g., to verify or validate the results.</td>
+                <td>Capability to retrieve and present input data used to run the workflow, and corresponding data from previous runs, allowing review and confirmation of steps taken to yield results.</td>
+              </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>The evolution and collaboration model should provide the mechanisms to identify and characterize different versions of a Research Object and the resources it encapsulates. The goal is to enable scientists to access the same version of the services and data sources involved in the experiments described by a Research Object. This will in turn allow the repetition of the experiments, e.g., to verify or validate the results.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Reproducible'>
+    
+    <a href=TechnicalFacets.html#Reproducible>Reproducible</a>
+  
+  </td>
+              <td>Include sufficient information for an independent investigator to reproduce the results, e.g. obtain the same results. As a Reviewer I want to rerun an investigation to validate the result.</td>
+              <td>Metadata information needs to contain all the necessary information in order to repeat an experiment and obtain the same results, and tools supporting scientists to use this metadata information to reproduce their experiment</td>
+            </tr>
+            
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Repurposeable'>
+    
+    <a href=TechnicalFacets.html#Repurposeable>Repurposeable</a>
+  
+  </td>
+              <td>Discovery and recommender features that assist in components being re-purposed to different applications or workflows or Research Objects. See also “Recommendation”.</td>
+              <td>The recommender system must take into consideration the resources that compose a Research Object and not only Research Objects as a whole. Therefore, when making recommendations to a given user the system might suggest new Research Objects; or just resources that might a useful addition/alternative to the ones already aggregated by the Research Objects that the user is currently using or creating</td>
+            </tr>
+            
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Reputation'>
+    
+    <a href=TechnicalFacets.html#Reputation>Reputation</a>
+  
+  </td>
+              <td>Is the degree to which the information or its source is in high standing. Synonyms: credibility</td>
+              <td>Support for grouping of ROs by field/tag/content, e.g.: "Most popular in field X"</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for rating and recommending content.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Reuse'>
+    
+    <a href=TechnicalFacets.html#Reuse>Reuse</a>
+  
+  </td>
+              <td>Deconstructing an investigation in order to reuse components or pieces. Reassembly of deconstructed aggregations. As a Re-user I want to build a new workflow based on an existing one.</td>
+              <td>expose metadata information to support searching of workflows, such as descriptions about the functions of workflows or parts of workflows</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td>Coping with change/loss/errors. As a Re-user I want to run an existing workflow with new data.</td>
+                <td>One or more mechanisms for describing workflows composed of component process elements, incorporated by reference rather than copying, allowing for re-use avoiding divergence between multiple instances.</td>
+              </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Matching conceptual workflows and components with actual executable processing elements.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for executing a workflow with specified input data, allowing workflow results to be re-evaluated.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capability to reference and execute a workflow element defined by someone other than the executor</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record interpretation of results, linked to experiment and data used</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record origin of experimental data used for analysis</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Create new workflow from existing components</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Create workflow from components of multiple other workflows</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Re-run workflow with different parameters and data</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Security'>
+    
+    <a href=TechnicalFacets.html#Security>Security</a>
+  
+  </td>
+              <td>Research Objects should have different access and security properties depending on user’s role, allowing policies such as making Research Objects (or only part of it) to be freely accessible to all users; permitting a finer-grained definition of access permissions to just a target group of users; and also allowing the definition of partial and temporal access permissions.</td>
+              <td>Confidential annotations: restricted access</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Search over data and annotations must not reveal confidential information</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Research Objects should have different access and security properties depending on user’s role, allowing policies such as making Research Objects (or only part of it) to be freely accessible to all users; permitting a finer-grained definition of access permissions to just a target group of users; and also allowing the definition of partial and temporal access permissions.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata on accessing private data (e.g.: server access, authentication).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for “selective hiding” of content in an RO.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for “selective hiding” of content in an RO.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Use'>
+    
+    <a href=TechnicalFacets.html#Use>Use</a>
+  
+  </td>
+              <td>Features that allow users to do useful things with workflows.</td>
+              <td>Information about data transformations and transitory data generated during a workflow execution needs to be accessible</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Information about each path taken during the workflow execution and the conditions present at the decision points needs to be accessible</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata needs to permit versioning, with versions semantically linked</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Tools need to display provenance information as graphs, allowing navigation through that kind of visualization</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Tools need to include a display of the status of a RO/Wf where the evolution over time (versions) are shown by handling a control</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata information about the behaviour of the external data sources in terms of response time, availability, etc. Tools that estimate the QoS for users and display such information along with the data sources</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata information needs to contain all the necessary information in order to repeat an experiment and obtain the same results, and tools supporting scientists to use this metadata information to reproduce their experiment</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Metadata should record information about previous executions, and differences from the current execution, and tools using this information to explain any inconsistency or incompleteness of previous execution</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for copying and modifying existing workflows</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for executing a workflow with specified input data, allowing workflow results to be re-evaluated.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Facilities for examining workflow input and output datasets</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capability to reference and execute a workflow element defined by someone other than the executor</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record and view rationale for workflow.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>View workflow definitions</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>View workflow annotations</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Re-run workflow with different parameters and data</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Extract information from working RO for publication</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture input data to allow repeat runs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for accessing and working with ROs in a “live” state.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Interfaces for the presentation of overviews.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Interfaces for browsing and following links between resources.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Ability to download data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Ability to request access to data (or forward requests on).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for storage/retrieval of structured metadata.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Replay workflow execution.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture provenance trace of original execution.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture original inputs and required tools.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Access to original services or copies of original return values.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Interfaces for running / “playing” ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Browse annotations on how relationship was made (for instance "dataX producedBy runY of workflowZ using inputA").</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Verify data equality/similarity via checksums, timestamps, actual content, etc.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for checking updates to external data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Notifications for changes detected.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for browsing annotations on steps to validate scientific reasoning.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for comparing steps with known methodologies (abstract workflows)</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for browsing annotations on origin/source of data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for following links to verify data equality/similarity/validity.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for getting the “latest” version or past versions of workflows/ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Ability to verify that workflow can still run (e.g.: by checking if underlying web services used are still accessible).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Ability to verify that parts of workflow can still run (e.g.: by checking if underlying web services used are still accessible).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for linking/referencing of resources from one RO to another, including retrieval of data.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for extracting content in a whole and atomic fashion.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture enough information (such as the source and usage) about content, to enable easy reuse.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms to ensure components of RO are accessible.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Versioning'>
+    
+    <a href=TechnicalFacets.html#Versioning>Versioning</a>
+  
+  </td>
+              <td>Providing roll-back to retrace steps, fix errors, diagnose errors. As a Re-user I want to see versions of a workflow to understand how it has evolved.</td>
+              <td>Metadata needs to permit versioning, with versions semantically linked</td>
+            </tr>
+            
+              <tr>
+                <td></td>
+                <td>The evolution and collaboration model should allow keeping a complete track of the changes that the Research Object undergoes. The information to be modelled includes not only a representation about the changes themselves, but also about how those changes were applied (e.g., chronological order, dependencies between them); and possibly why they were conducted (e.g., argumentation).</td>
+                <td>It should be possible to keep different versions of Research Objects. In general, two types of Research Object have been identified so far, a live or working Research Object and a published or archived Research Object. The former is expected to change frequently, while the latter is expected to be immutable. Hence, versioning will have to deal mostly with live Research Objects. Versions should have to consider changes at different levels, from the Research Object itself, such as its metadata, to the resources it encapsulates. Moreover, it should be possible to do automatic versioning of metadata (contributors, access privileges, modification date, etc.) to trace the provenance of these metadata. As a result, scientists will be able to access concrete versions of Research Objects and/or their associated resources, e.g., workflows, and to keep track of the evolution of those objects resulting from community efforts.</td>
+              </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for capturing history of changes to resources in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for capturing history of changes to content in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Mechanisms for capturing history of changes to content in ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capturing rating changes over time as RO evolves.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for customising existing workflows, keeping links to original.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for getting the “latest” version or past versions of workflows/ROs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for linking to newer versions of data from later runs.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for the notion of a 'version' (possibly non-linear).</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for forward-links to versions in other repositories/by other users.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Capture history of workflow evolution</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for comparing different versions of workflows</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Support for snapshots of RO and its resources.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Visualization'>
+    
+    <a href=TechnicalFacets.html#Visualization>Visualization</a>
+  
+  </td>
+              <td>The visualization tool for Collaboration Spheres has to present in a graphical fashion how Research Objects are connected by sharing different resources.</td>
+              <td>Tools need to display provenance information as graphs, allowing navigation through that kind of visualization</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Tools need to include a display of the status of a RO/Wf where the evolution over time (versions) are shown by handling a control</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>The visualization tool for Collaboration Spheres has to present in a graphical fashion how Research Objects are connected by sharing different resources</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Interfaces for the presentation of overviews.</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Interfaces for browsing and following links between resources.</td>
+              </tr>
+            
+          
+        </tbody>
+      
+        
+        
+        
+        
+        <tbody>
+          
+            
+            
+            <tr>
+              <td id='Workflow'>
+    
+    <a href=TechnicalFacets.html#Workflow>Workflow</a>
+  
+  </td>
+              <td>Mechanisms to create, modify, view, execute, re-execute a workflow</td>
+              <td>Create new workflow from existing components</td>
+            </tr>
+            
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Modify workflow components</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>View workflow definitions</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Create workflow from components of multiple other workflows</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Record an abstract (not-yet-implemented) workflow</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Workflow can use references to not-yet-implemented, or stub components</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Partial execution of workflow with stubs prompting manual inputs</td>
+              </tr>
+            
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Re-run workflow with different parameters and data</td>
+              </tr>
+            
+          
+        </tbody>
+      
+    </table>
+  
+
+  </body>
+</html>
