@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <rdf:RDF
+          xml:base=".."
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:oxds="http://vocab.ox.ac.uk/dataset/schema#"
+          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        >
+          <oxds:Grouping rdf:about="#">
+            <dcterms:identifier>wf4ever-requirements</dcterms:identifier>
+            <dcterms:title>Wf4Ever requirements</dcterms:title>
+            <dcterms:description>Wf4Ever requirements</dcterms:description>
+            <dcterms:creator>Test user</dcterms:creator>
+            <dcterms:created>2011-12-02T13:40:02</dcterms:created>
+          </oxds:Grouping>
+        </rdf:RDF>
+        
