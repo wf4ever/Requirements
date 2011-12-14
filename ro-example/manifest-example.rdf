@@ -16,8 +16,8 @@
     <!ENTITY wfdesc  "http://purl.org/wf4ever/wfdesc#" >
 ]>
 
-<rdf:RDF xmlns=".ro/.."
-     xml:base=".ro/.."
+<rdf:RDF xmlns=".."
+     xml:base=".."
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -45,8 +45,8 @@
     <dcterms:title>Wf4Ever requirements manifest</dcterms:title>
   </rdf:Description>
 
-  <ro:ResearchObject rdf:resource=".">
-    <ore:isDescribedBy rdf:resource=".ro/../manifest-example.rdf" />
+  <ro:ResearchObject rdf:resource="">
+    <ore:isDescribedBy rdf:resource="../manifest-example.rdf" />
     <ore:aggregates rdf:resource="data/TechnicalFacets.ods" />
     <ore:aggregates rdf:resource="data/TechRequirements-all.ods" />
     <ore:aggregates rdf:resource="data/UserRequirements-astro.ods" />
@@ -93,11 +93,11 @@
         <rdf:type rdf:resource="&ro;SemanticAnnotation" />   <!-- inferrable -->
         <rdf:type rdf:resource="&ao;Annotation" />           <!-- inferrable -->
         <ro:annotatesAggregatedResource rdf:resource="" />
-        <ao:body rdf:resource=".ro/../manifest.rdf" />
+        <ao:body rdf:resource="ro-example/manifest.rdf" />
       </ro:AggregatedAnnotation>
     </ore:aggregates>
 
-    <!-- Annotate user requirements spreadsheet files 
+    <!-- Annotate requirements spreadsheet files 
          The annotation bodies are separate files in same location with .annotation.rdf appended
       -->
 
@@ -128,6 +128,58 @@
         <rdf:type rdf:resource="&ao;Annotation" />           <!-- inferrable -->
         <ro:annotatesAggregatedResource rdf:resource="data/UserRequirements-gen.ods" />
         <ao:body rdf:resource=".ro/Ann-20111212-0001-UserRequirements-gen.ods.rdf" />
+      </ro:AggregatedAnnotation>
+    </ore:aggregates>
+
+    <ore:aggregates>
+      <ro:AggregatedAnnotation>
+        <rdf:type rdf:resource="&ore;AggregatedResource" />  <!-- inferrable -->
+        <rdf:type rdf:resource="&ro;SemanticAnnotation" />   <!-- inferrable -->
+        <rdf:type rdf:resource="&ao;Annotation" />           <!-- inferrable -->
+        <ro:annotatesAggregatedResource rdf:resource="data/TechRequirements-all.ods" />
+        <ao:body rdf:resource=".ro/Ann-20111212-0001-TechRequirements-all.ods.rdf" />
+      </ro:AggregatedAnnotation>
+    </ore:aggregates>
+
+    <!-- provenance annotations for generated JSON files -->
+
+    <ore:aggregates>
+      <ro:AggregatedAnnotation>
+        <rdf:type rdf:resource="&ore;AggregatedResource" />  <!-- inferrable -->
+        <rdf:type rdf:resource="&ro;SemanticAnnotation" />   <!-- inferrable -->
+        <rdf:type rdf:resource="&ao;Annotation" />           <!-- inferrable -->
+        <ro:annotatesAggregatedResource rdf:resource="docs/UserRequirements-astro.json" />
+        <ao:body rdf:resource=".ro/Ann-20111214-0001-JSON-from-ODS.rdf" />
+      </ro:AggregatedAnnotation>
+    </ore:aggregates>
+
+    <ore:aggregates>
+      <ro:AggregatedAnnotation>
+        <rdf:type rdf:resource="&ore;AggregatedResource" />  <!-- inferrable -->
+        <rdf:type rdf:resource="&ro;SemanticAnnotation" />   <!-- inferrable -->
+        <rdf:type rdf:resource="&ao;Annotation" />           <!-- inferrable -->
+        <ro:annotatesAggregatedResource rdf:resource="docs/UserRequirements-bio.json" />
+        <ao:body rdf:resource=".ro/Ann-20111214-0001-JSON-from-ODS.rdf" />
+      </ro:AggregatedAnnotation>
+    </ore:aggregates>
+
+    <ore:aggregates>
+      <ro:AggregatedAnnotation>
+        <rdf:type rdf:resource="&ore;AggregatedResource" />  <!-- inferrable -->
+        <rdf:type rdf:resource="&ro;SemanticAnnotation" />   <!-- inferrable -->
+        <rdf:type rdf:resource="&ao;Annotation" />           <!-- inferrable -->
+        <ro:annotatesAggregatedResource rdf:resource="docs/UserRequirements-gen.json" />
+        <ao:body rdf:resource=".ro/Ann-20111214-0001-JSON-from-ODS.rdf" />
+      </ro:AggregatedAnnotation>
+    </ore:aggregates>
+
+    <ore:aggregates>
+      <ro:AggregatedAnnotation>
+        <rdf:type rdf:resource="&ore;AggregatedResource" />  <!-- inferrable -->
+        <rdf:type rdf:resource="&ro;SemanticAnnotation" />   <!-- inferrable -->
+        <rdf:type rdf:resource="&ao;Annotation" />           <!-- inferrable -->
+        <ro:annotatesAggregatedResource rdf:resource="docs/TechRequirements-all.json" />
+        <ao:body rdf:resource=".ro/Ann-20111214-0001-JSON-from-ODS.rdf" />
       </ro:AggregatedAnnotation>
     </ore:aggregates>
 
