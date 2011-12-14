@@ -35,11 +35,18 @@
 
   <wfprov:WorkflowRun rdf:about=".ro/Run_JSON-from-ODS">
     <rdfs:label>ODS to JSON conversion using mkjson.sh</rdfs:label>
-    <rdfs:seeAlso rdf:resource="docs/mkjson.sh" />
-    <rdfs:description>
-      Shell script workflow extracts JSON information from original ODS files,
-      for subsequent formatting using Dexy.
-    </rdfs:description>
+      <wfprov:describedByWorkflow>
+        <wfdesc:Workflow>
+          <rdfs:label>Convert ODS files to JSON</rdfs:label>
+          <rdfs:seeAlso rdf:resource="docs/mkjson.sh" />
+          <rdfs:description>
+            Shell script workflow extracts JSON information from original ODS files,
+            for subsequent formatting using Dexy.
+          </rdfs:description>
+          <wfdesc:hasInput rdf:resource="data/UserRequirements-gen.ods" />
+          <wfdesc:hasOutput rdf:resource="docs/UserRequirements-gen.json" />
+        </wfdesc:Workflow>
+      </wfprov:describedByWorkflow>
   </wfprov:WorkflowRun>
 
   <rdf:Description rdf:about="docs/UserRequirements-gen.csv">
