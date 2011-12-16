@@ -60,7 +60,6 @@
     <ore:aggregates rdf:resource="docs/output/trac.css" />
     <ore:aggregates rdf:resource="docs/output/UserRequirements-all.html" />
     <ore:aggregates rdf:resource="docs/reqs.css" />
-    <ore:aggregates rdf:resource="docs/TechnicalFacets-backup.html" />
     <ore:aggregates rdf:resource="docs/TechnicalFacets-summary.html" />
     <ore:aggregates rdf:resource="docs/TechnicalFacets-with-TRs.html" />
     <ore:aggregates rdf:resource="docs/TechnicalFacets.csv" />
@@ -77,7 +76,6 @@
     <ore:aggregates rdf:resource="docs/UserRequirements-bio.json" />
     <ore:aggregates rdf:resource="docs/UserRequirements-gen.csv" />
     <ore:aggregates rdf:resource="docs/UserRequirements-gen.json" />
-    <ore:aggregates rdf:resource="manifest-example.rdf" />
     <ore:aggregates rdf:resource="python/ReadCSV.py" />
     <ore:aggregates rdf:resource="README" />
     <ore:aggregates rdf:resource="ro_setup.sh" />
