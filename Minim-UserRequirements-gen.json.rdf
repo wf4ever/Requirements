@@ -47,14 +47,68 @@
     </make:make>
   </rdf:Description>
 
-  <rdf:Description rdf:about="docs/UserRequirements-gen.json">
-    <minim:onResource rdf:resource="" />
-    <minim:forPurpose>runnable</minim:forPurpose>
-    <minim:requires>
-      <minim:Model>
-        ...
-      </minim:Model>
-    </minim:requires>
+  <!-- Target for Minimum information requirement 
+  
+       Minim invokes minimum information models on for a specified purpose
+       relating to a specified target.  The requirement may apply to some
+       resource other than the specified target.
+       
+       For example, in this case, the requirement to create the 
+       UserRequirements-gen.json file is that a given Minim model 
+       must be satisfied by the Research Object.
+    -->
+  <rdf:Description rdf:about="docs/UserRequirements-gen.csv">
+    <minim:appliesConstraint>
+      <minim:Constraint>
+        <minim:forPurpose>create</minim:forPurpose>
+        <minim:onResource rdf:resource="" />
+        <minim:toModel rdf:resource=".ro/runnable" />
+        # Environment needs lpod-show
+        # Environment needs Python
+      </minim:Constraint>
+    </minim:appliesConstraint>
   </rdf:Description>
+
+  <!-- Requirements on RO to be runnable, to create defined outputs
+    -->
+  <minim:Model rdf:about=".ro/runnable">
+    <minim:hasMustRequirement>
+      <minim:Requirement>
+
+        <minim:isDerivedFrom>
+          <minim:RequirementRule>
+            <minim:reports>
+
+
+            </minim:reports>
+          </minim:RequirementRule>
+        </minim:isDerivedFrom>
+
+
+
+
+      </minim:Requirement>
+    </minim:hasMustRequirement>
+
+    # MUST contain 
+    <... rdf:resource="data/UserRequirements-astro.ods" />
+    <... rdf:resource="data/UserRequirements-bio.ods" />
+    <... rdf:resource="data/UserRequirements-gen.ods" />
+    <... rdf:resource="data/TechRequirements-all.ods" />
+    <... rdf:resource="data/TechnicalFacets.ods" />
+    <... rdf:resource="docs/.dexy" />
+    <... rdf:resource="docs/reqs.css" />
+    <... rdf:resource="docs/trac.css" />
+    <... rdf:resource="docs/UserRequirements-all.html" />
+    <... rdf:resource="docs/TechRequirements-all.html" />
+    <... rdf:resource="docs/TechnicalFacets.html" />
+    <... rdf:resource="docs/mkjson.sh" />
+    <... rdf:resource="python/ReadCSV.py" />
+    ...
+  </minim:Model>
+
+
+
+
 
 </rdf:RDF>
