@@ -14,6 +14,7 @@
     <!ENTITY ro      "http://purl.org/wf4ever/ro#" >
     <!ENTITY wfprov  "http://purl.org/wf4ever/wfprov#" >
     <!ENTITY wfdesc  "http://purl.org/wf4ever/wfdesc#" >
+    <!ENTITY make    "http://purl.org/wf4ever/make#" >
     <!ENTITY minim   "http://purl.org/minim/minim#" >
 ]>
 
@@ -32,8 +33,19 @@
      xmlns:ro="http://purl.org/wf4ever/ro#"
      xmlns:wfprov="http://purl.org/wf4ever/wfprov#"
      xmlns:wfdesc="http://purl.org/wf4ever/wfdesc#"
+     xmlns:make="&make;"
      xmlns:minim="&minim;"
 >
+
+  <rdf:Description rdf:about="docs/UserRequirements-gen.json">
+    <make:make>
+      <make:Description>
+        <make:inp1 rdf:resource="python/ReadCSV.py" />
+        <make:inp2 rdf:resource="data/UserRequirements-gen.ods" />
+        <make:exec>python $(inp1) $(inp2)</make:exec>
+      </make:Description>
+    </make:make>
+  </rdf:Description>
 
   <!-- Target for Minimum information requirement 
   
@@ -46,15 +58,15 @@
        must be satisfied by the Research Object.
     -->
   <rdf:Description rdf:about="docs/UserRequirements-gen.csv">
-    <minim:hasConstraint>
-      <minim:Constraint rdf:about="#create/docs/UserRequirements-gen.csv">
-        <minim:forPurpose>create UserRequirements-gen.csv</minim:forPurpose> <!-- or just use rdfs:label? -->
+    <minim:appliesConstraint>
+      <minim:Constraint rdf:about=".ro/runnableRequirement">
+        <rdfs:label>create</rdfs:label>
         <minim:onResource rdf:resource="" />
-        <minim:toModel rdf:resource="#runnableRequirementRO" />
+        <minim:toModel rdf:resource=".ro/runnable" />
         <!-- # Environment needs lpod-show -->
         <!-- # Environment needs Python -->
       </minim:Constraint>
-    </minim:hasConstraint>
+    </minim:appliesConstraint>
   </rdf:Description>
 
   <!-- Requirements on RO to be runnable, to create defined outputs
@@ -69,11 +81,10 @@
       <minim:Requirement rdf:about="#isPresent/data/UserRequirements-astro.ods">
       <!-- Inline definition follows of rule that defines above requirement.
            It could also be defined separately.
-           This structure also allows OWL-based reporting structure used by MIM (see below)
+           @@TODO: show this: This structure also allows OWL-based reporting structure used by MIM.
         -->
         <minim:isDerivedFrom>
           <minim:RequirementRule>
-            <!-- this is very ad hoc ... can use RIF here? -->
             <minim:aggregationPresent rdf:resource="data/UserRequirements-astro.ods" />
             <minim:derivesReport rdf:resource="#isPresent/data/UserRequirements-astro.ods" />
           </minim:RequirementRule>
@@ -88,6 +99,7 @@
       <minim:Requirement rdf:about="#isPresent/data/UserRequirements-astro.ods">
       <!-- Inline definition follows of rule that defines above requirement.
            It could also be defined separately.
+           @@TODO: show this: This structure also allows OWL-based reporting structure used by MIM.
         -->
         <mimim:isReportedBy>
           <mimim:Report>
@@ -96,9 +108,6 @@
               -->
             <owl:equivalentClass>
               <owl:Restriction>
-                <!-- note this has ore:aggregates as premise, but it's beyond OWL to 
-                     enforce that the resource is actually present.
-                  -->
                 <owl:onProperty rdf:resource="&ore;aggregates" />
                 <owl:hasValue rdf:resource="data/UserRequirements-astro.ods" />
               </owl:Restriction>
