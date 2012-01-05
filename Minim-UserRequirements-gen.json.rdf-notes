@@ -55,6 +55,7 @@
     </minim:hasConstraint>
   </rdf:Description>
 
+
   <!-- Requirements on RO to be runnable, to create defined outputs
     -->
   <minim:Model rdf:about="#runnableRequirementRO">
@@ -69,24 +70,21 @@
 
     <minim:hasMustRequirement>
       <minim:Requirement rdf:about="#isPresent/data/UserRequirements-astro.ods">
+      <!-- Inline definition follows of rule that defines above requirement.
+           It could also be defined separately.
+           This structure also allows OWL-based reporting structure used by MIM (see below)
+           
+           The particular structure here is very RO-specific.  We will also need more generic
+           structures that can capture the requirement for appropriate inputs to a workflow 
+           instance to be present.
+           
+           By adopting this rather ad hoc structure, we can use it to learn what kinds of
+           minimum requirement need to be encoded; later, we may be able to define some more
+           generic requirement structure to capture these.
+        -->
         <minim:isDerivedBy>
           <minim:RequirementRule>
-            <minim:environment>
-              <minim:SoftwareSupport>
-                <minim:command>lpod-show.py --version</minim:command>
-                <minim:response>0.9.3</minim:response>
-              </minim:SoftwareSupport>
-            </minim:environment>
-            <minim:derivesRequirement rdf:resource="#isPresent/data/UserRequirements-astro.ods" />
-          </minim:RequirementRule>
-        </minim:isDerivedBy>
-      </minim:Requirement>
-    </minim:hasMustRequirement>
-
-    <minim:hasMustRequirement>
-      <minim:Requirement rdf:about="#isPresent/data/UserRequirements-astro.ods">
-        <minim:isDerivedBy>
-          <minim:RequirementRule>
+            <!-- this is very ad hoc ... can use more general approach here? -->
             <minim:aggregatePresent rdf:resource="data/UserRequirements-astro.ods" />
             <minim:derivesRequirement rdf:resource="#isPresent/data/UserRequirements-astro.ods" />
           </minim:RequirementRule>
@@ -94,16 +92,38 @@
       </minim:Requirement>
     </minim:hasMustRequirement>
 
-    <minim:hasShouldRequirement>
-      <minim:Requirement rdf:about="#isPresent/docs/reqs.css">
+    <!-- Same as above requirement using Matt Gamble's original report framework,
+         to demonstrate compatibility of approach...
+      -->
+    <minim:hasMustRequirement>
+      <minim:Requirement rdf:about="#isPresent/data/UserRequirements-astro.ods">
+      <!-- Inline definition follows of rule that defines above requirement.
+           It could also be defined separately.
+        -->
         <minim:isDerivedBy>
-          <minim:RequirementRule>
-            <minim:aggregatePresent rdf:resource="data/docs/reqs.css" />
-            <minim:derivesRequirement rdf:resource="#isPresent/docs/reqs.css" />
-          </minim:RequirementRule>
+          <mimim:RequirementRule>
+            <!-- use OWL constraints applied directly to a research object or component
+                 to infer the minim:reports property 
+              -->
+            <owl:equivalentClass>
+              <owl:Restriction>
+                <!-- note this has ore:aggregates as premise, but it's beyond OWL to 
+                     enforce that the resource is actually present.
+                  -->
+                <owl:onProperty rdf:resource="&ore;aggregates" />
+                <owl:hasValue rdf:resource="data/UserRequirements-astro.ods" />
+              </owl:Restriction>
+            </owl:equivalentClass>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="&minim;reports" />
+                <owl:hasValue rdf:resource="#isPresent/data/UserRequirements-astro.ods" />
+              </owl:Restriction>
+            </rdfs:subClassOf>
+          </mimim:RequirementRule>
         </minim:isDerivedBy>
       </minim:Requirement>
-    </minim:hasShouldRequirement>
+    </minim:hasMustRequirement>
 
     <!--
     # MUST contain 
@@ -113,17 +133,14 @@
     <... rdf:resource="data/TechRequirements-all.ods" />
     <... rdf:resource="data/TechnicalFacets.ods" />
     <... rdf:resource="docs/.dexy" />
+    <... rdf:resource="docs/reqs.css" />
+    <... rdf:resource="docs/trac.css" />
     <... rdf:resource="docs/UserRequirements-all.html" />
     <... rdf:resource="docs/TechRequirements-all.html" />
     <... rdf:resource="docs/TechnicalFacets.html" />
     <... rdf:resource="docs/mkjson.sh" />
     <... rdf:resource="python/ReadCSV.py" />
     ...
-    # SHOULD contain
-    <... rdf:resource="docs/reqs.css" />
-    <... rdf:resource="docs/trac.css" />
-
-
       -->
 
   </minim:Model>
