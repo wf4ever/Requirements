@@ -18,9 +18,19 @@ $RO config -v \
 
 $RO create -v "Wf4Ever requirements" -d $ROBASE/wf4ever-requirements/ -i wf4ever-requirements
 
+for F in \
+    data/UserRequirements-astro.ods \
+    data/UserRequirements-bio.ods   \
+    data/UserRequirements-gen.ods   \
+    data/TechRequirements-all.ods   \
+    data/TechnicalFacets.ods
+do
+    $RO add -v -d $ROBASE/wf4ever-requirements/ $ROBASE/wf4ever-requirements/$F
+done
+
 $RO status -v -d $ROBASE/wf4ever-requirements
 
-$RO list -v -d $ROBASE/wf4ever-requirements
+# $RO list -v -d $ROBASE/wf4ever-requirements
 
 
 #echo "--------"
