@@ -12,3 +12,5 @@ To build requirements documents from ODS spreadsheets:
   $ cd ${wf4ever-requirements}/docs
   $ ./mkjson.sh
   $ dexy --utf8
+
+A copy of the resulting document can be viewed at [docs/output/UserRequirements-all.html]() [http://wf4ever.github.io/Requirements/docs/output/UserRequirements-all.html]().
